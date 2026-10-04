@@ -25,6 +25,7 @@ web-ui-art-direction/
 ├── LICENSE                      # MIT cho nội dung gốc của repo
 └── references/
     ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
+    ├── component-craft.md       # Header, nav, button, input, tab, overlay và micro-detail
     ├── product-ui.md            # Quy tắc cho hệ thống sau đăng nhập
     ├── source-notes.md          # Nguồn công khai, kết luận và giới hạn bằng chứng
     ├── visual-atlas.md          # Phân tích 33 ảnh tham khảo
@@ -88,7 +89,7 @@ Khi chỉ cần thiết kế, hãy nói rõ “chỉ phân tích/đề xuất, c
 5. Thiết kế/triển khai theo hành trình nội dung hoặc tác vụ xuyên nhiều màn hình; giữ hành động chính rõ ràng.
 6. Kiểm tra desktop, mobile, bàn phím, zoom chữ, dữ liệu ít/nhiều, trạng thái và hành vi thực tế; báo đúng phần đã xác minh.
 
-Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references/worked-app-example.md), [quy tắc thị giác](references/design-rules.md) và [quy tắc product UI](references/product-ui.md).
+Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references/worked-app-example.md), [quy tắc thị giác](references/design-rules.md), [quy tắc product UI](references/product-ui.md) và [quy tắc component](references/component-craft.md).
 
 ## Bổ sung cho hệ thống sau đăng nhập
 
@@ -97,6 +98,10 @@ Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references
 - Trạng thái “chưa có dữ liệu”, “không có kết quả lọc”, “đang tải”, “lỗi lưu”, “thiếu quyền” và “thành công” cần lời giải thích và bước tiếp theo khác nhau.
 - Cá tính của sản phẩm nằm ở ngôn ngữ, cấu trúc, nhịp chữ và những chi tiết phục vụ công việc; giao diện dùng hằng ngày cần ổn định để người dùng thao tác nhanh.
 - Đánh giá **một luồng hoàn chỉnh** với dữ liệu thực tế và quyền khác nhau. Screenshot chỉ cho thấy một thời điểm.
+
+## Từ hệ thống đến component nhỏ
+
+[Component craft](references/component-craft.md) bổ sung cách chọn và rà soát header, nav, button, link, input, tab, dialog, drawer, tooltip, thông báo và điều khiển trong bảng. Nó tập trung vào **mục đích, cấu tạo, nhãn, trạng thái, bàn phím, mobile và chi tiết thị giác**, không áp một kích thước hoặc bộ màu cố định cho mọi sản phẩm. Ví dụ: header toàn ứng dụng khác header của một trang; button kích hoạt hành động còn link dẫn tới địa chỉ; tooltip chỉ giải thích thêm, không giấu thông tin bắt buộc.
 
 ## Những gì rút ra từ 33 ảnh
 

@@ -38,6 +38,17 @@ Reviewed on 2026-10-04. This is a selective reading of the linked public pages, 
 
 ## Translation into the skill
 
-The reusable decisions live in [product-ui.md](product-ui.md): model real tasks and roles; choose each surface for its job; preserve context; design real data density; distinguish empty, loading, error, permission, and success; then test a complete journey. The [worked app example](worked-app-example.md) demonstrates this method without copying a referenced product.
+The reusable decisions live in [product-ui.md](product-ui.md): model real tasks and roles; choose each surface for its job; preserve context; design real data density; distinguish empty, loading, error, permission, and success; then test a complete journey. [Component craft](component-craft.md) covers smaller controls and their states. The [worked app example](worked-app-example.md) demonstrates the task method without copying a referenced product.
+
+### Component-level follow-up, reviewed 2026-10-04
+
+| Official source | What it adds beyond the earlier flow-level review |
+| --- | --- |
+| [Carbon global header](https://www.carbondesignsystem.com/building-blocks/core/patterns/global-header) and [PatternFly masthead](https://www.patternfly.org/components/masthead/design-guidelines/) | Separate persistent app utilities and orientation from page-local actions. |
+| [Carbon button](https://www.carbondesignsystem.com/building-blocks/core/components/button/guidelines) and [GitLab button](https://design.gitlab.com/components/button/) | Action hierarchy, button versus link, label, icon, and control states. |
+| [Carbon text input](https://www.carbondesignsystem.com/building-blocks/core/components/text-input/guidelines) | Label, help, value, error, disabled/read-only, and overflow anatomy. |
+| [Carbon tabs](https://www.carbondesignsystem.com/building-blocks/core/components/tabs/guidelines) | Tabs for related peer content; filters and steps solve different problems. |
+| [Carbon modal](https://www.carbondesignsystem.com/building-blocks/core/components/modal/guidelines) and [W3C dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) | Interruption threshold, content, action, and focus behavior. |
+| [GitLab tooltip](https://design.gitlab.com/components/tooltip/) and [W3C tooltip draft](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) | Supplementary hint versus essential instructions; keyboard/hover behavior. The W3C pattern is still marked work in progress. |
 
 This repo links to third-party materials but does not reproduce their screenshots, logos, prose, or code. Its MIT license covers only original content in this repo.

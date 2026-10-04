@@ -13,6 +13,7 @@ Create an interface that feels authored for its audience and purpose. A distinct
 - Read [visual-atlas.md](references/visual-atlas.md) when the brief includes visual references or needs alternative directions. It records observations from 33 static images and the limits of those observations. Use the images as evidence of techniques, never as templates to copy.
 - Read [worked-example.md](references/worked-example.md) when an open-ended brief needs a concrete example of a design direction and its translation into page sections.
 - Read [product-ui.md](references/product-ui.md) for an authenticated app, dashboard, admin area, editor, settings, data-heavy screen, or multi-screen task. It covers information architecture, task continuity, tables, forms, permissions, and state behavior.
+- Read [component-craft.md](references/component-craft.md) when choosing, designing, implementing, or reviewing headers, navigation, buttons, inputs, tabs, overlays, feedback, and other reusable controls. Use it with [product-ui.md](references/product-ui.md) for app work.
 - Read [worked-app-example.md](references/worked-app-example.md) when a post-login brief needs a concrete example spanning several screens and states.
 - Read [source-notes.md](references/source-notes.md) to trace the public design-system guidance and product examples behind the post-login rules. Public galleries are examples to inspect, not proof that a pattern works for every user.
 
