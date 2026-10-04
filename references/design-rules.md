@@ -1,6 +1,6 @@
 # Design rules: from visual intent to usable web UI
 
-These are decision checks, not a mandatory aesthetic. The 33-image atlas shows several incompatible styles that work because each is coherent within its own context.
+These are decision checks, not a mandatory aesthetic. The 33-image atlas shows several incompatible styles that work because each is coherent within its own context. For authenticated workspaces, dashboards, tables, and multi-screen tasks, also read [product-ui.md](product-ui.md).
 
 ## 1. Give the page one point of view
 

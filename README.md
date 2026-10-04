@@ -1,20 +1,20 @@
 # Web UI Art Direction
 
-Skill cho Codex giúp biến ý tưởng hoặc bộ ảnh tham khảo thành giao diện web có cá tính, rõ mục đích và dùng được. Trọng tâm là **lý do đằng sau quyết định thiết kế**: người dùng đang làm gì, nội dung nào cần nổi bật, hình ảnh và chữ tạo cảm giác gì, từng chi tiết nhỏ có nhất quán hay không.
+Skill cho Codex giúp biến ý tưởng hoặc bộ ảnh tham khảo thành giao diện web có cá tính, rõ mục đích và dùng được — từ trang giới thiệu đến **hệ thống sau đăng nhập**. Trọng tâm là **lý do đằng sau quyết định thiết kế**: người dùng đang làm gì, dữ liệu và hành động nào cần nổi bật, hình ảnh và chữ tạo cảm giác gì, từng chi tiết nhỏ có nhất quán hay không.
 
-Bộ skill này được tổng hợp từ việc xem 33 ảnh giao diện, mockup và slide do người dùng cung cấp. [Atlas phân tích từng ảnh](references/visual-atlas.md) ghi rõ điểm quan sát được, nguyên tắc có thể chuyển dụng và điều cần kiểm tra. Ảnh gốc không được đưa lên GitHub vì quyền sử dụng ảnh chưa được xác minh.
+Bộ skill khởi đầu từ 33 ảnh giao diện, mockup và slide do người dùng cung cấp. [Atlas phân tích từng ảnh](references/visual-atlas.md) ghi rõ điểm quan sát được, nguyên tắc có thể chuyển dụng và điều cần kiểm tra. Phiên bản hiện tại bổ sung [quy tắc cho product UI](references/product-ui.md), dựa trên việc đọc chọn lọc các trang công khai của nhiều design system, nghiên cứu UX, thư viện flow và tài liệu sản phẩm. [Ghi chú nguồn](references/source-notes.md) nói rõ đã đọc gì và giới hạn của từng loại bằng chứng. Ảnh gốc không được đưa lên GitHub vì quyền sử dụng ảnh chưa được xác minh.
 
 ## Skill giải quyết việc gì?
 
 Một lời nhắc kiểu “làm landing page hiện đại, đẹp, có hồn” thường chưa đủ để ra giao diện tốt. Skill buộc người thiết kế/AI kết nối:
 
-1. **Con người và công việc:** Ai vào trang, họ cần hiểu hoặc làm gì?
+1. **Con người và công việc:** Ai vào trang, vai trò và quyền của họ là gì, họ cần hiểu hoặc làm gì?
 2. **Ý tưởng thị giác:** Một góc nhìn chủ đạo có liên hệ thật với sản phẩm.
 3. **Hệ thống:** Chữ, màu, lưới, ảnh, khoảng trắng, chi tiết và chuyển động cùng nói một ngôn ngữ.
-4. **Trải nghiệm:** Điều hướng, nội dung, trạng thái, mobile, bàn phím và khả năng đọc vẫn rõ ràng.
+4. **Trải nghiệm:** Điều hướng, tìm kiếm, bảng, form, trạng thái, mobile, bàn phím và khả năng đọc vẫn rõ ràng.
 5. **Kiểm chứng:** Chỉ nhận xét phần đã quan sát/kiểm tra; không coi screenshot là bằng chứng website hoạt động.
 
-Skill phù hợp với trang web mới, redesign hoặc frontend dựa trên ảnh tham khảo. Nó không nhằm xử lý backend, sửa lỗi chức năng không liên quan đến giao diện, hay tự động sinh cùng một phong cách cho mọi sản phẩm.
+Skill phù hợp với trang web mới, redesign, dashboard, admin, workspace, form nhiều bước hoặc frontend dựa trên ảnh tham khảo. Nó không nhằm xử lý backend, sửa lỗi chức năng không liên quan đến giao diện, hay tự động sinh cùng một phong cách cho mọi sản phẩm.
 
 ## Cấu trúc
 
@@ -24,9 +24,12 @@ web-ui-art-direction/
 ├── README.md                    # Hướng dẫn và phạm vi
 ├── LICENSE                      # MIT cho nội dung gốc của repo
 └── references/
-    ├── design-rules.md          # Quy tắc chi tiết và checklist chống giao diện rập khuôn
+    ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
+    ├── product-ui.md            # Quy tắc cho hệ thống sau đăng nhập
+    ├── source-notes.md          # Nguồn công khai, kết luận và giới hạn bằng chứng
     ├── visual-atlas.md          # Phân tích 33 ảnh tham khảo
-    └── worked-example.md        # Ví dụ từ brief du lịch tới hướng thiết kế
+    ├── worked-example.md        # Ví dụ từ brief du lịch tới hướng thiết kế
+    └── worked-app-example.md    # Ví dụ một luồng công việc sau đăng nhập
 ```
 
 ## Cài vào Codex trên Windows
@@ -38,6 +41,12 @@ git clone https://github.com/AnhVuu215/web-ui-art-direction.git "$env:USERPROFIL
 ```
 
 Nếu đã có thư mục cùng tên, hãy kiểm tra và cập nhật repo cũ thay vì clone đè. Khởi động lại Codex hoặc mở chat mới để skill được nhận diện. Cũng có thể đặt thư mục skill trong `.agents/skills/` của riêng một dự án nếu bạn chỉ muốn dùng tại dự án đó.
+
+Nếu đã clone bản cũ và không có chỉnh sửa cục bộ trong thư mục skill, cập nhật bằng:
+
+```powershell
+git -C "$env:USERPROFILE\.codex\skills\web-ui-art-direction" pull --ff-only
+```
 
 ## Cách dùng
 
@@ -58,6 +67,16 @@ màu, chất liệu hình ảnh, nhịp section, micro-detail và phần nào kh
 cho sản phẩm của tôi. Sau đó chọn một hướng riêng, không sao chép nguyên mẫu.
 ```
 
+Khi làm hệ thống sau đăng nhập:
+
+```text
+$web-ui-art-direction Thiết kế luồng quản lý đơn hàng cho nhân viên và quản lý.
+Đọc frontend, dữ liệu mẫu và quyền hiện có. Xác định luồng tìm đơn → xem chi tiết
+→ cập nhật trạng thái → nhận phản hồi. Thiết kế list/table, form, phân quyền,
+trạng thái trống/loading/lỗi/thành công và mobile. Giữ nhận diện thương hiệu,
+giải thích các quyết định và chỉ triển khai những chức năng có trong phạm vi.
+```
+
 Khi chỉ cần thiết kế, hãy nói rõ “chỉ phân tích/đề xuất, chưa viết code”. Khi cần code, hãy cung cấp repo hoặc thư mục dự án cùng các giới hạn về nội dung, thương hiệu và kỹ thuật.
 
 ## Quy trình đầu ra mong đợi
@@ -65,11 +84,19 @@ Khi chỉ cần thiết kế, hãy nói rõ “chỉ phân tích/đề xuất, c
 1. Tóm tắt người dùng mục tiêu, việc chính cần làm và các ràng buộc đã biết.
 2. Với brief mở, nêu hai hướng có khác biệt thực chất; chọn hướng phù hợp với lý do cụ thể. Với brief đã cố định phong cách, đi thẳng theo ràng buộc đó.
 3. Viết câu định hướng ngắn: đối tượng + cảm giác + chất liệu/ẩn dụ + công dụng.
-4. Chốt hệ chữ, lưới, màu chức năng, loại hình ảnh, chi tiết lặp lại và nhịp section.
-5. Thiết kế/triển khai từng section theo hành trình nội dung; giữ hành động chính rõ ràng.
-6. Kiểm tra desktop, mobile, bàn phím, zoom chữ, trạng thái và hiệu năng ảnh; báo đúng phần đã xác minh.
+4. Chốt hệ chữ, lưới, màu chức năng, hình ảnh, chi tiết lặp lại; với app, chốt thêm cấu trúc điều hướng và ngôn ngữ trạng thái.
+5. Thiết kế/triển khai theo hành trình nội dung hoặc tác vụ xuyên nhiều màn hình; giữ hành động chính rõ ràng.
+6. Kiểm tra desktop, mobile, bàn phím, zoom chữ, dữ liệu ít/nhiều, trạng thái và hành vi thực tế; báo đúng phần đã xác minh.
 
-Xem [ví dụ hoàn chỉnh](references/worked-example.md) và [bộ quy tắc chi tiết](references/design-rules.md).
+Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references/worked-app-example.md), [quy tắc thị giác](references/design-rules.md) và [quy tắc product UI](references/product-ui.md).
+
+## Bổ sung cho hệ thống sau đăng nhập
+
+- Bắt đầu từ **vai trò → mục tiêu → đối tượng dữ liệu → hành động → kết quả → cách phục hồi**, rồi mới chọn màn hình và component.
+- Mỗi bề mặt có một việc: trang tổng quan cho việc cần chú ý, bảng cho tìm và so sánh, trang chi tiết cho ngữ cảnh và hành động, form cho nhập liệu, settings cho thay đổi có phạm vi rõ.
+- Trạng thái “chưa có dữ liệu”, “không có kết quả lọc”, “đang tải”, “lỗi lưu”, “thiếu quyền” và “thành công” cần lời giải thích và bước tiếp theo khác nhau.
+- Cá tính của sản phẩm nằm ở ngôn ngữ, cấu trúc, nhịp chữ và những chi tiết phục vụ công việc; giao diện dùng hằng ngày cần ổn định để người dùng thao tác nhanh.
+- Đánh giá **một luồng hoàn chỉnh** với dữ liệu thực tế và quyền khác nhau. Screenshot chỉ cho thấy một thời điểm.
 
 ## Những gì rút ra từ 33 ảnh
 
@@ -82,11 +109,13 @@ Xem [ví dụ hoàn chỉnh](references/worked-example.md) và [bộ quy tắc c
 
 33 ảnh tham khảo không nằm trong repo và không được cấp phép lại theo MIT. Atlas là ghi chép phân tích mới, dùng tên tệp để truy vết trong bộ sưu tập gốc. Việc có ảnh trong bộ sưu tập không chứng minh tác giả, nguồn hay quyền tái sử dụng.
 
+Việc khảo cứu nguồn công khai **không đồng nghĩa** đã đọc toàn bộ website, truy cập màn hình cần đăng nhập hoặc thử nghiệm sản phẩm thật. Thư viện ảnh cung cấp ví dụ, design system cung cấp hướng dẫn của chính họ, còn nghiên cứu UX cho thêm bằng chứng về hành vi. Các kết luận chuyển dụng đều ghi trong [source-notes.md](references/source-notes.md).
+
 Skill không bảo đảm tự động đạt WCAG hoặc hiệu năng tốt: phải kiểm tra trang triển khai thực tế. Các ngưỡng truy cập nêu trong [design-rules.md](references/design-rules.md) được đối chiếu với tài liệu [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/); hướng dẫn về tránh layout shift tham chiếu [web.dev](https://web.dev/articles/optimize-cls).
 
 ## Đóng góp
 
-Khi bổ sung quy tắc, hãy đưa ra **bối cảnh áp dụng**, **tác dụng với người dùng**, và **trường hợp không nên áp dụng**. Ưu tiên một quy tắc có căn cứ hơn một danh sách dài các xu hướng. Không thêm ảnh, logo, testimonial hoặc số liệu của bên thứ ba nếu chưa có quyền và nguồn rõ ràng.
+Khi bổ sung quy tắc, hãy đưa ra **bối cảnh áp dụng**, **tác dụng với người dùng**, **trường hợp không nên áp dụng** và **nguồn hỗ trợ**. Ưu tiên một quy tắc có căn cứ hơn một danh sách dài các xu hướng. Không thêm ảnh, logo, testimonial hoặc số liệu của bên thứ ba nếu chưa có quyền và nguồn rõ ràng.
 
 ## Giấy phép
 
