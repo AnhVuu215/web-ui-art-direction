@@ -51,4 +51,4 @@ The reusable decisions live in [product-ui.md](product-ui.md): model real tasks 
 | [Carbon modal](https://www.carbondesignsystem.com/building-blocks/core/components/modal/guidelines) and [W3C dialog](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/) | Interruption threshold, content, action, and focus behavior. |
 | [GitLab tooltip](https://design.gitlab.com/components/tooltip/) and [W3C tooltip draft](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/) | Supplementary hint versus essential instructions; keyboard/hover behavior. The W3C pattern is still marked work in progress. |
 
-This repo links to third-party materials but does not reproduce their screenshots, logos, prose, or code. Its MIT license covers only original content in this repo.
+This repo links to third-party design systems and research without reproducing their documentation or code. It also includes the [seven images selected and supplied by the skill owner](owner-image-study.md), published here after the owner confirmed permission. Those images have [separate rights terms](../assets/owner-references/README.md); the MIT license covers only the original writing and scripts.

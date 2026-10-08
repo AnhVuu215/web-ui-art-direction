@@ -1,6 +1,6 @@
 # Visual atlas: 33 supplied images
 
-This is a static visual analysis of 33 files supplied by the user on 2026-10-04. File names are identifiers, not author/source attribution. Several images are presentation composites, concept work, or product mockups. They show visible design choices; they do not establish live behavior, legal rights, responsive quality, accessibility, or whether displayed claims are true. The original images are intentionally excluded from this public skill repository.
+This is a static visual analysis of 33 files supplied by the user on 2026-10-04. File names are identifiers, not author/source attribution. Several images are presentation composites, concept work, or product mockups. They show visible design choices; they do not establish live behavior, responsive quality, accessibility, or whether displayed claims are true. Seven owner-selected original images are now [available in this repo with a detailed study](owner-image-study.md) after the owner confirmed permission to publish them on 2026-10-08. The other 26 original files are not included.
 
 The owner later selected seven images as their preferred visual direction. Their shared visual grammar, differences, and limits are analyzed in [owner-style.md](owner-style.md); the entries below preserve the observations across all 33 images.
 
@@ -25,7 +25,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** Industrial portfolio with a gray paper-like field, one tactile 3D object cluster, large type crossing the object, hairline framing, and a numbered five-item contents strip. **Transfer:** Let the work objects supply color while neutral chrome carries structure; numbered entries make a portfolio scannable. **Check:** Tiny project metadata works as a poster detail but needs enlargement and clearer links for actual browsing.
 
-### 03 · `16233b3d54a543caec9fdeede60292fb.jpg`
+### 03 · [16233b3d54a543caec9fdeede60292fb.jpg](../assets/owner-references/16233b3d54a543caec9fdeede60292fb.jpg)
 
 **Seen:** Furniture story in warm orange, cream, and dark brown. A sculptural chair overlaps oversized typography; unusual inward corner cuts and thin rules repeat through the panels. The next slide shifts to a framed orange scene with a statistics rail. **Transfer:** A distinctive material, object, and corner treatment can form a whole visual grammar. **Check:** The percentages and behavioral claims are part of the reference's presentation, not facts to import; the small captions need readability review.
 
@@ -33,7 +33,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** Local lawn service uses a real worker and lawn photo, lime CTA, dark green overlay, service cards with task imagery, then a step-by-step process. Service area and phone number make the offer concrete. **Transfer:** For a local service, show real work, location, process, and the next contact action before visual novelty. **Check:** Some lower-page copy appears unrelated to lawn care; verify product-specific writing and image contrast before reuse.
 
-### 05 · `21ae9f90f826cbd33a35d0a9cd531089.jpg`
+### 05 · [21ae9f90f826cbd33a35d0a9cd531089.jpg](../assets/owner-references/21ae9f90f826cbd33a35d0a9cd531089.jpg)
 
 **Seen:** Agency page leads with very large black type on white; a gray phrase completes the thought. A horizontal strip of mostly quiet service cards gives way to a full-bleed orange light streak and then black narrative section. **Transfer:** Strong typography plus a single cinematic interruption produces rhythm without decorating every component. **Check:** The pale gray display text and micro-sized body captions may fail practical contrast or readability.
 
@@ -57,7 +57,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** Food-technology concept places warm organic microstructure photography behind white translucent navigation and CTA pills. A white statistics shelf crosses the hero's bottom edge. **Transfer:** Repeat a product-relevant texture and let a sharply defined information shelf ground an immersive scene. **Check:** White copy over a highly varied image has unstable contrast, and large outcome numbers need evidence.
 
-### 11 · `50223f7ca6df60f8baf407b29cb0d033.jpg`
+### 11 · [50223f7ca6df60f8baf407b29cb0d033.jpg](../assets/owner-references/50223f7ca6df60f8baf407b29cb0d033.jpg)
 
 **Seen:** Motion studio hero uses a custom 3D mark across orange-black light, with lettering partly behind it. The next section opens into a quiet cream field with a huge type composition and sparse client row. **Transfer:** A hero can be intense when the following section gives the eye a pause; repeat the central object subtly rather than another hero. **Check:** Ensure the mark does not cover essential text at smaller widths.
 
@@ -69,7 +69,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** Dark game page uses a perspective grid and overlapping colorful character cards, with a centered subscription statement. The bright cards carry most of the emotion; chrome stays restrained. **Transfer:** Use layered items and perspective to convey a collection or playful universe. **Check:** Third-party game characters and console branding require rights; the pictured design is not a reusable asset library.
 
-### 14 · `5fbabad0075a50b928c38ca16e327043.jpg`
+### 14 · [5fbabad0075a50b928c38ca16e327043.jpg](../assets/owner-references/5fbabad0075a50b928c38ca16e327043.jpg)
 
 **Seen:** Music app case study stages a phone in a hand against a red-orange gradient, then drops to a black product chapter. Large type, warm light, tiny project annotations, and circular playback controls express the music concept. **Transfer:** Show the product in a usage moment, then explain the system with contrasting sections. **Check:** Mockup controls and playback states are visual evidence only; light-on-gradient text requires contrast testing.
 
@@ -85,7 +85,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** Growth agency uses an intimate face image blurred into an olive-black field, lime CTA, colored micro-tags, a row of partners, and metrics below. Its visual effect connects to the message of personal clarity. **Transfer:** A single human portrait can anchor an otherwise abstract consultancy claim. **Check:** Small colored tags and stats need both contrast and factual sources.
 
-### 18 · `85b954e2c242a7fc82980b05d4852d5e.jpg`
+### 18 · [85b954e2c242a7fc82980b05d4852d5e.jpg](../assets/owner-references/85b954e2c242a7fc82980b05d4852d5e.jpg)
 
 **Seen:** Media agency runs a black/orange sequence: bright first screen, restrained black explanatory chapters, video area, staggered service cards, and chart-like growth stories. **Transfer:** Use a limited accent color to connect media, CTA, and data. **Check:** Placeholder-looking video and repeated nav labels reveal the danger of polished visuals with incomplete content.
 
@@ -121,7 +121,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** Travel landing page uses a large location photograph, search filters over its lower edge, then varied destination cards, trip metadata, and availability cues. A quiet white content field follows the immersive opening. **Transfer:** Put trip search and decision facts close to the inspiration image; let destination photography supply variety. **Check:** Locations, dates, prices, and availability must match real listings; cropped cards and filters require a mobile strategy.
 
-### 27 · `be8fa1a3bd8dfb307c17dc1ff4b67531.jpg`
+### 27 · [be8fa1a3bd8dfb307c17dc1ff4b67531.jpg](../assets/owner-references/be8fa1a3bd8dfb307c17dc1ff4b67531.jpg)
 
 **Seen:** Formix agency identity stays almost entirely within orange, near-black, and warm white. Portraits alternate with service cards, asymmetric blocks, and sparse arrow actions. **Transfer:** A strict palette plus varying card scale can feel energetic without introducing unrelated styles. **Check:** Testimonials and large client/result counts require source data; several paragraphs are too small in the provided image.
 
@@ -141,7 +141,7 @@ The owner later selected seven images as their preferred visual direction. Their
 
 **Seen:** SUTÉRA cycles through white natural rock, black holographic flower, and white blueprint-like studies. Fine coordinate lines, boxed readouts, and type treatments maintain a science/nature dialogue. **Transfer:** A coherent concept can tolerate multiple scenes when recurring visual grammar ties them together. **Check:** Technical readouts are extremely small, and any “change reality” control needs a meaningful accessible action.
 
-### 32 · `ed8d239bca32ace72f715f222ab6d89e.jpg`
+### 32 · [ed8d239bca32ace72f715f222ab6d89e.jpg](../assets/owner-references/ed8d239bca32ace72f715f222ab6d89e.jpg)
 
 **Seen:** Orange gradient slide deck uses oversized labels, wide internal margins, alternating light/dark cards, tiny top annotations, and a repeated `+` sign as system punctuation. **Transfer:** Presentation design shows how a repeated typographic and color system can unify many compositions. **Check:** Slides are not website interaction evidence; do not use their microtext scale or fixed slide dimensions as web defaults.
 

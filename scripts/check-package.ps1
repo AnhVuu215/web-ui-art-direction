@@ -47,6 +47,36 @@ foreach ($file in $markdownFiles) {
     }
 }
 
+$imageRoot = Join-Path $root 'assets\owner-references'
+$manifestFile = Join-Path $imageRoot 'manifest.csv'
+if (-not (Test-Path -LiteralPath $manifestFile -PathType Leaf)) {
+    $errors.Add('Missing owner reference image manifest.')
+} else {
+    $images = @(Import-Csv -LiteralPath $manifestFile -Encoding UTF8)
+    if ($images.Count -ne 7) { $errors.Add("Expected seven owner reference images, found $($images.Count) manifest rows.") }
+    $names = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::OrdinalIgnoreCase)
+    foreach ($entry in $images) {
+        if ($entry.file -notmatch '^[a-f0-9]{32}\.jpg$' -or -not $names.Add($entry.file)) {
+            $errors.Add("Invalid or duplicate reference image name: $($entry.file)")
+            continue
+        }
+        $path = Join-Path $imageRoot $entry.file
+        if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+            $errors.Add("Missing reference image: $($entry.file)")
+            continue
+        }
+        if ($entry.sha256 -notmatch '^[a-f0-9]{64}$') {
+            $errors.Add("Invalid SHA-256 in manifest: $($entry.file)")
+        } elseif ((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash -ine $entry.sha256) {
+            $errors.Add("Reference image differs from manifest: $($entry.file)")
+        }
+    }
+    $actualImages = @(Get-ChildItem -LiteralPath $imageRoot -Filter '*.jpg' -File)
+    if ($actualImages.Count -ne $images.Count) {
+        $errors.Add("Expected $($images.Count) JPG files, found $($actualImages.Count).")
+    }
+}
+
 $promptFile = Join-Path $root 'evals\prompts.csv'
 if (-not (Test-Path -LiteralPath $promptFile -PathType Leaf)) {
     $errors.Add('Missing evals/prompts.csv.')
@@ -65,4 +95,4 @@ if ($errors.Count -gt 0) {
     exit 1
 }
 
-Write-Output "Package check passed: $($markdownFiles.Count) Markdown files, $($prompts.Count) evaluation prompts, no broken local links or placeholders."
+Write-Output "Package check passed: $($markdownFiles.Count) Markdown files, $($prompts.Count) evaluation prompts, seven verified reference images, no broken local links or placeholders."

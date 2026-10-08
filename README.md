@@ -2,13 +2,27 @@
 
 Skill cho Codex giúp biến ý tưởng hoặc bộ ảnh tham khảo thành giao diện web có cá tính, rõ mục đích và dùng được — từ trang giới thiệu đến **hệ thống sau đăng nhập**. Trọng tâm là **lý do đằng sau quyết định thiết kế**: người dùng đang làm gì, dữ liệu và hành động nào cần nổi bật, hình ảnh và chữ tạo cảm giác gì, từng chi tiết nhỏ có nhất quán hay không.
 
-Bộ skill khởi đầu từ 33 ảnh giao diện, mockup và slide do người dùng cung cấp. [Atlas phân tích từng ảnh](references/visual-atlas.md) ghi rõ điểm quan sát được, nguyên tắc có thể chuyển dụng và điều cần kiểm tra. Phiên bản hiện tại bổ sung [quy tắc cho product UI](references/product-ui.md), dựa trên việc đọc chọn lọc các trang công khai của nhiều design system, nghiên cứu UX, thư viện flow và tài liệu sản phẩm. [Ghi chú nguồn](references/source-notes.md) nói rõ đã đọc gì và giới hạn của từng loại bằng chứng. Ảnh gốc không được đưa lên GitHub vì quyền sử dụng ảnh chưa được xác minh.
+Bộ skill khởi đầu từ 33 ảnh giao diện, mockup và slide do người dùng cung cấp. [Atlas phân tích từng ảnh](references/visual-atlas.md) ghi rõ điểm quan sát được, nguyên tắc có thể chuyển dụng và điều cần kiểm tra. **7 ảnh được chủ skill chọn làm gu tham chiếu nay đã có trong repo**, kèm [phân tích trực tiếp trên từng ảnh](references/owner-image-study.md). 26 ảnh còn lại được phân tích bằng chữ. Phiên bản hiện tại còn có [quy tắc cho product UI](references/product-ui.md), dựa trên việc đọc chọn lọc các trang công khai của nhiều design system, nghiên cứu UX, thư viện flow và tài liệu sản phẩm. [Ghi chú nguồn](references/source-notes.md) nói rõ đã đọc gì và giới hạn của từng loại bằng chứng.
 
 ## Gu thẩm mỹ mặc định của chủ skill
 
 Từ 33 ảnh, chủ skill chọn 7 ảnh làm nhóm tham chiếu ưu tiên. [Owner style](references/owner-style.md) phân tích mẫu số chung: **chữ sans lớn và tự tin; bố cục editorial; một người, vật thể hoặc giao diện sản phẩm làm tâm điểm; ánh sáng cam/đỏ giàu chiều sâu trên nền tối; khoảng trắng để đổi nhịp; chi tiết điều khiển gọn và chính xác**. Khi brief chưa chốt phong cách, Codex nên bắt đầu từ hướng này thay vì tự chọn một giao diện SaaS xanh pastel chung chung.
 
-Đây là **gu ưu tiên, không phải khuôn mẫu**. Brand và yêu cầu cụ thể của dự án được ưu tiên trước. Trang sau đăng nhập vẫn phải dễ đọc, dễ thao tác; không phủ gradient cam lên bảng, form và trạng thái chỉ để giống ảnh tham khảo. 7 ảnh gốc vẫn chỉ được phân tích bằng chữ, không được đưa vào repository.
+Đây là **gu ưu tiên, không phải khuôn mẫu**. Brand và yêu cầu cụ thể của dự án được ưu tiên trước. Trang sau đăng nhập vẫn phải dễ đọc, dễ thao tác; không phủ gradient cam lên bảng, form và trạng thái chỉ để giống ảnh tham khảo. Ảnh giúp người đọc kiểm chứng nhận xét và nhìn ra cơ chế thị giác, không phải tài sản để sao chép vào sản phẩm.
+
+### Xem 7 ảnh gốc
+
+| Sản phẩm trong cảnh sử dụng | Chữ lớn và nhịp sáng/tối |
+| --- | --- |
+| ![Ứng dụng nghe nhạc với điện thoại trong tay, nền cam và chương tối](assets/owner-references/5fbabad0075a50b928c38ca16e327043.jpg) | ![Agency với chữ lớn trên trắng, dải ánh sáng cam và chương đen](assets/owner-references/21ae9f90f826cbd33a35d0a9cd531089.jpg) |
+| **Vật thể tạo hình** | **Một accent xuyên nhiều phần** |
+| ![Nội thất với ghế điêu khắc, chữ lớn và góc panel đặc trưng](assets/owner-references/16233b3d54a543caec9fdeede60292fb.jpg) | ![Media agency với mở đầu cam đen và các panel giải thích](assets/owner-references/85b954e2c242a7fc82980b05d4852d5e.jpg) |
+| **Tâm điểm mạnh rồi khoảng nghỉ** | **Con người và module bất đối xứng** |
+| ![Motion studio với biểu tượng lớn trong ánh cam rồi chuyển sang nền kem](assets/owner-references/50223f7ca6df60f8baf407b29cb0d033.jpg) | ![Branding agency với chân dung ánh cam và các card xen kẽ](assets/owner-references/be8fa1a3bd8dfb307c17dc1ff4b67531.jpg) |
+| **Ngữ pháp đồ họa xuyên chuỗi** | **Đọc theo ảnh** |
+| ![Bộ slide với gradient cam, nhãn lớn và dấu cộng lặp lại](assets/owner-references/ed8d239bca32ace72f715f222ab6d89e.jpg) | [Phân tích 7 ảnh theo bố cục, chữ, ánh sáng, component và cách chuyển sang app](references/owner-image-study.md). |
+
+Các tệp gốc được giữ nguyên; [manifest](assets/owner-references/manifest.csv) ghi kích thước và SHA-256 để đối chiếu. Chủ skill đã xác nhận quyền đăng công khai 7 ảnh. **Ảnh không thuộc giấy phép MIT của tài liệu và script**; xem [điều kiện sử dụng ảnh](assets/owner-references/README.md).
 
 ### 7 ảnh được ưu tiên cho điều gì?
 
@@ -43,6 +57,7 @@ web-ui-art-direction/
 ├── SKILL.md                     # Khi nào dùng và quy trình chính
 ├── README.md                    # Hướng dẫn và phạm vi
 ├── LICENSE                      # MIT cho nội dung gốc của repo
+├── assets/owner-references/     # 7 ảnh gốc, manifest và điều kiện sử dụng riêng
 ├── evals/
 │   └── prompts.csv              # 10 tình huống kích hoạt/không kích hoạt
 ├── scripts/
@@ -50,6 +65,7 @@ web-ui-art-direction/
 └── references/
     ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
     ├── owner-style.md           # Gu mặc định rút từ 7 ảnh chủ skill chọn
+    ├── owner-image-study.md     # Đọc từng ảnh và chuyển cơ chế sang web/app
     ├── owner-components.md      # Áp gu đó vào header, nav, button, card, form, table, state
     ├── owner-product-ui.md      # Áp gu đó xuyên suốt hệ thống sau đăng nhập
     ├── evaluation.md            # Bộ thử kích hoạt, đầu ra thị giác và UX
@@ -140,7 +156,7 @@ Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references
 
 | Bạn đang làm gì? | Đọc tài liệu nào? | Kết quả cần chốt |
 | --- | --- | --- |
-| Muốn hiểu gu cá nhân | [Owner style](references/owner-style.md) + [atlas 33 ảnh](references/visual-atlas.md) | Chủ thể, chữ, màu, ánh sáng, nhịp trang và giới hạn của ảnh tham khảo. |
+| Muốn hiểu gu cá nhân | [Owner style](references/owner-style.md) + [7 ảnh và phân tích](references/owner-image-study.md) + [atlas 33 ảnh](references/visual-atlas.md) | Chủ thể, chữ, màu, ánh sáng, nhịp trang và giới hạn của ảnh tham khảo. |
 | Thiết kế homepage/portfolio | [Owner style](references/owner-style.md) + [design rules](references/design-rules.md) | Một cảnh mở đầu gắn với sản phẩm, phần giải thích, chứng cứ, CTA, responsive. |
 | Thiết kế header, nút, card, form | [Owner components](references/owner-components.md) + [component craft](references/component-craft.md) | Phân cấp hành động, cấu tạo, trạng thái, bàn phím, mobile và độ nhất quán. |
 | Thiết kế sản phẩm sau đăng nhập | [Owner product UI](references/owner-product-ui.md) + [product UI](references/product-ui.md) | Một luồng từ mục tiêu đến kết quả, đủ màn hình và trạng thái quan trọng. |
@@ -206,7 +222,7 @@ Script kiểm tra frontmatter, tên skill, liên kết nội bộ, placeholder v
 
 ## Giới hạn và bản quyền
 
-33 ảnh tham khảo không nằm trong repo và không được cấp phép lại theo MIT. Atlas là ghi chép phân tích mới, dùng tên tệp để truy vết trong bộ sưu tập gốc. Việc có ảnh trong bộ sưu tập không chứng minh tác giả, nguồn hay quyền tái sử dụng.
+7 ảnh chủ skill chọn đã được đưa vào repo sau khi chủ skill xác nhận có quyền đăng công khai. **Quyền đăng ảnh tại đây không tự động cấp quyền tái sử dụng ảnh cho người khác.** Ảnh trong `assets/owner-references/` không thuộc MIT; xem [ghi chú quyền ảnh](assets/owner-references/README.md). 26 ảnh còn lại không nằm trong repo. Atlas là ghi chép phân tích mới, dùng tên tệp để truy vết trong bộ sưu tập gốc. Việc có ảnh trong bộ sưu tập không tự nó chứng minh tác giả hoặc nguồn gốc.
 
 Việc khảo cứu nguồn công khai **không đồng nghĩa** đã đọc toàn bộ website, truy cập màn hình cần đăng nhập hoặc thử nghiệm sản phẩm thật. Thư viện ảnh cung cấp ví dụ, design system cung cấp hướng dẫn của chính họ, còn nghiên cứu UX cho thêm bằng chứng về hành vi. Các kết luận chuyển dụng đều ghi trong [source-notes.md](references/source-notes.md).
 
@@ -218,4 +234,4 @@ Khi bổ sung quy tắc, hãy đưa ra **bối cảnh áp dụng**, **tác dụn
 
 ## Giấy phép
 
-Nội dung gốc trong repo phát hành theo [MIT License](LICENSE). Giấy phép này không bao gồm 33 ảnh tham khảo gốc.
+Nội dung chữ và script gốc trong repo phát hành theo [MIT License](LICENSE). Giấy phép này không bao gồm 7 ảnh tham khảo trong `assets/owner-references/` và cũng không áp dụng cho 26 ảnh không được đưa vào repo.
