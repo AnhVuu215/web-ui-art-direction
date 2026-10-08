@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Đổi sách cuối tuần — Bản mẫu giao diện</title>
+<style>
+@font-face{font-family:Vietnam;src:url('../../../../../assets/fonts/BeVietnamPro-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Vietnam;src:url('../../../../../assets/fonts/BeVietnamPro-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Vietnam;src:url('../../../../../assets/fonts/BeVietnamPro-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{--paper:#f5f1e7;--ink:#203b32;--muted:#526359;--accent:#a83c22;--line:#cbd0c0;--cream:#fffcf5;--yellow:#eac979;--error:#962b27;--success:#235b3b}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 Vietnam,Arial,sans-serif}a{color:inherit;text-underline-offset:5px}button,input,select,textarea{font:inherit}button,a,input,select,textarea,summary{outline-offset:5px} :focus-visible{outline:3px solid #bc4827}button{cursor:pointer}button:disabled{cursor:wait;opacity:.72}a:hover{color:var(--accent)}.wrap{max-width:1280px;padding-inline:56px;margin:auto}.skip{position:fixed;top:-100px;left:16px;z-index:5;background:var(--cream);padding:12px}.skip:focus{top:12px}.notice{border-bottom:1px solid var(--line);font-size:12px;line-height:1.6;text-align:center;padding:9px 20px;background:#e7eadc;color:var(--ink)}.notice strong{font-weight:700}.header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:26px}.brand{text-decoration:none;display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px;line-height:1.3}.brand svg{width:33px;height:33px;flex:none}.nav{display:flex;gap:30px;align-items:center;font-size:14px;font-weight:500}.nav a{text-decoration:none}.nav .nav-register{border-bottom:1px solid var(--ink);padding:4px 0}.hero{display:grid;grid-template-columns:1.16fr 1fr;gap:26px;padding-top:54px;padding-bottom:74px;align-items:center}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:0 0 22px;display:flex;gap:10px;align-items:center}.eyebrow:before{content:'';width:25px;height:2px;background:currentColor}h1{font-size:clamp(42px,4.7vw,67px);line-height:1.19;letter-spacing:-.055em;font-weight:700;margin:0 0 28px;max-width:650px}h1 span{color:var(--accent)}.intro{font-size:17px;max-width:470px;margin:0 0 29px;color:var(--muted)}.button{display:inline-flex;justify-content:center;align-items:center;gap:22px;min-height:52px;border:1px solid var(--accent);background:var(--accent);color:#fff8ec;padding:12px 24px;text-decoration:none;font-weight:500;line-height:1.5;transition:background .18s,transform .18s}.button:hover{background:#87301b;color:#fff8ec}.button:active{transform:translateY(1px)}.arrow{font-size:23px;font-family:Arial,sans-serif;line-height:1}.hero .aside-note{display:block;font-size:12px;margin-top:12px;color:var(--muted)}.book-scene{position:relative;min-width:0}.book-scene svg{width:100%;height:auto;display:block}.scene-caption{display:flex;justify-content:space-between;gap:16px;padding-top:13px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.facts{display:grid;grid-template-columns:1fr 1fr 1.25fr .75fr;border-block:1px solid var(--line);padding-block:23px;margin-bottom:80px;gap:28px}.facts dl{margin:0}.facts dt{font-size:12px;color:var(--muted);margin-bottom:6px}.facts dd{font-size:18px;font-weight:500;line-height:1.4;margin:0}.facts dd.free{color:var(--accent)}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-bottom:42px;align-items:start}.section-index{font-size:12px;letter-spacing:.06em;font-weight:500;display:block;margin-bottom:13px}h2{font-size:36px;letter-spacing:-.035em;line-height:1.3;margin:0}p{margin-top:0}.section-head p{max-width:480px;color:var(--muted);margin:23px 0 0}.exchange{padding-bottom:86px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:38px;list-style:none;padding:0;margin:0}.steps li{border-top:1px solid var(--ink);padding-top:23px}.step-no{font-size:42px;line-height:1;color:var(--accent);display:block;margin-bottom:21px;letter-spacing:-.04em}.steps h3{font-size:20px;letter-spacing:-.02em;margin:0 0 10px}.steps p{font-size:15px;color:var(--muted);margin:0}.schedule{background:var(--ink);color:var(--paper);padding-block:58px}.schedule-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}.schedule h2{font-size:42px;max-width:350px}.schedule .schedule-note{font-size:14px;color:#ced6c8;margin-top:23px;max-width:300px}.timeline{list-style:none;margin:0;padding:0}.timeline li{display:grid;grid-template-columns:110px 1fr;gap:24px;padding:19px 0;border-top:1px solid #607469;align-items:baseline}.timeline li:last-child{border-bottom:1px solid #607469}.timeline time{font-size:30px;letter-spacing:-.045em;font-weight:500;color:var(--yellow)}.timeline h3{font-size:18px;margin:0}.timeline p{font-size:14px;margin:3px 0 0;color:#ced6c8}.registration{padding-block:86px}.registration-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px;align-items:start}.registration h2{font-size:44px;max-width:360px}.registration .description{font-size:16px;color:var(--muted);margin-top:21px;max-width:340px}.registration-note{border-left:3px solid var(--accent);padding-left:18px;max-width:350px;margin-top:38px;font-size:14px}.registration-note strong{display:block;margin-bottom:7px}form{padding:31px;background:var(--cream);border:1px solid var(--line)}.form-title{font-size:14px;font-weight:500;margin-bottom:24px;border-bottom:1px solid var(--line);padding-bottom:14px}.form-title span{float:right;color:var(--muted);font-size:12px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px}.field.full{grid-column:1/-1}label{display:block;font-size:14px;font-weight:500;margin-bottom:8px}label .optional{font-weight:400;color:var(--muted);font-size:12px}input,select,textarea{width:100%;min-height:49px;border:1px solid #89998a;border-radius:0;background:#fffdf8;color:var(--ink);padding:10px 12px;transition:border-color .18s}input:hover,select:hover,textarea:hover{border-color:var(--ink)}input:focus,select:focus,textarea:focus{border-color:var(--accent)}textarea{resize:vertical;min-height:128px;line-height:1.6}.help{color:var(--muted);font-size:12px;line-height:1.6;margin:7px 0 0}.note-foot{display:flex;justify-content:space-between;gap:20px}.note-foot p{max-width:400px}#counter{font-size:12px;white-space:nowrap;color:var(--muted);padding-top:7px}.feedback{margin-top:24px;padding:14px 16px;font-size:14px;border:1px solid var(--line);background:#f0f2e7;line-height:1.6;overflow-wrap:anywhere}.feedback strong{display:block;margin-bottom:3px}.feedback.error{color:var(--error);border-color:#dca79b;background:#fff0ea}.feedback.success{color:var(--success);border-color:#9fc1a4;background:#eaf3e5}.feedback.pending{color:var(--ink)}form .button{margin-top:18px;width:100%}.privacy{font-size:12px;color:var(--muted);margin:11px 0 0}.faq{padding-bottom:78px}.faq-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}.faq h2{font-size:32px}.faq details{border-top:1px solid var(--line);padding:18px 0}.faq details:last-child{border-bottom:1px solid var(--line)}summary{cursor:pointer;font-size:15px;font-weight:500;position:relative;padding-right:30px;list-style:none;min-height:28px}summary::-webkit-details-marker{display:none}summary:after{content:'+';position:absolute;right:3px;top:-4px;font-size:25px;font-weight:400}details[open] summary:after{content:'−'}details p{color:var(--muted);font-size:14px;margin:13px 0 1px;max-width:520px}footer{border-top:1px solid var(--line);padding-block:25px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}footer p{margin:0}.footer-name{font-weight:500;color:var(--ink)}.back-top{text-decoration:none}
+@media(min-width:1440px){.hero{padding-top:67px;padding-bottom:86px}}
+@media(max-width:900px){.wrap{padding-inline:32px}.hero{gap:12px}h1{font-size:49px}.facts{gap:18px;grid-template-columns:1fr 1fr}.facts dd{font-size:17px}.schedule-inner,.registration-grid,.faq-grid{gap:38px;grid-template-columns:.8fr 1.2fr}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.schedule h2,.registration h2{font-size:35px}.steps{gap:24px}form{padding:24px}.timeline li{grid-template-columns:86px 1fr;gap:15px}.timeline time{font-size:26px}}
+@media(max-width:640px){.wrap{padding-inline:22px}.notice{font-size:11px;padding:9px 18px}.header{padding-block:22px;gap:12px;align-items:flex-start}.brand{font-size:15px;max-width:145px;gap:9px}.brand svg{width:27px;height:30px}.nav{font-size:12px;gap:15px;padding-top:3px}.nav a:first-child{display:none}.hero{grid-template-columns:1fr;padding-top:30px;padding-bottom:36px;gap:27px}.eyebrow{font-size:11px;margin-bottom:20px}h1{font-size:43px;line-height:1.2;letter-spacing:-.052em;margin-bottom:22px}.intro{font-size:15px;margin-bottom:24px}.hero .button{min-height:52px}.hero .aside-note{font-size:11px}.book-scene{max-width:410px;margin:auto;width:100%}.book-scene svg{max-height:290px}.scene-caption{font-size:10px;padding-top:10px}.facts{padding-block:20px;gap:24px 16px;margin-bottom:53px;grid-template-columns:1fr 1fr}.facts dt{font-size:11px}.facts dd{font-size:16px}.facts dl:nth-child(3){grid-column:1/-1}.facts dl:nth-child(4){grid-column:2;grid-row:2}.facts dl:nth-child(3){grid-row:3}.section-head{grid-template-columns:1fr;gap:0;margin-bottom:30px}h2{font-size:30px}.section-head p{font-size:15px;margin-top:17px}.exchange{padding-bottom:53px}.steps{grid-template-columns:1fr;gap:25px}.steps li{display:grid;grid-template-columns:47px 1fr;column-gap:14px;padding-top:19px}.step-no{grid-row:1/3;font-size:31px;margin-top:4px}.steps h3{font-size:18px;margin-bottom:6px}.steps p{font-size:14px}.schedule{padding-block:39px}.schedule-inner,.registration-grid,.faq-grid{grid-template-columns:1fr;gap:29px}.schedule h2{font-size:32px;max-width:none}.schedule .schedule-note{font-size:13px;margin:17px 0 0;max-width:none}.timeline li{grid-template-columns:89px 1fr;gap:14px;padding-block:18px}.timeline time{font-size:27px}.timeline h3{font-size:17px}.timeline p{font-size:12px}.registration{padding-block:52px}.registration h2{font-size:34px;max-width:none}.registration .description{max-width:none;font-size:15px;margin-top:17px}.registration-note{margin-top:25px;max-width:none;font-size:13px}form{padding:22px 18px}.form-title{font-size:13px;margin-bottom:20px}.form-title span{font-size:11px}.fields{gap:20px}input,select,textarea{font-size:16px}.feedback{padding:13px 12px;font-size:13px}.faq{padding-bottom:45px}.faq h2{font-size:28px}.faq-grid{gap:22px}.faq details{padding-block:17px}summary{font-size:14px}footer{display:block;font-size:11px;padding-block:24px}footer p{margin-bottom:8px}.back-top{display:inline-block;margin-top:9px;min-height:30px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Đến nội dung chính</a>
+<div class="notice"><strong>BẢN MẪU GIAO DIỆN</strong> · Sự kiện hư cấu. Mọi đăng ký đều được mô phỏng trên trang.</div>
+<div class="wrap">
+<header class="header">
+<a class="brand" href="#main" aria-label="Đổi sách cuối tuần, đầu trang"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M3 7h12l3 4 3-4h12v23H21l-3 3-3-3H3V7Z" stroke="currentColor" stroke-width="2"/><path d="M18 11v20M7 13h7M7 18h7M22 13h7M22 18h7" stroke="currentColor" stroke-width="1.5"/></svg><span>Đổi sách<br>cuối tuần</span></a>
+<nav class="nav" aria-label="Điều hướng sự kiện"><a href="#cach-doi">Cách đổi sách</a><a href="#lich-trinh">Lịch trình</a><a class="nav-register" href="#dang-ky">Đăng ký ↗</a></nav>
+</header>
+</div>
+<main id="main">
+<div class="wrap">
+<section class="hero" aria-labelledby="hero-title">
+<div><p class="eyebrow">Một buổi sáng dành cho sách</p><h1 id="hero-title">Một cuốn sách<br>đã đọc.<br><span>Một câu chuyện<br>còn tiếp.</span></h1><p class="intro">Mang theo cuốn sách bạn đã đọc. Tìm một cuốn sách khác, rồi để câu chuyện tiếp tục với một người mới.</p><a class="button" href="#dang-ky">Đăng ký thử <span class="arrow" aria-hidden="true">↗</span></a><span class="aside-note">Tham gia miễn phí · Mang 1–3 cuốn sách</span></div>
+<figure class="book-scene" style="margin:0">
+<svg viewBox="0 0 540 490" role="img" aria-labelledby="book-title book-desc">
+<title id="book-title">Những cuốn sách đang chờ một người đọc mới</title><desc id="book-desc">Minh họa tự vẽ: hai cuốn sách đứng và một cuốn sách mở, với bìa xanh, vàng và đỏ đất; không phải ảnh của sách thật.</desc>
+<defs><pattern id="pages" width="8" height="6" patternUnits="userSpaceOnUse"><path d="M0 1h8" stroke="#c7bd9d" stroke-width=".65"/></pattern></defs>
+<ellipse cx="282" cy="429" rx="220" ry="15" fill="#dedfcc"/>
+<path d="M55 376c73-142 222-177 425-75" stroke="#adb49d" stroke-width="1" fill="none" stroke-dasharray="3 7"/>
+<g transform="translate(111 89) rotate(-14 80 170)"><path d="M6 9 166 0v302L6 311Z" fill="#668976" stroke="#203b32" stroke-width="2"/><path d="m166 0 22 11v302l-22-11Z" fill="#315b48" stroke="#203b32" stroke-width="2"/><path d="m12 305 154-9 16 10-154 9Z" fill="#efe6cc"/><path d="M22 33 143 26v219l-121 7Z" stroke="#cad7b2" fill="none"/><path d="m28 69 106-7M28 77l106-7M28 195l106-7" stroke="#cad7b2" stroke-width="2"/><path d="m68 95 30-2 16 51-44 5-19-31Z" fill="#e9c579"/><path d="m73 105 23 19-25 25" stroke="#315b48" fill="none"/><path d="m16 13 1 287" stroke="#315b48" stroke-width="2"/></g>
+<g transform="translate(265 58) rotate(10 70 170)"><path d="M0 13 139 0v335L0 345Z" fill="#eac979" stroke="#203b32" stroke-width="2"/><path d="m139 0 20 12v334l-20-11Z" fill="#bb9958" stroke="#203b32" stroke-width="2"/><path d="M16 43 123 33v272L16 313Z" fill="none" stroke="#826631"/><path d="M66 41v103l12-10 12 7V39" fill="#b8452a"/><path d="m35 218 70-7m-70 12 70-7m-70 12 70-7" stroke="#826631" stroke-width="2"/><path d="m18 329 121-10 14 9-121 10Z" fill="#f5eddb"/></g>
+<g transform="translate(36 286)"><path d="m19 55 191-26 93 5 147 73-194 50-25-12-28 8L8 78Z" fill="#a83c22" stroke="#203b32" stroke-width="2"/><path d="m28 52 175-21 28 107-27 9L22 75Z" fill="#ece2c8" stroke="#203b32"/><path d="m236 38 64-4 132 68-176 43-25-7Z" fill="#ece2c8" stroke="#203b32"/><path d="m28 52 175-21 28 100-27 9L22 68Z" fill="#fff8e5"/><path d="m236 38 64-4 132 62-176 43-25-8Z" fill="#fff8e5"/><path d="m203 31 28 100 5-93" fill="#d9cdb1"/><path d="m22 68 182 72M31 74l175 68m30-4 20 7 176-43" stroke="#c7bd9d" fill="none"/><path d="m45 57 119-12m-108 23 111-9m-98 20 101-6m-77 18 81-3m88-33 80 12m-81-2 101 17m-103-7 122 23m-124-13 99 17" stroke="#c3baa4" stroke-width="2"/><path d="m230 133 5 38 13-8 8 5-2-25" fill="#668976" stroke="#203b32"/></g>
+</svg>
+<figcaption class="scene-caption"><span>Sách cũ, hành trình mới.</span><span>Minh họa đồ vật</span></figcaption>
+</figure>
+</section>
+<section class="facts" aria-label="Thông tin sự kiện mẫu"><dl><dt>Ngày gặp nhau</dt><dd>18/10/2026</dd></dl><dl><dt>Thời gian</dt><dd>09:00–12:00</dd></dl><dl><dt>Địa điểm mẫu</dt><dd>Không gian mẫu, Quận 3</dd></dl><dl><dt>Phí tham gia</dt><dd class="free">Miễn phí</dd></dl></section>
+<section id="cach-doi" class="exchange" aria-labelledby="exchange-title"><div class="section-head"><div><span class="section-index">01 / CÁCH ĐỔI SÁCH</span><h2 id="exchange-title">Sách đến tay bạn.<br>Rồi đi xa hơn.</h2></div><p>Không cần một chồng sách lớn. Chỉ cần 1–3 cuốn còn đọc được và bạn sẵn lòng trao cho một người đọc khác.</p></div><ol class="steps"><li><span class="step-no" aria-hidden="true">01</span><h3>Chọn sách mang theo</h3><p>Chuẩn bị 1–3 cuốn sách trong tình trạng đọc được.</p></li><li><span class="step-no" aria-hidden="true">02</span><h3>Gặp nhau, trao đổi</h3><p>Mang sách đến buổi gặp, xem những cuốn sách khác và trao đổi cùng nhau.</p></li><li><span class="step-no" aria-hidden="true">03</span><h3>Tiếp một câu chuyện</h3><p>Chọn cuốn bạn muốn đọc tiếp. Nếu thích, chia sẻ đôi điều về cuốn sách đã mang.</p></li></ol></section>
+</div>
+<section id="lich-trinh" class="schedule" aria-labelledby="schedule-title"><div class="wrap schedule-inner"><div><span class="section-index">02 / LỊCH TRÌNH MẪU</span><h2 id="schedule-title">Ba giờ.<br>Nhiều trang mới.</h2><p class="schedule-note">18/10/2026 · 09:00–12:00<br>Không gian mẫu, Quận 3</p></div><ol class="timeline"><li><time>09:00</time><div><h3>Check-in</h3><p>Đến cùng những cuốn sách bạn mang theo.</p></div></li><li><time>09:30</time><div><h3>Đổi sách</h3><p>Xem sách và trao đổi cùng người đọc khác.</p></div></li><li><time>11:30</time><div><h3>Chia sẻ khép lại</h3><p>Một câu chuyện nhỏ trước khi kết thúc lúc 12:00.</p></div></li></ol></div></section>
+<div class="wrap">
+<section id="dang-ky" class="registration" aria-labelledby="registration-title"><div class="registration-grid"><div><span class="section-index">03 / ĐĂNG KÝ MẪU</span><h2 id="registration-title">Hẹn một buổi sáng<br>cùng sách.</h2><p class="description">Thử điền thông tin để trải nghiệm đăng ký. Bạn có thể ghi thêm nhu cầu hỗ trợ để kiểm tra biểu mẫu.</p><div class="registration-note"><strong>Đây là trải nghiệm mô phỏng.</strong>Sự kiện hư cấu, thông tin chỉ ở trong trang này. Lần xác nhận đầu sẽ mô phỏng lỗi; thử lại sẽ xác nhận đăng ký mẫu.</div></div>
+<form data-testid="work-form" id="registration-form" aria-labelledby="form-heading"><div class="form-title" id="form-heading">Thông tin đăng ký <span>* Bắt buộc</span></div><div class="fields"><div class="field"><label for="name">Họ và tên *</label><input id="name" name="name" autocomplete="name" required maxlength="100" placeholder="Tên của bạn"></div><div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="ban@example.com"></div><div class="field full"><label for="count">Số sách mang theo *</label><select id="count" name="count" required aria-describedby="count-help"><option value="">Chọn số cuốn sách</option><option value="1">1 cuốn sách</option><option value="2">2 cuốn sách</option><option value="3">3 cuốn sách</option></select><p id="count-help" class="help">Mang 1–3 cuốn sách trong tình trạng đọc được.</p></div><div class="field full"><label for="note">Nhu cầu hỗ trợ tiếp cận <span class="optional">(không bắt buộc)</span></label><textarea id="note" name="note" rows="4" maxlength="2000" aria-describedby="note-help counter" placeholder="Bạn có thể ghi nhu cầu di chuyển, chỗ ngồi hoặc hỗ trợ khác…"></textarea><div class="note-foot"><p id="note-help" class="help">Chỉ dùng dữ liệu mẫu. Đừng nhập thông tin nhạy cảm vào bản thử nghiệm.</p><span id="counter">0 / 2000</span></div></div></div>
+<div id="feedback" data-testid="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"><strong>Sẵn sàng thử đăng ký.</strong><span id="feedback-message">Lần xác nhận đầu mô phỏng lỗi. Thông tin đã điền sẽ được giữ nguyên để bạn thử lại.</span></div><button class="button" data-testid="primary" type="submit"><span id="submit-label">Xác nhận đăng ký mẫu</span><span class="arrow" aria-hidden="true">↗</span></button><p class="privacy">Không gửi email, không gửi thông tin ra ngoài trang. Tải lại trang sẽ xóa đăng ký mẫu.</p></form></div></section>
+<section class="faq" aria-labelledby="faq-title"><div class="faq-grid"><div><span class="section-index">04 / HỎI & ĐÁP</span><h2 id="faq-title">Trước khi mang<br>sách đi.</h2></div><div><details><summary>Tham gia có mất phí không?</summary><p>Theo thông tin sự kiện mẫu, tham gia miễn phí.</p></details><details><summary>Tôi nên mang bao nhiêu cuốn sách?</summary><p>Mang từ 1 đến 3 cuốn sách trong tình trạng đọc được. Bạn có thể chọn số cuốn ngay trong biểu mẫu đăng ký.</p></details><details><summary>Có yêu cầu về thể loại sách không?</summary><p>Thông tin mẫu chỉ yêu cầu 1–3 cuốn sách trong tình trạng đọc được, không quy định giới hạn thể loại.</p></details><details><summary>Đăng ký này có giữ chỗ thật không?</summary><p>Không. Đây là bản mẫu giao diện cho một sự kiện hư cấu. Nút xác nhận chỉ mô phỏng đăng ký tại chỗ; không có email hoặc dữ liệu nào được gửi đi.</p></details><details><summary>Tôi có thể ghi nhu cầu hỗ trợ ở đâu?</summary><p>Dùng ô “Nhu cầu hỗ trợ tiếp cận” trong biểu mẫu. Ô này không bắt buộc và cho phép ghi chú dài. Đây chỉ là phần thử giao diện, không xác nhận khả năng hỗ trợ của một địa điểm thực tế.</p></details></div></div></section>
+</div>
+</main>
+<div class="wrap">
+<footer><p class="footer-name">Đổi sách cuối tuần</p><p>Bản mẫu · Sự kiện hư cấu · Dữ liệu và thao tác mô phỏng</p><a class="back-top" href="#main">Về đầu trang ↑</a></footer>
+</div>
+<script>
+(() => {
+  'use strict';
+  const form = document.getElementById('registration-form');
+  const button = form.querySelector('[data-testid="primary"]');
+  const label = document.getElementById('submit-label');
+  const feedback = document.getElementById('feedback');
+  const note = document.getElementById('note');
+  const counter = document.getElementById('counter');
+  let attempted = false;
+  let busy = false;
+  let confirmed = false;
+  function announce(kind, title, message, moveFocus = true) {
+    feedback.className = 'feedback ' + kind;
+    feedback.replaceChildren();
+    const heading = document.createElement('strong');
+    heading.textContent = title;
+    const text = document.createElement('span');
+    text.textContent = message;
+    feedback.append(heading, text);
+    if (moveFocus) feedback.focus({ preventScroll: true });
+  }
+  function fail(moveFocus = true) {
+    attempted = true;
+    announce('error', 'Chưa xác nhận được đăng ký mẫu.', 'Đây là lỗi mô phỏng. Tất cả thông tin của bạn vẫn được giữ nguyên. Bấm “Thử lại đăng ký mẫu” để hoàn tất tại chỗ.', moveFocus);
+    label.textContent = 'Thử lại đăng ký mẫu';
+  }
+  note.addEventListener('input', () => { counter.textContent = note.value.length + ' / 2000'; });
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (busy || !form.reportValidity()) return;
+    const name = document.getElementById('name');
+    if (!name.value.trim()) {
+      name.setCustomValidity('Vui lòng nhập họ và tên, không chỉ khoảng trắng.');
+      name.reportValidity();
+      return;
+    }
+    name.setCustomValidity('');
+    busy = true;
+    button.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    label.textContent = 'Đang xác nhận mẫu…';
+    announce('pending', 'Đang xử lý tại chỗ…', 'Thông tin chỉ được dùng trong trang thử nghiệm này.', false);
+    window.setTimeout(() => {
+      if (!attempted) {
+        fail();
+      } else {
+        confirmed = true;
+        const count = document.getElementById('count').value;
+        announce('success', 'Đã xác nhận đăng ký mẫu.', name.value.trim() + ' · ' + count + ' cuốn sách. Hẹn mẫu: 18/10/2026, 09:00–12:00 tại Không gian mẫu, Quận 3. Không có email hay thông tin nào được gửi đi.');
+        label.textContent = 'Cập nhật đăng ký mẫu';
+      }
+      busy = false;
+      button.disabled = false;
+      form.removeAttribute('aria-busy');
+    }, 450);
+  });
+  document.getElementById('name').addEventListener('input', (event) => event.target.setCustomValidity(''));
+  form.addEventListener('input', () => {
+    if (confirmed && !busy) {
+      confirmed = false;
+      announce('', 'Bạn đang sửa đăng ký mẫu.', 'Thay đổi chưa được xác nhận. Bấm “Cập nhật đăng ký mẫu” để lưu tại chỗ.', false);
+    }
+  });
+  if (new URLSearchParams(window.location.search).get('state') === 'error') {
+    document.getElementById('name').value = 'Nguyễn An';
+    document.getElementById('email').value = 'an@example.com';
+    document.getElementById('count').value = '2';
+    fail(false);
+  }
+})();
+</script>
+</body>
+</html>

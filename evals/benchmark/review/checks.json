@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-08T15:42:07.269Z",
+  "browser": "154.0.8037.98",
+  "views": [
+    {
+      "width": 1440,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 390,
+      "noDocumentOverflow": true
+    },
+    {
+      "width": 320,
+      "noDocumentOverflow": true
+    }
+  ],
+  "checks": [
+    "no preselected winner",
+    "keyboard tabs",
+    "all views required",
+    "save and reload",
+    "image dialog Escape/focus return",
+    "JSON export preserves tie",
+    "reset requires choice and clears local votes"
+  ],
+  "errors": [],
+  "syntheticVotesRetained": false,
+  "limits": "Fresh automated browser context; test votes discarded, not human evidence."
+}

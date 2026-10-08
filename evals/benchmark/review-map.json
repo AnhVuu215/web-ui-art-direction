@@ -1,0 +1,28 @@
+[
+  {
+    "id": "X-01",
+    "briefId": "P2",
+    "scheduled": false,
+    "status": "complete",
+    "eligible": false,
+    "conditions": {
+      "A": "control",
+      "B": "skill"
+    },
+    "renderFingerprint": "ddf9306bb6d9b3ee8db6adff7c28c846e8393e2fe818a368f3fd6fec5e8ac50c",
+    "reason": "Earlier exploratory pilot; no pre-registration, imperfect control; public root-authored."
+  },
+  {
+    "id": "X-02",
+    "briefId": "P1",
+    "scheduled": false,
+    "status": "complete",
+    "eligible": false,
+    "conditions": {
+      "A": "skill",
+      "B": "control"
+    },
+    "renderFingerprint": "f425b5ecadf49dbd047b872a7c76f06b0f83c5152dd42d87641c0346870a7aa0",
+    "reason": "Earlier exploratory pilot; no pre-registration, imperfect control; public root-authored."
+  }
+]

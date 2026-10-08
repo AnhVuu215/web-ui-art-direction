@@ -1,0 +1,97 @@
+{
+  "at": "2026-10-08T15:43:31.895Z",
+  "browser": "154.0.8037.98",
+  "results": [
+    {
+      "pairId": "DARK-03",
+      "side": "A",
+      "sourceSha256": "a93a777af5992424057c8b377e47b8a6415a42ac5edd5c49a5cbb3cb14d81c58",
+      "views": {
+        "default-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        },
+        "error-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        },
+        "default-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        },
+        "error-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        }
+      },
+      "checks": [
+        {
+          "name": "error-route keyboard retry reports success",
+          "passed": true,
+          "valuesAtFailure": [
+            {
+              "name": "reviewer",
+              "value": "Thu Hà"
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "manualTaskAudit": "pending"
+    },
+    {
+      "pairId": "DARK-03",
+      "side": "B",
+      "sourceSha256": "eed6db5d22a01097872315a1f70d52f16d9ad687b0e62619cc0abb743f693b96",
+      "views": {
+        "default-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        },
+        "error-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        },
+        "default-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        },
+        "error-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "noDocumentOverflow": true,
+          "fontsLoaded": 3
+        }
+      },
+      "checks": [
+        {
+          "name": "error-route keyboard retry reports success",
+          "passed": true,
+          "valuesAtFailure": [
+            {
+              "name": "reviewer",
+              "value": "Thu Hà"
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "manualTaskAudit": "pending"
+    }
+  ],
+  "limits": "First attempts retained. Generic retry check supplements, not replaces, per-brief task audit and owner review."
+}

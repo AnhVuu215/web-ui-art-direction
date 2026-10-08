@@ -1,0 +1,636 @@
+{
+  "studyId": "ui-paired-v1-2026-10-08",
+  "planSha256": "6b8645e006d7af63ec98d413c9d8fcb34988160a1fa174a92334d7bc4a94fef7",
+  "skillCommit": "a578204ff16983b18c2cd0dc41e6829357cfee2c",
+  "createdAt": "2026-10-08T15:34:49.634Z",
+  "model": null,
+  "modelAvailability": "exact ID not exposed by inherited subagent tool",
+  "resourceBudgetEnforced": false,
+  "generationAvailable": null,
+  "pairs": [
+    {
+      "id": "DARK-03",
+      "briefId": "DARK",
+      "title": "Khung — existing dark production queue",
+      "brief": "Fictional video-edit production queue Khung. Established dark working system: canvas #14171c, surface #20262f, light text #eef2f6, amber #ffbd5a for primary, distinct error and success roles. Preserve dark mode on list/detail/edit; do not introduce a light task surface. Three mock jobs: K-01 'Những người giữ nhịp phố', Đang dựng, Mai Anh; K-02 'Một bữa cơm trước bình minh', Chờ duyệt, Minh Khang; K-03 'Chuyến xe cuối ngày', Hoàn tất, Thu Hà. Filter status -> open K-02 -> change reviewer to Thu Hà -> save failure -> retry -> return same filter updated name. Show job as work artifact via clear metadata, not invented thumbnail photography, timeline or analytics. Main task first. Error query opens K-02 with Thu Hà selected and failure.",
+      "scheduled": true,
+      "status": "complete",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/DARK-03/a",
+          "promptFile": "evals/benchmark/prompts/DARK-03-A.txt",
+          "promptSha256": "1afa1df32478a3c62f5448d9dd30038933e213a6746fed1c0e1b3cbb804a1b24",
+          "status": "complete",
+          "attempts": [
+            {
+              "status": "running",
+              "at": "2026-10-08T15:38:06.237Z",
+              "note": "Fresh explicit-skill context dispatched using frozen prompt; no control output inspected."
+            },
+            {
+              "status": "complete",
+              "at": "2026-10-08T15:43:21.899Z",
+              "note": "Agent /root/benchmark_dark_03_a returned index/report; original images opened; no root repair or render feedback."
+            }
+          ],
+          "sourceSha256": "a93a777af5992424057c8b377e47b8a6415a42ac5edd5c49a5cbb3cb14d81c58"
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/DARK-03/b",
+          "promptFile": "evals/benchmark/prompts/DARK-03-B.txt",
+          "promptSha256": "a6fc6ce4424c976cf3abacb6c6a917078597721ff3b89a72f712db5e30b1f0e7",
+          "status": "complete",
+          "attempts": [
+            {
+              "status": "running",
+              "at": "2026-10-08T15:35:10.038Z",
+              "note": "Fresh control context dispatched using exact frozen prompt; inherited model, no override."
+            },
+            {
+              "status": "complete",
+              "at": "2026-10-08T15:40:26.606Z",
+              "note": "Agent /root/benchmark_dark_03_b returned two files; no root repair; original images opened per report. Browser checks pending."
+            }
+          ],
+          "sourceSha256": "eed6db5d22a01097872315a1f70d52f16d9ad687b0e62619cc0abb743f693b96"
+        }
+      },
+      "renderFingerprint": "a5cc5fe928321da1954b7e3ffae06bd5086ef96d5e5791dddc786ebfbd99539e"
+    },
+    {
+      "id": "EVENT-02",
+      "briefId": "EVENT",
+      "title": "Đổi sách cuối tuần — community registration",
+      "brief": "Fictional community event page 'Đổi sách cuối tuần'. Exact supplied demo facts: 18/10/2026, 09:00–12:00, 'Không gian mẫu, Quận 3'; participation free; bring 1–3 books in readable condition, no textbook restriction invented. Headline 'Một cuốn sách đã đọc. Một câu chuyện còn tiếp.' Clear event identity, how exchange works, schedule with three supplied slots 09:00 check-in,09:30 exchange,11:30 close sharing; FAQ with native disclosure; registration name/email/book count1–3 and long optional accessibility note. Do not invent sponsors, attendance, testimonials, organizers or contact details. No photography available; typography and truthful object illustration only. Submit first fails preserving fields, retry confirms demo registration. Error query pre-fills name/email/count2 and failure. Avoid implying a real public event exists; prototype label visible.",
+      "scheduled": true,
+      "status": "complete",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/EVENT-02/a",
+          "promptFile": "evals/benchmark/prompts/EVENT-02-A.txt",
+          "promptSha256": "ed41034d895716d5cd070bd5af5f713c369697b8d0152d6c77434785ba2ff678",
+          "status": "complete",
+          "attempts": [
+            {
+              "status": "running",
+              "at": "2026-10-08T15:39:14.043Z",
+              "note": "Fresh control context dispatched from frozen prompt, no prior output read."
+            },
+            {
+              "status": "complete",
+              "at": "2026-10-08T15:53:32.335Z",
+              "note": "Fresh control context completed before user pause; browser opportunity pending."
+            }
+          ],
+          "sourceSha256": "342c2c1f85228b2fa9e6fd624e10bbaeeb7662a1b17dfa21ec95a569f928a700"
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/EVENT-02/b",
+          "promptFile": "evals/benchmark/prompts/EVENT-02-B.txt",
+          "promptSha256": "618a1a0e5881dfa0a17c29eba0f66ec5d2e4566a314f7c1262e2e2f30d73f955",
+          "status": "complete",
+          "attempts": [
+            {
+              "status": "running",
+              "at": "2026-10-08T15:40:26.870Z",
+              "note": "Fresh explicit-skill context dispatched; paired control not inspected."
+            },
+            {
+              "status": "complete",
+              "at": "2026-10-08T15:53:32.703Z",
+              "note": "Fresh skill context completed before user pause; browser opportunity pending."
+            }
+          ],
+          "sourceSha256": "e5cef3766b5801e227f56ea2533896e2f0c8c97551920d293bcee9de0977c044"
+        }
+      }
+    },
+    {
+      "id": "INVENTORY-03",
+      "briefId": "INVENTORY",
+      "title": "Kho Nhỏ — dense stock workspace",
+      "brief": "Fictional inventory workspace Kho Nhỏ. Generate exactly 60 deterministic mock rows: IDs SKU-001 to SKU-060, names 'Mặt hàng mẫu 01' through 'Mặt hàng mẫu 60', quantity = index modulo 9, unit 'chiếc', status 'Hết hàng' when quantity 0, 'Sắp hết' when 1 or 2, otherwise 'Còn hàng'. No fabricated performance analytics. Implement labeled search by ID/name, status filter, visible result count computed from data, dense readable rows/table with narrow-screen alternative or labeled horizontal scrolling. Clicking SKU-001 opens quantity edit; reject negative values with nearby text. Edit quantity from 1 to 5, first save fails then retry updates visible row. Return preserves search/filter. Keep table visible early; no campaign banner above it. URL ?state=error opens SKU-001 edit with 5 entered and simulated failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/INVENTORY-03/a",
+          "promptFile": "evals/benchmark/prompts/INVENTORY-03-A.txt",
+          "promptSha256": "67d22b33cb4b2a15d606d0a51ba3966d6ee86f13b2f3b90dc8254f034e400505",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/INVENTORY-03/b",
+          "promptFile": "evals/benchmark/prompts/INVENTORY-03-B.txt",
+          "promptSha256": "09d71c41adaef5787bd838373376c3e60a8d040f856bd465c13fc2328f91f884",
+          "status": "interrupted-user",
+          "attempts": [
+            {
+              "status": "running",
+              "at": "2026-10-08T15:44:21.327Z",
+              "note": "Fresh control context, raw frozen prompt, no prior output."
+            },
+            {
+              "status": "interrupted-user",
+              "at": "2026-10-08T15:54:24.032Z",
+              "note": "User requested checkpoint commit and resume tomorrow. HTML exists; report absent. Not counted complete."
+            }
+          ],
+          "partialSourceSha256": "f2f5f2e6fb77a9d9f7d1f99b475fdc04993fbd302ba4ead2f54f4aade4896265"
+        }
+      }
+    },
+    {
+      "id": "LIBRARY-02",
+      "briefId": "LIBRARY",
+      "title": "Thư viện Lam — fixed cool brand",
+      "brief": "Fictional library reservation flow Thư viện Lam with established brand: navy #16324f, paper white #f8fbff, blue #275dad, restrained serif display using local system Georgia, BeVietnamPro for labels/body; no orange/red brand accent, no campaign gradient. Catalog three mock titles: 'Những đường về' by 'Tác giả mẫu A', 'Một mùa gió' by 'Tác giả mẫu B', 'Đọc chậm lại' by 'Tác giả mẫu C'. Authors explicitly sample, no real reviews or popularity metrics. Search titles -> select book -> reserve form full name/email/pickup date -> demo failure -> retry confirmation naming selected title. Date must not be before 2026-10-08 in this frozen prototype; explain date rule. Preserve selected book and input. Error query opens 'Một mùa gió' reservation with sample valid fields, date2026-10-12 and failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/LIBRARY-02/a",
+          "promptFile": "evals/benchmark/prompts/LIBRARY-02-A.txt",
+          "promptSha256": "f743b92181a875ac655bd4e152df887a41aa701d21f774972732c0f225658992",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/LIBRARY-02/b",
+          "promptFile": "evals/benchmark/prompts/LIBRARY-02-B.txt",
+          "promptSha256": "dba99edfa6ac974dc55998995d14fd5cfc76f4cabaa355c7be73e7f417df74ac",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "COMPONENT-03",
+      "briefId": "COMPONENT",
+      "title": "Mạch — established settings details",
+      "brief": "Improve only a settings surface for fictional product Mạch. Fixed existing system: white canvas, dark text #20252b, blue primary #235bd1, 8px controls radius, sans body; no oversized hero, photography, orange or new visual brand. Header Mạch, destinations Tổng quan (current-page explanatory disabled/sample only), Cài đặt active, Trợ giúp (inline disclosure with useful sample explanation). Settings tabs Hồ sơ/Thông báo with correct arrow keyboard navigation. Profile fields tên hiển thị, email, language select Việt/English. Save first fails preserving input, retry succeeds locally. Button hierarchy, helper/error text and focus matter. Add labeled 'Đổi tên không gian' dialog with cancel/confirm and focus return; mock pending rename distinct from profile save. Error query pre-fills profile and save failure. Keep within small component task, no unrelated dashboard.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/COMPONENT-03/a",
+          "promptFile": "evals/benchmark/prompts/COMPONENT-03-A.txt",
+          "promptSha256": "ee5afa2a38b710feadc1c6112a53e618a2d791bdf8485bb0b2ecf9bdc2c3b2a3",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/COMPONENT-03/b",
+          "promptFile": "evals/benchmark/prompts/COMPONENT-03-B.txt",
+          "promptSha256": "f1d00e1a2c7b4086ab03f11d7209a0aaa6e5ca396e8bcef9ac109c0db9ff9333",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "INVENTORY-02",
+      "briefId": "INVENTORY",
+      "title": "Kho Nhỏ — dense stock workspace",
+      "brief": "Fictional inventory workspace Kho Nhỏ. Generate exactly 60 deterministic mock rows: IDs SKU-001 to SKU-060, names 'Mặt hàng mẫu 01' through 'Mặt hàng mẫu 60', quantity = index modulo 9, unit 'chiếc', status 'Hết hàng' when quantity 0, 'Sắp hết' when 1 or 2, otherwise 'Còn hàng'. No fabricated performance analytics. Implement labeled search by ID/name, status filter, visible result count computed from data, dense readable rows/table with narrow-screen alternative or labeled horizontal scrolling. Clicking SKU-001 opens quantity edit; reject negative values with nearby text. Edit quantity from 1 to 5, first save fails then retry updates visible row. Return preserves search/filter. Keep table visible early; no campaign banner above it. URL ?state=error opens SKU-001 edit with 5 entered and simulated failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/INVENTORY-02/a",
+          "promptFile": "evals/benchmark/prompts/INVENTORY-02-A.txt",
+          "promptSha256": "4532f858d89e5608761c674694e96d1273dca9026ac7bb47938e0d1fac8f6e40",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/INVENTORY-02/b",
+          "promptFile": "evals/benchmark/prompts/INVENTORY-02-B.txt",
+          "promptSha256": "1172c6d517563bf68908105ede6b386b157612d8d919618abc001b73b6b01c76",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "LIBRARY-01",
+      "briefId": "LIBRARY",
+      "title": "Thư viện Lam — fixed cool brand",
+      "brief": "Fictional library reservation flow Thư viện Lam with established brand: navy #16324f, paper white #f8fbff, blue #275dad, restrained serif display using local system Georgia, BeVietnamPro for labels/body; no orange/red brand accent, no campaign gradient. Catalog three mock titles: 'Những đường về' by 'Tác giả mẫu A', 'Một mùa gió' by 'Tác giả mẫu B', 'Đọc chậm lại' by 'Tác giả mẫu C'. Authors explicitly sample, no real reviews or popularity metrics. Search titles -> select book -> reserve form full name/email/pickup date -> demo failure -> retry confirmation naming selected title. Date must not be before 2026-10-08 in this frozen prototype; explain date rule. Preserve selected book and input. Error query opens 'Một mùa gió' reservation with sample valid fields, date2026-10-12 and failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/LIBRARY-01/a",
+          "promptFile": "evals/benchmark/prompts/LIBRARY-01-A.txt",
+          "promptSha256": "b450d80d64819f31c64fc65e4f9125ad1a6f4e28c7b4f92bdd6d526df86f452b",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/LIBRARY-01/b",
+          "promptFile": "evals/benchmark/prompts/LIBRARY-01-B.txt",
+          "promptSha256": "00d1af119121ba76d63cee908462820432844ca9b8699698e5d45b891102b158",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "EVENT-03",
+      "briefId": "EVENT",
+      "title": "Đổi sách cuối tuần — community registration",
+      "brief": "Fictional community event page 'Đổi sách cuối tuần'. Exact supplied demo facts: 18/10/2026, 09:00–12:00, 'Không gian mẫu, Quận 3'; participation free; bring 1–3 books in readable condition, no textbook restriction invented. Headline 'Một cuốn sách đã đọc. Một câu chuyện còn tiếp.' Clear event identity, how exchange works, schedule with three supplied slots 09:00 check-in,09:30 exchange,11:30 close sharing; FAQ with native disclosure; registration name/email/book count1–3 and long optional accessibility note. Do not invent sponsors, attendance, testimonials, organizers or contact details. No photography available; typography and truthful object illustration only. Submit first fails preserving fields, retry confirms demo registration. Error query pre-fills name/email/count2 and failure. Avoid implying a real public event exists; prototype label visible.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/EVENT-03/a",
+          "promptFile": "evals/benchmark/prompts/EVENT-03-A.txt",
+          "promptSha256": "ee39076857b7944d3573d4b7fe7538b8a3e694221365745b73685195dd8c7a4d",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/EVENT-03/b",
+          "promptFile": "evals/benchmark/prompts/EVENT-03-B.txt",
+          "promptSha256": "d95d3b0c59a8c129b0bdce5907c9e286261beed89bab40a3a241b8827ab0a766",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "COMPONENT-01",
+      "briefId": "COMPONENT",
+      "title": "Mạch — established settings details",
+      "brief": "Improve only a settings surface for fictional product Mạch. Fixed existing system: white canvas, dark text #20252b, blue primary #235bd1, 8px controls radius, sans body; no oversized hero, photography, orange or new visual brand. Header Mạch, destinations Tổng quan (current-page explanatory disabled/sample only), Cài đặt active, Trợ giúp (inline disclosure with useful sample explanation). Settings tabs Hồ sơ/Thông báo with correct arrow keyboard navigation. Profile fields tên hiển thị, email, language select Việt/English. Save first fails preserving input, retry succeeds locally. Button hierarchy, helper/error text and focus matter. Add labeled 'Đổi tên không gian' dialog with cancel/confirm and focus return; mock pending rename distinct from profile save. Error query pre-fills profile and save failure. Keep within small component task, no unrelated dashboard.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/COMPONENT-01/a",
+          "promptFile": "evals/benchmark/prompts/COMPONENT-01-A.txt",
+          "promptSha256": "ff402385fa591378fe9d7dda6a57b7a7c12be49290b347972d17543b9878f2b6",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/COMPONENT-01/b",
+          "promptFile": "evals/benchmark/prompts/COMPONENT-01-B.txt",
+          "promptSha256": "ac3a36bd3a4198e182a197db6eb8d37e21f48f5825fd5666ceea2d7decb67faf",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "CERAMIC-03",
+      "briefId": "CERAMIC",
+      "title": "Bờ Gốm — craft catalog",
+      "brief": "Fictional craft studio Bờ Gốm. Headline 'Những vật nhỏ, ở lại lâu.' Showcase exactly three sample objects: Cốc mộc (men nâu, 250 ml), Bát sớm (men ngà, đường kính 16 cm), Bình hiên (men tro, cao 22 cm). No photography is supplied; use typography and original CSS/SVG object illustrations explicitly labeled illustrations, never pretend they are product photos. Sections opening, object collection, care instructions (rửa bằng tay; tránh thay đổi nhiệt độ đột ngột), and inquiry form. Inquiry has name/email/product select/message, main CTA anchors to form. No prices, delivery promise or sales statistics. Keep warm editorial owner taste when visually useful. Submit first fails as demo, retry confirms locally; retain all fields. Error query pre-fills sample fields.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/CERAMIC-03/a",
+          "promptFile": "evals/benchmark/prompts/CERAMIC-03-A.txt",
+          "promptSha256": "d14939327c33559a7c93d6dac753179ee9bd5b79308b962efbf86dd64bfee0da",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/CERAMIC-03/b",
+          "promptFile": "evals/benchmark/prompts/CERAMIC-03-B.txt",
+          "promptSha256": "ed6746339210458f3bd320fe190b2954aa4ca611c4ecb272ccbb231c0c615e35",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "DARK-01",
+      "briefId": "DARK",
+      "title": "Khung — existing dark production queue",
+      "brief": "Fictional video-edit production queue Khung. Established dark working system: canvas #14171c, surface #20262f, light text #eef2f6, amber #ffbd5a for primary, distinct error and success roles. Preserve dark mode on list/detail/edit; do not introduce a light task surface. Three mock jobs: K-01 'Những người giữ nhịp phố', Đang dựng, Mai Anh; K-02 'Một bữa cơm trước bình minh', Chờ duyệt, Minh Khang; K-03 'Chuyến xe cuối ngày', Hoàn tất, Thu Hà. Filter status -> open K-02 -> change reviewer to Thu Hà -> save failure -> retry -> return same filter updated name. Show job as work artifact via clear metadata, not invented thumbnail photography, timeline or analytics. Main task first. Error query opens K-02 with Thu Hà selected and failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/DARK-01/a",
+          "promptFile": "evals/benchmark/prompts/DARK-01-A.txt",
+          "promptSha256": "f32f5176e75451fe26deca0e82be3f0db4114a6be4f0c7994f2fdc9f8aa93ac5",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/DARK-01/b",
+          "promptFile": "evals/benchmark/prompts/DARK-01-B.txt",
+          "promptSha256": "9b5fc3b26e506b1484f43df4571f5335b928f7c4bcd7d18a0f91a566c53d2fc5",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "CERAMIC-02",
+      "briefId": "CERAMIC",
+      "title": "Bờ Gốm — craft catalog",
+      "brief": "Fictional craft studio Bờ Gốm. Headline 'Những vật nhỏ, ở lại lâu.' Showcase exactly three sample objects: Cốc mộc (men nâu, 250 ml), Bát sớm (men ngà, đường kính 16 cm), Bình hiên (men tro, cao 22 cm). No photography is supplied; use typography and original CSS/SVG object illustrations explicitly labeled illustrations, never pretend they are product photos. Sections opening, object collection, care instructions (rửa bằng tay; tránh thay đổi nhiệt độ đột ngột), and inquiry form. Inquiry has name/email/product select/message, main CTA anchors to form. No prices, delivery promise or sales statistics. Keep warm editorial owner taste when visually useful. Submit first fails as demo, retry confirms locally; retain all fields. Error query pre-fills sample fields.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/CERAMIC-02/a",
+          "promptFile": "evals/benchmark/prompts/CERAMIC-02-A.txt",
+          "promptSha256": "9741c778a55d633da0ff5f29e3bc0605c5d3e3560b46f6154a95dcd510af3e16",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/CERAMIC-02/b",
+          "promptFile": "evals/benchmark/prompts/CERAMIC-02-B.txt",
+          "promptSha256": "1168605c5b74bfaae0b924df0e282ea2b5c5d02747b47f3d87173d462a9ae1b3",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "COMPONENT-02",
+      "briefId": "COMPONENT",
+      "title": "Mạch — established settings details",
+      "brief": "Improve only a settings surface for fictional product Mạch. Fixed existing system: white canvas, dark text #20252b, blue primary #235bd1, 8px controls radius, sans body; no oversized hero, photography, orange or new visual brand. Header Mạch, destinations Tổng quan (current-page explanatory disabled/sample only), Cài đặt active, Trợ giúp (inline disclosure with useful sample explanation). Settings tabs Hồ sơ/Thông báo with correct arrow keyboard navigation. Profile fields tên hiển thị, email, language select Việt/English. Save first fails preserving input, retry succeeds locally. Button hierarchy, helper/error text and focus matter. Add labeled 'Đổi tên không gian' dialog with cancel/confirm and focus return; mock pending rename distinct from profile save. Error query pre-fills profile and save failure. Keep within small component task, no unrelated dashboard.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/COMPONENT-02/a",
+          "promptFile": "evals/benchmark/prompts/COMPONENT-02-A.txt",
+          "promptSha256": "6676e5a10af41a9103d98dca8aac0783b2d77555af309c731ba2594ee38558eb",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/COMPONENT-02/b",
+          "promptFile": "evals/benchmark/prompts/COMPONENT-02-B.txt",
+          "promptSha256": "5fe11fbda73ab4484a6e8189cbf324e6f73b5de1c59e78655f184257cd40e8e3",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "EVENT-01",
+      "briefId": "EVENT",
+      "title": "Đổi sách cuối tuần — community registration",
+      "brief": "Fictional community event page 'Đổi sách cuối tuần'. Exact supplied demo facts: 18/10/2026, 09:00–12:00, 'Không gian mẫu, Quận 3'; participation free; bring 1–3 books in readable condition, no textbook restriction invented. Headline 'Một cuốn sách đã đọc. Một câu chuyện còn tiếp.' Clear event identity, how exchange works, schedule with three supplied slots 09:00 check-in,09:30 exchange,11:30 close sharing; FAQ with native disclosure; registration name/email/book count1–3 and long optional accessibility note. Do not invent sponsors, attendance, testimonials, organizers or contact details. No photography available; typography and truthful object illustration only. Submit first fails preserving fields, retry confirms demo registration. Error query pre-fills name/email/count2 and failure. Avoid implying a real public event exists; prototype label visible.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/EVENT-01/a",
+          "promptFile": "evals/benchmark/prompts/EVENT-01-A.txt",
+          "promptSha256": "02032288dde61abf6c8ff211416ff26174ce664870a3af22c57f4c755039ca50",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/EVENT-01/b",
+          "promptFile": "evals/benchmark/prompts/EVENT-01-B.txt",
+          "promptSha256": "5b14543a39e974d18812e7d5f9f4ef81ce2277c5c4df0f666477c31de82a3f93",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "INVENTORY-01",
+      "briefId": "INVENTORY",
+      "title": "Kho Nhỏ — dense stock workspace",
+      "brief": "Fictional inventory workspace Kho Nhỏ. Generate exactly 60 deterministic mock rows: IDs SKU-001 to SKU-060, names 'Mặt hàng mẫu 01' through 'Mặt hàng mẫu 60', quantity = index modulo 9, unit 'chiếc', status 'Hết hàng' when quantity 0, 'Sắp hết' when 1 or 2, otherwise 'Còn hàng'. No fabricated performance analytics. Implement labeled search by ID/name, status filter, visible result count computed from data, dense readable rows/table with narrow-screen alternative or labeled horizontal scrolling. Clicking SKU-001 opens quantity edit; reject negative values with nearby text. Edit quantity from 1 to 5, first save fails then retry updates visible row. Return preserves search/filter. Keep table visible early; no campaign banner above it. URL ?state=error opens SKU-001 edit with 5 entered and simulated failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/INVENTORY-01/a",
+          "promptFile": "evals/benchmark/prompts/INVENTORY-01-A.txt",
+          "promptSha256": "f3454df6c2fd7c5669e68c710942f79e25efd3672de97d7f295713d71dcc3402",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/INVENTORY-01/b",
+          "promptFile": "evals/benchmark/prompts/INVENTORY-01-B.txt",
+          "promptSha256": "06f0da0757ab6c2b58cc89bc36b99cf5dd460ddbb089fdfe1d0ba14454b0de2d",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "DARK-02",
+      "briefId": "DARK",
+      "title": "Khung — existing dark production queue",
+      "brief": "Fictional video-edit production queue Khung. Established dark working system: canvas #14171c, surface #20262f, light text #eef2f6, amber #ffbd5a for primary, distinct error and success roles. Preserve dark mode on list/detail/edit; do not introduce a light task surface. Three mock jobs: K-01 'Những người giữ nhịp phố', Đang dựng, Mai Anh; K-02 'Một bữa cơm trước bình minh', Chờ duyệt, Minh Khang; K-03 'Chuyến xe cuối ngày', Hoàn tất, Thu Hà. Filter status -> open K-02 -> change reviewer to Thu Hà -> save failure -> retry -> return same filter updated name. Show job as work artifact via clear metadata, not invented thumbnail photography, timeline or analytics. Main task first. Error query opens K-02 with Thu Hà selected and failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/DARK-02/a",
+          "promptFile": "evals/benchmark/prompts/DARK-02-A.txt",
+          "promptSha256": "5f0f6a0696f7116f6219306ec0795ab05a892ff8b67cbe831c5a29620b9f48b8",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/DARK-02/b",
+          "promptFile": "evals/benchmark/prompts/DARK-02-B.txt",
+          "promptSha256": "55866ca22f72a5b141ae9305c58562ee6d91429d1423c545349e327a3751859d",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "CERAMIC-01",
+      "briefId": "CERAMIC",
+      "title": "Bờ Gốm — craft catalog",
+      "brief": "Fictional craft studio Bờ Gốm. Headline 'Những vật nhỏ, ở lại lâu.' Showcase exactly three sample objects: Cốc mộc (men nâu, 250 ml), Bát sớm (men ngà, đường kính 16 cm), Bình hiên (men tro, cao 22 cm). No photography is supplied; use typography and original CSS/SVG object illustrations explicitly labeled illustrations, never pretend they are product photos. Sections opening, object collection, care instructions (rửa bằng tay; tránh thay đổi nhiệt độ đột ngột), and inquiry form. Inquiry has name/email/product select/message, main CTA anchors to form. No prices, delivery promise or sales statistics. Keep warm editorial owner taste when visually useful. Submit first fails as demo, retry confirms locally; retain all fields. Error query pre-fills sample fields.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "skill",
+        "B": "control"
+      },
+      "runs": {
+        "A": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/CERAMIC-01/a",
+          "promptFile": "evals/benchmark/prompts/CERAMIC-01-A.txt",
+          "promptSha256": "3ecffe14caf4dac7972d5fa82ffec6cae9cefe0025f661a9230a7fd0028513b7",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/CERAMIC-01/b",
+          "promptFile": "evals/benchmark/prompts/CERAMIC-01-B.txt",
+          "promptSha256": "db7348ed9dbb98305ee84e4333ca89b65234319b39a6adab65a9dfccc5368ea3",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    },
+    {
+      "id": "LIBRARY-03",
+      "briefId": "LIBRARY",
+      "title": "Thư viện Lam — fixed cool brand",
+      "brief": "Fictional library reservation flow Thư viện Lam with established brand: navy #16324f, paper white #f8fbff, blue #275dad, restrained serif display using local system Georgia, BeVietnamPro for labels/body; no orange/red brand accent, no campaign gradient. Catalog three mock titles: 'Những đường về' by 'Tác giả mẫu A', 'Một mùa gió' by 'Tác giả mẫu B', 'Đọc chậm lại' by 'Tác giả mẫu C'. Authors explicitly sample, no real reviews or popularity metrics. Search titles -> select book -> reserve form full name/email/pickup date -> demo failure -> retry confirmation naming selected title. Date must not be before 2026-10-08 in this frozen prototype; explain date rule. Preserve selected book and input. Error query opens 'Một mùa gió' reservation with sample valid fields, date2026-10-12 and failure.",
+      "scheduled": true,
+      "status": "pending",
+      "eligible": false,
+      "conditions": {
+        "A": "control",
+        "B": "skill"
+      },
+      "runs": {
+        "A": {
+          "condition": "control",
+          "directory": "evals/benchmark/artifacts/LIBRARY-03/a",
+          "promptFile": "evals/benchmark/prompts/LIBRARY-03-A.txt",
+          "promptSha256": "48d3b841181d3872517d37bd9574a7175a75252a26a8f9b996361ba45eeab2be",
+          "status": "pending",
+          "attempts": []
+        },
+        "B": {
+          "condition": "skill",
+          "directory": "evals/benchmark/artifacts/LIBRARY-03/b",
+          "promptFile": "evals/benchmark/prompts/LIBRARY-03-B.txt",
+          "promptSha256": "4fc521f2cb844213063e20238a30aaad4ed504d5472174d22cce7bf621c42542",
+          "status": "pending",
+          "attempts": []
+        }
+      }
+    }
+  ],
+  "checkpoint": {
+    "status": "paused-by-user",
+    "at": "2026-10-08T15:54:24.051Z",
+    "note": "No further generation dispatched. Resume instructions in CHECKPOINT.md. No owner votes received."
+  }
+}

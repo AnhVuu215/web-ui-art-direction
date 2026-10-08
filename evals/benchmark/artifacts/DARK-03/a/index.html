@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Khung — Hàng đợi sản xuất</title>
+<style>
+@font-face{font-family:Be Vietnam Pro;src:url('../../../../../assets/fonts/BeVietnamPro-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Be Vietnam Pro;src:url('../../../../../assets/fonts/BeVietnamPro-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Be Vietnam Pro;src:url('../../../../../assets/fonts/BeVietnamPro-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{color-scheme:dark;--canvas:#14171c;--surface:#20262f;--text:#eef2f6;--muted:#aab4c3;--border:#3a4350;--amber:#ffbd5a;--success:#9be0b6;--error:#ffaaaa}
+*{box-sizing:border-box}body{margin:0;background:var(--canvas);color:var(--text);font:14px/1.65 'Be Vietnam Pro',sans-serif}button,select{font:inherit}button,a,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:wait;opacity:.65}button:focus-visible,a:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--amber);outline-offset:5px}button,select{min-height:46px}button{border:1px solid var(--border);color:var(--text);background:transparent;border-radius:7px;padding:10px 18px;font-weight:500}button:hover{background:#2b333e;border-color:#6e7c8d}.primary{color:#231b0e;background:var(--amber);border-color:var(--amber);font-weight:700}.primary:hover{background:#ffcd81;border-color:#ffcd81}a{color:inherit;text-decoration:none}.topbar{padding:0 44px;height:88px;display:flex;align-items:center;gap:48px;border-bottom:1px solid var(--border)}.brand{font-size:25px;font-weight:700;letter-spacing:-1px;display:flex;gap:11px;align-items:center}.brand-mark{width:25px;height:25px;position:relative;border:3px solid var(--amber);border-radius:2px}.brand-mark:after{content:'';position:absolute;left:6px;top:-5px;bottom:-5px;width:6px;background:var(--canvas)}.nav-label{height:88px;display:flex;align-items:center;border-bottom:3px solid var(--amber);font-size:13px}.demo{margin-left:auto;color:var(--muted);display:flex;align-items:center;gap:9px;font-size:12px}.demo:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--amber)}main{max-width:1280px;padding:56px 44px 40px;margin:auto}.eyebrow{font-size:11px;color:var(--muted);letter-spacing:1.8px;text-transform:uppercase;margin:0 0 8px}h1{font-size:36px;line-height:1.3;letter-spacing:-1.1px;margin:0 0 12px}h2{font-size:20px;line-height:1.5;margin:0 0 8px}.subtitle{color:var(--muted);margin:0}.page-head{margin-bottom:36px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px;border-bottom:1px solid var(--border)}.filter{display:flex;gap:16px;align-items:center}.filter label{font-size:13px;font-weight:500}select{background:var(--canvas);border:1px solid #596474;color:var(--text);border-radius:6px;padding:10px 38px 10px 14px;min-width:182px}.list-surface{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}.scope{font-size:12px;color:var(--muted)}table{width:100%;border-collapse:collapse;text-align:left}th{font-size:11px;color:var(--muted);font-weight:500;text-transform:uppercase;letter-spacing:1px;padding:18px 24px;background:#1b2027}td{padding:26px 24px;border-top:1px solid var(--border)}th:first-child{width:58%}th:nth-child(2){width:21%}.job-title{display:block;font-size:17px;font-weight:500;color:var(--text)}.job-code{font-size:11px;letter-spacing:1px;color:var(--muted);margin-bottom:5px;display:block}.job-link{display:flex;gap:20px;align-items:center}.job-link:hover .job-title{color:var(--amber)}.frame-icon{position:relative;display:block;width:48px;height:48px;flex:none;border:1px solid #657181;border-radius:4px}.frame-icon:before,.frame-icon:after{content:'';position:absolute;width:16px;height:16px;border:1px solid #aab4c3}.frame-icon:before{left:7px;top:7px;border-right:0;border-bottom:0}.frame-icon:after{right:7px;bottom:7px;border-left:0;border-top:0}.status{display:inline-flex;align-items:center;gap:8px;font-size:12px;white-space:nowrap;border:1px solid #526176;border-radius:5px;padding:5px 10px;color:#c2d4f0;background:#283340}.status:before{content:'';width:5px;height:5px;border-radius:50%;background:currentColor}.status.waiting{color:var(--amber);border-color:#79603d;background:#342c21}.status.done{color:var(--success);border-color:#456b54;background:#24352c}.person{display:flex;align-items:center;gap:10px}.initials{width:29px;height:29px;border-radius:50%;background:#323b47;color:#cbd2db;font-size:10px;display:grid;place-items:center}.footer{display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px;margin-top:24px;padding-top:18px;border-top:1px solid #2e3540}.back{display:inline-flex;gap:9px;align-items:center;color:var(--muted);margin-bottom:26px;font-size:13px;border:0;padding:0;min-height:40px}.back:hover{color:var(--text);background:transparent}.detail-grid{display:grid;grid-template-columns:1.12fr 1fr;gap:28px;align-items:start}.artifact{min-height:390px;border:1px solid var(--border);border-radius:10px;background:var(--surface);padding:32px;position:relative;display:flex;flex-direction:column}.artifact-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-bottom:22px;border-bottom:1px solid var(--border)}.artifact-code{font-size:13px;letter-spacing:2px;color:var(--muted)}.artifact-title{font-size:30px;line-height:1.5;font-weight:500;letter-spacing:-.7px;margin:34px 0 38px;max-width:370px}.artifact-meta{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:auto;padding-top:20px;border-top:1px solid var(--border)}.artifact-meta dt{color:var(--muted);font-size:11px;margin-bottom:6px}.artifact-meta dd{margin:0;font-size:13px}.form-panel{border:1px solid var(--border);border-radius:10px;background:var(--surface);padding:30px}.form-panel .subtitle{font-size:13px;max-width:390px}.field{margin-top:27px}.field label{display:block;font-size:13px;font-weight:500;margin-bottom:9px}.field select{width:100%}.help{font-size:12px;color:var(--muted);margin:9px 0 0}.dirty{font-size:11px;color:var(--amber);min-height:22px;margin:16px 0 0}.feedback{font-size:13px;border-radius:6px;margin:12px 0 22px;padding:14px 16px;border:1px solid;line-height:1.7}.feedback.error{background:#38272b;color:var(--error);border-color:#89535d}.feedback.success{background:#24362d;color:var(--success);border-color:#507862}.feedback strong{display:block;margin-bottom:3px}.feedback:empty{display:none}.actions{display:flex;gap:12px;border-top:1px solid var(--border);padding-top:24px;margin-top:20px}.actions .primary{flex:1}.local-note{font-size:11px;color:var(--muted);margin:16px 0 0}.leave-box{margin-bottom:24px;padding:18px;border:1px solid #79603d;background:#302a22;border-radius:7px}.leave-box p{margin:0 0 14px}.leave-box button{margin-right:8px}.list-feedback{margin:0 0 20px}[hidden]{display:none!important}
+@media(max-width:700px){.topbar{height:74px;padding:0 20px;gap:26px}.brand{font-size:23px}.nav-label{height:74px;font-size:11px}.demo{font-size:10px}.demo:before{display:none}.demo .extra{display:none}main{padding:32px 20px 30px}h1{font-size:29px}.page-head{margin-bottom:25px}.subtitle{font-size:13px}.toolbar{padding:18px;align-items:flex-start}.filter{flex-direction:column;align-items:flex-start;gap:8px}.scope{max-width:85px;text-align:right;font-size:10px;padding-top:4px}select{min-width:180px}table,tbody,tr,td{display:block}thead{display:none}tr{position:relative;padding:22px 18px;border-top:1px solid var(--border)}td{border:0;padding:0}td:nth-child(2){padding-top:18px;padding-left:0}td:nth-child(3){padding-top:13px}.job-title{font-size:15px}.job-link{gap:13px;align-items:flex-start}.frame-icon{width:39px;height:43px}.person{font-size:12px}.person:before{content:'Người duyệt';color:var(--muted);font-size:11px;margin-right:auto}.person .initials{display:none}.status{font-size:11px}.detail-grid{grid-template-columns:1fr;gap:20px}.artifact{padding:22px;min-height:300px}.artifact-title{font-size:25px;margin:26px 0}.artifact-top{gap:10px}.form-panel{padding:22px}.footer{flex-direction:column;gap:4px}.back{margin-bottom:16px}.actions{flex-wrap:wrap}.actions .primary{min-width:175px}.local-note{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#queue" id="brand-home" aria-label="Khung — về hàng đợi"><span class="brand-mark" aria-hidden="true"></span>Khung</a><span class="nav-label">Hàng đợi sản xuất</span><span class="demo">Bản mẫu<span class="extra"> · dữ liệu mô phỏng</span></span></header>
+<main>
+<section id="queue-view" aria-labelledby="queue-title">
+<div class="page-head"><p class="eyebrow">Không gian làm việc / Video</p><h1 id="queue-title" tabindex="-1">Hàng đợi sản xuất</h1><p class="subtitle">Theo dõi công việc và phân công người duyệt.</p></div>
+<div id="queue-feedback" class="feedback success list-feedback" role="status" hidden></div>
+<div class="list-surface"><div class="toolbar"><div class="filter"><label for="status-filter">Trạng thái</label><select id="status-filter"><option value="all">Tất cả trạng thái</option><option value="Đang dựng">Đang dựng</option><option value="Chờ duyệt">Chờ duyệt</option><option value="Hoàn tất">Hoàn tất</option></select></div><span class="scope">Danh sách mô phỏng</span></div>
+<table aria-label="Công việc sản xuất video"><thead><tr><th scope="col">Công việc</th><th scope="col">Trạng thái</th><th scope="col">Người duyệt</th></tr></thead><tbody id="job-rows"></tbody></table></div>
+</section>
+<section id="detail-view" hidden aria-labelledby="detail-title"><button class="back" id="back" type="button"><span aria-hidden="true">←</span> Trở về hàng đợi</button>
+<div id="leave-box" class="leave-box" hidden role="alert"><p>Thay đổi người duyệt chưa được lưu. Bạn muốn tiếp tục chỉnh sửa hay bỏ thay đổi?</p><button type="button" id="keep-editing">Tiếp tục chỉnh sửa</button><button type="button" id="discard">Bỏ thay đổi và trở về</button></div>
+<div class="page-head"><p class="eyebrow">Công việc / <span id="detail-code">K-02</span></p><h1 id="detail-title" tabindex="-1">Chi tiết công việc</h1><p class="subtitle">Xem thông tin và cập nhật người duyệt.</p></div>
+<div class="detail-grid"><article class="artifact" aria-label="Thông tin công việc"><div class="artifact-top"><span class="artifact-code" id="artifact-code"></span><span id="artifact-status" class="status"></span></div><h2 class="artifact-title" id="artifact-title"></h2><dl class="artifact-meta"><div><dt>Loại công việc</dt><dd>Dựng video</dd></div><div><dt>Người duyệt hiện tại</dt><dd id="current-reviewer"></dd></div></dl></article>
+<form class="form-panel" id="work-form" data-testid="work-form"><h2>Phân công người duyệt</h2><p class="subtitle">Thay đổi này sẽ cập nhật tên người duyệt trong hàng đợi.</p><div class="field"><label for="reviewer">Người duyệt</label><select id="reviewer" name="reviewer" required aria-describedby="reviewer-help"><option>Mai Anh</option><option>Minh Khang</option><option>Thu Hà</option></select><p class="help" id="reviewer-help">Chọn người duyệt cho công việc này.</p></div><p id="dirty" class="dirty" aria-live="polite"></p><div id="feedback" data-testid="feedback" class="feedback" role="status" aria-live="polite" aria-atomic="true" tabindex="-1"></div><div class="actions"><button class="primary" id="save" data-testid="primary" type="submit">Lưu thay đổi</button><button id="cancel" type="button">Trở về</button></div><p class="local-note">Thao tác mô phỏng. Lần lưu đầu sẽ báo lỗi để thử lại.<br>Dữ liệu chỉ thay đổi trong trang và sẽ đặt lại khi tải lại.</p></form></div>
+</section>
+<footer class="footer"><span>Khung / Không gian sản xuất video</span><span>Prototype · Không gửi dữ liệu ra ngoài</span></footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const jobs = [
+    {id:'K-01',title:'Những người giữ nhịp phố',status:'Đang dựng',reviewer:'Mai Anh'},
+    {id:'K-02',title:'Một bữa cơm trước bình minh',status:'Chờ duyệt',reviewer:'Minh Khang'},
+    {id:'K-03',title:'Chuyến xe cuối ngày',status:'Hoàn tất',reviewer:'Thu Hà'}
+  ];
+  const $ = id => document.getElementById(id);
+  let current = null, failedOnce = false, saving = false, returnTarget = null;
+  const statusClass = status => status === 'Chờ duyệt' ? 'waiting' : status === 'Hoàn tất' ? 'done' : '';
+  function renderRows() {
+    $('job-rows').replaceChildren();
+    jobs.filter(job => $('status-filter').value === 'all' || job.status === $('status-filter').value).forEach(job => {
+      const row = document.createElement('tr');
+      row.innerHTML = '<td><a class="job-link" href="#'+job.id+'"><span class="frame-icon" aria-hidden="true"></span><span><span class="job-code">'+job.id+'</span><span class="job-title">'+job.title+'</span></span></a></td><td><span class="status '+statusClass(job.status)+'">'+job.status+'</span></td><td><span class="person"><span class="initials" aria-hidden="true">'+job.reviewer.split(' ').map(part => part[0]).join('')+'</span><span>'+job.reviewer+'</span></span></td>';
+      const link = row.querySelector('a');
+      link.addEventListener('click', event => {event.preventDefault(); returnTarget = job.id; openJob(job);});
+      $('job-rows').append(row);
+    });
+  }
+  function feedback(kind, title, message) {
+    const node = $('feedback');
+    node.className = 'feedback '+kind;
+    node.replaceChildren();
+    const strong = document.createElement('strong'); strong.textContent = title;
+    node.append(strong, document.createTextNode(message));
+  }
+  function updateDirty() {
+    $('dirty').textContent = current && $('reviewer').value !== current.reviewer ? 'Có thay đổi chưa lưu' : '';
+  }
+  function openJob(job) {
+    current = job;
+    $('queue-view').hidden = true; $('detail-view').hidden = false; $('leave-box').hidden = true;
+    $('detail-code').textContent = job.id; $('artifact-code').textContent = job.id;
+    $('artifact-title').textContent = job.title;
+    $('artifact-status').textContent = job.status; $('artifact-status').className = 'status '+statusClass(job.status);
+    $('current-reviewer').textContent = job.reviewer; $('reviewer').value = job.reviewer;
+    $('feedback').replaceChildren(); $('save').textContent = 'Lưu thay đổi'; updateDirty();
+    $('detail-title').focus(); window.scrollTo(0,0);
+  }
+  function goBack(discard = false) {
+    if (saving) return;
+    if (!discard && current && $('reviewer').value !== current.reviewer) {
+      $('leave-box').hidden = false; $('keep-editing').focus(); return;
+    }
+    $('detail-view').hidden = true; $('queue-view').hidden = false; $('leave-box').hidden = true;
+    renderRows();
+    const target = returnTarget && $('job-rows').querySelector('a[href="#'+returnTarget+'"]');
+    (target || $('queue-title')).focus(); current = null;
+  }
+  $('status-filter').addEventListener('change', renderRows);
+  $('reviewer').addEventListener('change', () => {
+    updateDirty();
+    if ($('feedback').classList.contains('success')) { $('feedback').replaceChildren(); $('save').textContent = 'Lưu thay đổi'; }
+  });
+  $('work-form').addEventListener('submit', event => {
+    event.preventDefault(); if (saving || !current) return;
+    if ($('reviewer').value === current.reviewer) {
+      feedback('success','Chưa có thay đổi','Người duyệt hiện tại là '+current.reviewer+'. Chọn một người khác để cập nhật.'); return;
+    }
+    const chosen = $('reviewer').value;
+    saving = true; $('save').disabled = true; $('reviewer').disabled = true; $('cancel').disabled = true; $('back').disabled = true;
+    $('save').textContent = 'Đang lưu…'; $('work-form').setAttribute('aria-busy','true');
+    window.setTimeout(() => {
+      saving = false; $('save').disabled = false; $('reviewer').disabled = false; $('cancel').disabled = false; $('back').disabled = false;
+      $('work-form').removeAttribute('aria-busy');
+      if (!failedOnce) {
+        failedOnce = true; $('save').textContent = 'Thử lưu lại';
+        feedback('error','Chưa lưu được thay đổi','Lỗi mô phỏng. Lựa chọn '+chosen+' vẫn được giữ. Nhấn “Thử lưu lại” để hoàn tất.');
+        $('feedback').focus();
+      } else {
+        current.reviewer = chosen; $('current-reviewer').textContent = chosen; updateDirty();
+        $('save').textContent = 'Lưu thay đổi';
+        feedback('success','Đã lưu trong bản mẫu',current.id+' đã được phân công cho '+chosen+'. Bạn có thể trở về hàng đợi.');
+        $('queue-feedback').textContent = 'Đã cập nhật '+current.id+' · Người duyệt: '+chosen+'. Thay đổi được lưu trong phiên mô phỏng này.';
+        $('queue-feedback').hidden = false; renderRows(); $('feedback').focus();
+      }
+    }, 450);
+  });
+  $('back').addEventListener('click', () => goBack()); $('cancel').addEventListener('click', () => goBack());
+  $('discard').addEventListener('click', () => goBack(true));
+  $('keep-editing').addEventListener('click', () => {$('leave-box').hidden = true; $('reviewer').focus();});
+  $('brand-home').addEventListener('click', event => {event.preventDefault(); if(current) goBack(); else $('queue-title').focus();});
+  renderRows();
+  if (new URLSearchParams(location.search).get('state') === 'error') {
+    $('status-filter').value = 'Chờ duyệt'; renderRows(); returnTarget = 'K-02'; openJob(jobs[1]);
+    $('reviewer').value = 'Thu Hà'; failedOnce = true; updateDirty(); $('save').textContent = 'Thử lưu lại';
+    feedback('error','Chưa lưu được thay đổi','Lỗi mô phỏng. Lựa chọn Thu Hà vẫn được giữ. Nhấn “Thử lưu lại” để hoàn tất.');
+  }
+})();
+</script>
+</body>
+</html>

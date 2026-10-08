@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "studyId": "ui-paired-v1-2026-10-08",
+  "skillCommit": "a578204ff16983b18c2cd0dc41e6829357cfee2c",
+  "repetitions": 3,
+  "sideSeed": "ui-paired-v1-fixed-order-2026-10-08",
+  "conditions": ["control", "skill"],
+  "model": null,
+  "reasoningEffort": null,
+  "resourceBudgetEnforced": false,
+  "commonPrompt": "Create a standalone Vietnamese frontend prototype from the brief below, with inline CSS/JavaScript and no backend or external services. Follow the condition line at the end: only that condition may load the named art-direction skill; do not use another UX/UI/art-direction skill or inspect another trial, earlier pilot output, reference analysis, or evaluator scores. The seven JPGs under D:/UI/web-ui-art-direction/assets/owner-references are available as visual taste inputs in both conditions; do not embed their pixels/logos/copy. Local fonts BeVietnamPro Regular, Medium and Bold are available; final HTML font src must be ../../../../../assets/fonts/BeVietnamPro-{Regular,Medium,Bold}.ttf. Preserve supplied facts and brand; mark all prototype data and simulated actions. No invented customers, claims, metrics or testimonials. Implement meaningful task interactions, native labels, visible keyboard focus, responsive 1440/390 and reduced motion. A first deliberate save/submit failure must preserve entered data, then retry succeeds locally; nothing is sent outside the page. Query ?state=error opens a reproducible error state for screenshots. Use data-testid=primary for the main submit/save, data-testid=feedback for its live feedback, and data-testid=work-form for the form. Write index.html and report.md ONLY inside the assigned output directory. Report which original JPGs were actually opened, design choices and checks actually run. Do not render or revise after evaluator feedback in this first attempt; the root applies the same browser opportunity to both conditions. Complete autonomously without asking approval: these are authorized mock prototypes. This is a quality evaluation, but do not optimize toward any guessed condition winner.",
+  "briefs": [
+    {
+      "id": "CERAMIC",
+      "title": "Bờ Gốm — craft catalog",
+      "surface": "public",
+      "text": "Fictional craft studio Bờ Gốm. Headline 'Những vật nhỏ, ở lại lâu.' Showcase exactly three sample objects: Cốc mộc (men nâu, 250 ml), Bát sớm (men ngà, đường kính 16 cm), Bình hiên (men tro, cao 22 cm). No photography is supplied; use typography and original CSS/SVG object illustrations explicitly labeled illustrations, never pretend they are product photos. Sections opening, object collection, care instructions (rửa bằng tay; tránh thay đổi nhiệt độ đột ngột), and inquiry form. Inquiry has name/email/product select/message, main CTA anchors to form. No prices, delivery promise or sales statistics. Keep warm editorial owner taste when visually useful. Submit first fails as demo, retry confirms locally; retain all fields. Error query pre-fills sample fields."
+    },
+    {
+      "id": "INVENTORY",
+      "title": "Kho Nhỏ — dense stock workspace",
+      "surface": "operate",
+      "text": "Fictional inventory workspace Kho Nhỏ. Generate exactly 60 deterministic mock rows: IDs SKU-001 to SKU-060, names 'Mặt hàng mẫu 01' through 'Mặt hàng mẫu 60', quantity = index modulo 9, unit 'chiếc', status 'Hết hàng' when quantity 0, 'Sắp hết' when 1 or 2, otherwise 'Còn hàng'. No fabricated performance analytics. Implement labeled search by ID/name, status filter, visible result count computed from data, dense readable rows/table with narrow-screen alternative or labeled horizontal scrolling. Clicking SKU-001 opens quantity edit; reject negative values with nearby text. Edit quantity from 1 to 5, first save fails then retry updates visible row. Return preserves search/filter. Keep table visible early; no campaign banner above it. URL ?state=error opens SKU-001 edit with 5 entered and simulated failure."
+    },
+    {
+      "id": "LIBRARY",
+      "title": "Thư viện Lam — fixed cool brand",
+      "surface": "operate",
+      "text": "Fictional library reservation flow Thư viện Lam with established brand: navy #16324f, paper white #f8fbff, blue #275dad, restrained serif display using local system Georgia, BeVietnamPro for labels/body; no orange/red brand accent, no campaign gradient. Catalog three mock titles: 'Những đường về' by 'Tác giả mẫu A', 'Một mùa gió' by 'Tác giả mẫu B', 'Đọc chậm lại' by 'Tác giả mẫu C'. Authors explicitly sample, no real reviews or popularity metrics. Search titles -> select book -> reserve form full name/email/pickup date -> demo failure -> retry confirmation naming selected title. Date must not be before 2026-10-08 in this frozen prototype; explain date rule. Preserve selected book and input. Error query opens 'Một mùa gió' reservation with sample valid fields, date2026-10-12 and failure."
+    },
+    {
+      "id": "COMPONENT",
+      "title": "Mạch — established settings details",
+      "surface": "component",
+      "text": "Improve only a settings surface for fictional product Mạch. Fixed existing system: white canvas, dark text #20252b, blue primary #235bd1, 8px controls radius, sans body; no oversized hero, photography, orange or new visual brand. Header Mạch, destinations Tổng quan (current-page explanatory disabled/sample only), Cài đặt active, Trợ giúp (inline disclosure with useful sample explanation). Settings tabs Hồ sơ/Thông báo with correct arrow keyboard navigation. Profile fields tên hiển thị, email, language select Việt/English. Save first fails preserving input, retry succeeds locally. Button hierarchy, helper/error text and focus matter. Add labeled 'Đổi tên không gian' dialog with cancel/confirm and focus return; mock pending rename distinct from profile save. Error query pre-fills profile and save failure. Keep within small component task, no unrelated dashboard."
+    },
+    {
+      "id": "DARK",
+      "title": "Khung — existing dark production queue",
+      "surface": "operate",
+      "text": "Fictional video-edit production queue Khung. Established dark working system: canvas #14171c, surface #20262f, light text #eef2f6, amber #ffbd5a for primary, distinct error and success roles. Preserve dark mode on list/detail/edit; do not introduce a light task surface. Three mock jobs: K-01 'Những người giữ nhịp phố', Đang dựng, Mai Anh; K-02 'Một bữa cơm trước bình minh', Chờ duyệt, Minh Khang; K-03 'Chuyến xe cuối ngày', Hoàn tất, Thu Hà. Filter status -> open K-02 -> change reviewer to Thu Hà -> save failure -> retry -> return same filter updated name. Show job as work artifact via clear metadata, not invented thumbnail photography, timeline or analytics. Main task first. Error query opens K-02 with Thu Hà selected and failure."
+    },
+    {
+      "id": "EVENT",
+      "title": "Đổi sách cuối tuần — community registration",
+      "surface": "public",
+      "text": "Fictional community event page 'Đổi sách cuối tuần'. Exact supplied demo facts: 18/10/2026, 09:00–12:00, 'Không gian mẫu, Quận 3'; participation free; bring 1–3 books in readable condition, no textbook restriction invented. Headline 'Một cuốn sách đã đọc. Một câu chuyện còn tiếp.' Clear event identity, how exchange works, schedule with three supplied slots 09:00 check-in,09:30 exchange,11:30 close sharing; FAQ with native disclosure; registration name/email/book count1–3 and long optional accessibility note. Do not invent sponsors, attendance, testimonials, organizers or contact details. No photography available; typography and truthful object illustration only. Submit first fails preserving fields, retry confirms demo registration. Error query pre-fills name/email/count2 and failure. Avoid implying a real public event exists; prototype label visible."
+    }
+  ]
+}

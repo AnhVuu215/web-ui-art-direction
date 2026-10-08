@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "studyId": "exploratory-review-v1",
+  "warning": "Previous pilot only. One public generation was operator-authored after a quota failure. Both pairs are exploratory. No owner votes exist until submitted.",
+  "pairs": [
+    {
+      "id": "X-01",
+      "title": "Workspace biên tập",
+      "brief": "Tìm bài BT-042, đổi người phụ trách, phục hồi sau lỗi và quay về bộ lọc cũ. Dữ liệu mẫu, không backend.",
+      "renderFingerprint": "ddf9306bb6d9b3ee8db6adff7c28c846e8393e2fe818a368f3fd6fec5e8ac50c",
+      "origin": "Pilot cũ · Chỉ dùng khám phá",
+      "views": [
+        {
+          "label": "Desktop",
+          "images": {
+            "A": "images/0b3cd474f773f62fe627.png",
+            "B": "images/dfaea628b3872bb2fdc4.png"
+          }
+        },
+        {
+          "label": "Mobile",
+          "images": {
+            "A": "images/6b5a7d2d431eecb9b915.png",
+            "B": "images/777e69fc4a8fc00117a3.png"
+          }
+        },
+        {
+          "label": "Lỗi desktop",
+          "images": {
+            "A": "images/98e161edd9bb9016e760.png",
+            "B": "images/62274a4781618ce145b8.png"
+          }
+        },
+        {
+          "label": "Lỗi mobile",
+          "images": {
+            "A": "images/e7363a4c5cedc8cac713.png",
+            "B": "images/e4c542f69416c47c076b.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "X-02",
+      "title": "Studio typography tiếng Việt",
+      "brief": "Chữ Việt; “Chữ rõ. Ý có dấu.”; Chọn chữ, Chỉnh nhịp, Hoàn thiện; có mẫu chữ và form mô phỏng giữ input.",
+      "renderFingerprint": "f425b5ecadf49dbd047b872a7c76f06b0f83c5152dd42d87641c0346870a7aa0",
+      "origin": "Pilot cũ · Chỉ dùng khám phá",
+      "views": [
+        {
+          "label": "Desktop",
+          "images": {
+            "A": "images/13263a0193e529ac8035.png",
+            "B": "images/18744b9d5adddce89e53.png"
+          }
+        },
+        {
+          "label": "Mobile",
+          "images": {
+            "A": "images/3c367287ee2842bc11cc.png",
+            "B": "images/511a1cbb35ec9f5d1077.png"
+          }
+        },
+        {
+          "label": "Phản hồi mobile",
+          "images": {
+            "A": "images/be69f94b7c5f2325c6e0.png",
+            "B": "images/77da2c5b9899fd2b5382.png"
+          }
+        }
+      ]
+    },
+    {
+      "id": "DARK-03",
+      "title": "Khung — existing dark production queue",
+      "brief": "Fictional video-edit production queue Khung. Established dark working system: canvas #14171c, surface #20262f, light text #eef2f6, amber #ffbd5a for primary, distinct error and success roles. Preserve dark mode on list/detail/edit; do not introduce a light task surface. Three mock jobs: K-01 'Những người giữ nhịp phố', Đang dựng, Mai Anh; K-02 'Một bữa cơm trước bình minh', Chờ duyệt, Minh Khang; K-03 'Chuyến xe cuối ngày', Hoàn tất, Thu Hà. Filter status -> open K-02 -> change reviewer to Thu Hà -> save failure -> retry -> return same filter updated name. Show job as work artifact via clear metadata, not invented thumbnail photography, timeline or analytics. Main task first. Error query opens K-02 with Thu Hà selected and failure.",
+      "renderFingerprint": "a5cc5fe928321da1954b7e3ffae06bd5086ef96d5e5791dddc786ebfbd99539e",
+      "origin": "Brief chốt trước · Benchmark mới",
+      "views": [
+        {
+          "label": "Desktop",
+          "images": {
+            "A": "images/a89ae6cbcc752599d1f6.png",
+            "B": "images/3d28db848cec99749c8c.png"
+          }
+        },
+        {
+          "label": "Mobile",
+          "images": {
+            "A": "images/e1f3e6582c99c00f7a1e.png",
+            "B": "images/b950e0b4d5fcd105cc04.png"
+          }
+        },
+        {
+          "label": "Lỗi desktop",
+          "images": {
+            "A": "images/f2502e0778d95f3a5969.png",
+            "B": "images/e48c142ea93ed7accbec.png"
+          }
+        },
+        {
+          "label": "Lỗi mobile",
+          "images": {
+            "A": "images/73143d0224fa8f9f1378.png",
+            "B": "images/48799c269d5ff8f23bfa.png"
+          }
+        }
+      ]
+    }
+  ]
+}

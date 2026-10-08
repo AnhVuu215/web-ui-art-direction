@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3efe6">
+  <title>Đổi sách cuối tuần — Trang mẫu</title>
+  <style>
+    @font-face{font-family:Be Vietnam Pro;src:url('../../../../../assets/fonts/BeVietnamPro-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+    @font-face{font-family:Be Vietnam Pro;src:url('../../../../../assets/fonts/BeVietnamPro-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+    @font-face{font-family:Be Vietnam Pro;src:url('../../../../../assets/fonts/BeVietnamPro-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+    :root{--paper:#f3efe6;--ink:#262822;--muted:#606057;--orange:#e84c20;--line:#d4d0c6;--white:#fffdf8;--green:#244d38}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Be Vietnam Pro,Arial,sans-serif;font-size:15px;line-height:1.65}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button,a,input,textarea,summary{ -webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #1766a2;outline-offset:5px}::selection{background:#ffd4af;color:var(--ink)}.wrap{width:min(1280px,calc(100% - 112px));margin-inline:auto}.skip{position:fixed;left:16px;top:-100px;background:var(--ink);color:white;padding:10px 18px;z-index:10}.skip:focus{top:16px}.prototype{background:var(--ink);color:#f3efe6;text-align:center;padding:8px 20px;font-size:11px;letter-spacing:.025em}.prototype strong{font-weight:500;color:#ffad88}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:25px 0}.brand{display:flex;gap:12px;align-items:center;font-size:16px;font-weight:700;line-height:1.25}.brand svg{width:35px;height:35px;color:var(--orange)}.topbar nav{display:flex;align-items:center;gap:32px;font-size:13px}.topbar nav a:hover{text-decoration:underline;text-underline-offset:5px}.nav-cta{border:1px solid var(--ink);padding:10px 18px;border-radius:100px;display:inline-flex;gap:28px;align-items:center}.eyebrow{font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;margin:0}.hero{position:relative;padding:54px 0 48px;display:grid;grid-template-columns:1.18fr 1fr;gap:24px;align-items:center}.hero .eyebrow{color:#9b351b;display:flex;gap:9px;align-items:center}.dot{width:7px;height:7px;display:inline-block;border-radius:50%;background:var(--orange)}h1{font-size:clamp(48px,5.2vw,76px);line-height:1.16;letter-spacing:-.058em;font-weight:500;margin:22px 0 24px;max-width:710px}h1 span{color:var(--orange)}.intro{max-width:430px;color:var(--muted);font-size:15px}.button{display:inline-flex;align-items:center;justify-content:space-between;gap:40px;padding:15px 24px;background:var(--orange);color:#fffdf8;border:1px solid var(--orange);border-radius:100px;font-weight:500;font-size:14px;cursor:pointer;min-height:52px;transition:background .15s}.button:hover{background:#bb3817;border-color:#bb3817}.hero-actions{margin-top:30px;display:flex;gap:20px;align-items:center;flex-wrap:wrap}.fine{color:var(--muted);font-size:12px}.book-scene{position:relative;align-self:stretch;display:flex;align-items:center;justify-content:center;min-height:440px}.book-scene svg{width:100%;height:auto;max-width:590px;overflow:visible}.scene-caption{position:absolute;bottom:8px;right:0;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.scene-date{position:absolute;left:20px;top:8px;display:flex;gap:10px;align-items:center;font-size:11px;border-bottom:1px solid var(--ink);padding-bottom:8px}.scene-date strong{font-size:30px;line-height:1.2;font-weight:500;letter-spacing:-.06em}.facts{display:grid;grid-template-columns:1fr 1fr 1.5fr .8fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:24px 0;gap:26px}.fact{border-right:1px solid var(--line);padding-right:24px}.fact:last-child{border-right:0}.fact-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:7px}.fact strong{font-size:16px;font-weight:500;line-height:1.4;display:block}.section{padding:78px 0}.section-heading{display:grid;grid-template-columns:1fr 2fr;gap:24px;margin-bottom:38px}.section-heading .eyebrow{padding-top:9px;color:var(--muted)}h2{font-size:38px;line-height:1.3;letter-spacing:-.045em;font-weight:500;margin:0}h3{font-size:20px;letter-spacing:-.035em;font-weight:500;margin:0 0 12px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}.step{border-top:1px solid var(--line);padding-top:22px}.step-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:27px}.step-number{color:var(--orange);font-size:13px}.step svg{width:54px;height:54px;color:var(--ink)}.step p{font-size:14px;color:var(--muted);margin:0;max-width:325px}.bring{display:flex;gap:12px;margin-top:32px;padding:15px 18px;background:#e9e4d9;font-size:12px;align-items:flex-start}.bring svg{flex-shrink:0;width:19px;height:19px;margin-top:1px}.program{background:#e6e5d7;border-radius:4px;display:grid;grid-template-columns:1fr 1.5fr;gap:70px;padding:40px 46px}.program h2{margin-top:14px;font-size:34px}.program-intro{font-size:13px;color:var(--muted);max-width:270px;margin-top:18px}.timeline{margin:0;padding:0;list-style:none}.timeline li{display:flex;gap:32px;align-items:baseline;border-bottom:1px solid #c5c7b8;padding:19px 0}.timeline li:first-child{padding-top:0}.timeline li:last-child{border-bottom:0;padding-bottom:0}.timeline time{font-size:28px;font-weight:500;letter-spacing:-.04em;min-width:86px}.timeline span{font-size:15px}.register{margin:78px 0;display:grid;grid-template-columns:.9fr 1.1fr;background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;scroll-margin-top:28px}.register-story{background:var(--ink);color:var(--paper);padding:46px;display:flex;flex-direction:column}.register-story .eyebrow{color:#ffad88}.register-story h2{font-size:43px;margin-top:20px;max-width:370px}.register-story>p{font-size:14px;max-width:340px;color:#c7c7bb}.ticket{margin-top:auto;padding-top:46px}.ticket-top{display:flex;gap:16px;align-items:center;font-size:11px;letter-spacing:.03em;border-top:1px solid #55574d;padding-top:24px}.ticket-top svg{width:56px;height:56px;color:#ff976e}.ticket-date{font-size:26px;letter-spacing:-.03em;font-weight:500;line-height:1.4}.ticket-meta{font-size:12px;color:#c7c7bb;margin-top:12px}.work-form{padding:40px 46px}.form-title{font-size:18px;margin:0 0 5px;font-weight:500}.form-note{font-size:11px;color:var(--muted);margin:0 0 26px}.field{margin-bottom:20px}label,legend{font-size:12px;font-weight:500}.field>label{display:block;margin-bottom:8px}input[type=text],input[type=email],textarea{display:block;width:100%;border:1px solid #b9b9ac;background:var(--white);color:var(--ink);border-radius:4px;padding:11px 13px;min-height:46px}input::placeholder,textarea::placeholder{color:#73736b}textarea{resize:vertical;min-height:108px;line-height:1.7;font-size:13px}fieldset{border:0;margin:0 0 20px;padding:0;min-width:0}legend{padding:0;margin-bottom:9px}.count-options{display:flex;gap:12px}.count-label{display:flex;gap:9px;align-items:center;border:1px solid #b9b9ac;border-radius:4px;padding:10px 16px;cursor:pointer;flex:1;min-height:44px;justify-content:center;white-space:nowrap}.count-label:has(input:checked){border-color:var(--orange);background:#fff1e7}.count-label:has(input:focus-visible){outline:3px solid #1766a2;outline-offset:4px}.count-label input{accent-color:#b93415;width:16px;height:16px;margin:0}.optional{color:var(--muted);font-weight:400}.hint{display:block;font-size:11px;color:var(--muted);margin-top:7px;line-height:1.6}.submit{width:100%;margin-top:3px}.submit:disabled{opacity:.75;cursor:default;background:var(--green);border-color:var(--green)}.feedback{font-size:12px;line-height:1.75;margin-top:16px;padding:13px 15px;background:#eeeee7;border-left:3px solid #919386;overflow-wrap:anywhere}.feedback[data-state=error]{background:#fff0e7;border-color:#bd3d19;color:#853118}.feedback[data-state=success]{background:#e9f2e9;border-color:#316947;color:#244d38}.feedback:focus-visible{outline:3px solid #1766a2;outline-offset:4px}.feedback strong{display:block;margin-bottom:3px;font-size:13px}.faq{display:grid;grid-template-columns:1fr 2fr;gap:24px;padding:0 0 78px}.faq h2{font-size:34px;margin-top:12px}.faq-list{border-top:1px solid var(--ink)}details{border-bottom:1px solid var(--line)}summary{padding:22px 35px 22px 0;cursor:pointer;position:relative;font-size:15px;font-weight:500;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:'+';position:absolute;right:2px;top:17px;font-size:26px;font-weight:400}details[open] summary:after{content:'−'}details p{font-size:14px;color:var(--muted);margin:0 40px 22px 0;max-width:610px}.footer{border-top:1px solid var(--ink);padding:24px 0 34px;display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.footer .brand{font-size:13px}.footer p{font-size:11px;color:var(--muted);margin:0;text-align:right;max-width:460px}
+    @media(min-width:1600px){.hero{padding-top:65px}}
+    @media(max-width:1000px){.wrap{width:calc(100% - 64px)}.hero{grid-template-columns:1.2fr 1fr}.hero h1{font-size:53px}.book-scene{min-height:390px}.facts{grid-template-columns:1fr 1fr;row-gap:22px}.fact:nth-child(2){border-right:0}.program{gap:35px;padding:32px}.register-story,.work-form{padding:32px}.count-options{gap:8px}.count-label{padding:9px 8px}.register-story h2{font-size:36px}.steps{gap:22px}}
+    @media(max-width:650px){.wrap{width:calc(100% - 40px)}.prototype{font-size:10px;padding:8px 14px}.topbar{padding:20px 0}.brand{font-size:13px;gap:8px}.brand svg{width:28px;height:28px}.topbar nav{gap:0}.topbar nav .nav-section{display:none}.nav-cta{font-size:11px;padding:8px 12px;gap:12px}.hero{display:flex;flex-direction:column;align-items:stretch;padding:36px 0 24px;gap:20px}.hero h1{font-size:45px;line-height:1.19;letter-spacing:-.055em;margin:18px 0 20px}.hero .eyebrow{font-size:10px}.intro{font-size:14px;max-width:100%}.hero-actions{margin-top:22px;gap:14px}.hero-actions .button{font-size:13px;padding:13px 20px;gap:24px}.hero-actions .fine{font-size:11px}.book-scene{min-height:285px;align-self:auto}.book-scene svg{max-width:350px}.scene-date{left:0;top:0;font-size:10px}.scene-date strong{font-size:24px}.scene-caption{bottom:0;font-size:8px}.facts{padding:20px 0;gap:20px 18px;grid-template-columns:1fr 1fr}.fact{padding-right:8px}.fact-label{font-size:9px}.fact strong{font-size:13px}.section{padding:48px 0}.section-heading{display:block;margin-bottom:25px}.section-heading .eyebrow{padding:0;margin-bottom:12px}h2{font-size:29px}.steps{display:block}.step{padding-top:17px;padding-bottom:25px}.step:last-child{padding-bottom:0}.step-top{margin-bottom:10px}.step svg{width:40px;height:40px}.step h3{font-size:19px;margin-bottom:8px}.step p{max-width:100%;font-size:13px}.bring{margin-top:24px;padding:14px;font-size:11px}.program{display:block;padding:26px 23px}.program h2{font-size:29px;margin-top:10px}.program-intro{margin:13px 0 26px;max-width:100%;font-size:12px}.timeline li{padding:15px 0;gap:24px}.timeline time{font-size:24px;min-width:72px}.timeline span{font-size:13px}.register{margin:48px 0;display:block}.register-story,.work-form{padding:27px 23px}.register-story h2{font-size:32px;max-width:100%;margin-top:14px}.register-story>p{font-size:12px;margin-bottom:0}.ticket{padding-top:24px}.ticket-top{padding-top:18px}.ticket-date{font-size:23px}.ticket-top svg{width:40px;height:40px}.ticket-meta{font-size:10px}.form-title{font-size:17px}.form-note{margin-bottom:23px}input[type=text],input[type=email]{font-size:16px}.count-label{padding:10px 7px;font-size:12px}.count-options{gap:8px}textarea{font-size:16px;min-height:120px}.hint{font-size:10px}.feedback{font-size:11px;padding:12px}.faq{display:block;padding-bottom:48px}.faq h2{font-size:29px;margin-bottom:24px}.faq summary{font-size:13px;padding-block:19px}.faq details p{font-size:12px;margin-right:15px}.footer{display:block;padding-bottom:26px}.footer p{margin-top:18px;text-align:left;max-width:100%;font-size:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Đến nội dung chính</a>
+  <div class="prototype"><strong>PROTOTYPE · SỰ KIỆN HƯ CẤU</strong> — Thông tin và đăng ký trên trang này là dữ liệu mẫu.</div>
+  <header class="topbar wrap">
+    <a class="brand" href="#main" aria-label="Đổi sách cuối tuần — đầu trang">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M5 8c7-2 11-1 15 3 4-4 8-5 15-3v25c-7-2-11-1-15 3-4-4-8-5-15-3V8Z" stroke="currentColor" stroke-width="2.2"/><path d="M20 11v25M10 15l6 1m-6 5 6 1m9-6 5-1m-5 7 5-1" stroke="currentColor" stroke-width="2"/></svg>
+      <span>Đổi sách<br>cuối tuần</span>
+    </a>
+    <nav aria-label="Điều hướng chính"><a class="nav-section" href="#cach-doi">Cách đổi sách</a><a class="nav-section" href="#lich-trinh">Lịch trình</a><a class="nav-cta" href="#dang-ky">Đăng ký mẫu <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Đổi sách cuối tuần · 18/10/2026</p>
+        <h1 id="hero-title">Một cuốn sách<br>đã đọc. <span>Một câu<br>chuyện còn tiếp.</span></h1>
+        <p class="intro">Mang theo những trang sách bạn đã đọc.<br>Để một người khác bắt đầu câu chuyện của họ.</p>
+        <div class="hero-actions"><a class="button" href="#dang-ky">Đăng ký tham gia mẫu <span aria-hidden="true">↗</span></a><span class="fine">Tham gia miễn phí</span></div>
+      </div>
+      <div class="book-scene">
+        <div class="scene-date"><strong>18.10</strong><span>2026<br>09:00–12:00</span></div>
+        <svg viewBox="0 0 560 450" role="img" aria-label="Minh họa một cuốn sách đang mở trên hai cuốn sách xếp chồng">
+          <defs><linearGradient id="orange-cover" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff8c4e"/><stop offset="1" stop-color="#df421c"/></linearGradient><linearGradient id="pages" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fdfbf1"/><stop offset=".5" stop-color="#d8d0bc"/><stop offset="1" stop-color="#fffcf4"/></linearGradient></defs>
+          <ellipse cx="285" cy="375" rx="204" ry="21" fill="#d6d0c2" opacity=".6"/>
+          <g transform="translate(33 0)">
+            <path d="m50 321 232-71 189 67-239 76Z" fill="#27392e"/><path d="m50 321 182 61 239-76v27l-239 76-182-62Z" fill="#344a3d"/>
+            <path d="m66 322 167 52 224-68v22l-224 68-167-54Z" fill="#e6e1cc"/><path d="m77 328 156 49 215-65m-215 72 215-64m-215 71 215-65" fill="none" stroke="#bcb69f" stroke-width="1.2"/>
+            <path d="m84 280 225-74 140 69-226 77Z" fill="#df471d"/><path d="m84 280 139 64 226-76v32l-226 76-139-63Z" fill="url(#orange-cover)"/>
+            <path d="m100 284 123 54 213-73v24l-213 72-123-54Z" fill="#f4e9d0"/><path d="m111 290 112 47 205-68m-205 77 205-68m-205 76 205-67" fill="none" stroke="#c1ad91" stroke-width="1.2"/>
+            <path d="m66 243 165-70 179 54-143 76Z" fill="#e24920"/><path d="m231 173 4-96 196 78-21 72-143 76Z" fill="#b83718"/>
+            <path d="m74 233 156-64 176 58-140 66Z" fill="#eee5d0"/>
+            <path d="M89 121c50-15 104-2 165 34l-9 112c-55-32-111-38-168-17Z" fill="url(#pages)"/>
+            <path d="M254 155c39-44 103-69 163-62l-7 131c-50-1-104 15-165 43Z" fill="#fffbed"/>
+            <path d="M254 155 245 267" stroke="#baaa8f" stroke-width="2"/>
+            <path d="M113 144c40-4 78 6 115 26m-118-12c41-3 78 7 116 25m-119-11c40-3 77 7 117 25m-120-10c40-3 79 7 118 24m-120-8c41-3 81 6 118 23" fill="none" stroke="#c5b9a0" stroke-width="2"/>
+            <path d="M278 166c34-25 71-38 107-39m-108 53c36-23 70-35 107-36m-108 49c36-21 70-32 107-33m-108 47c36-19 72-30 107-31m-108 45c36-18 72-28 107-30" fill="none" stroke="#d4c9b0" stroke-width="2"/>
+            <path d="m336 111 20-8-2 111-12-7-13 16Z" fill="#e84c20"/>
+          </g>
+          <path d="m470 98 8-18m1 32 18-4m-37-15-5-13" fill="none" stroke="#e84c20" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="scene-caption">Minh họa sách · Không phải ảnh sự kiện</span>
+      </div>
+    </section>
+    <div class="facts" aria-label="Thông tin sự kiện mẫu">
+      <div class="fact"><span class="fact-label">Ngày gặp nhau</span><strong>18/10/2026</strong></div>
+      <div class="fact"><span class="fact-label">Thời gian</span><strong>09:00–12:00</strong></div>
+      <div class="fact"><span class="fact-label">Địa điểm mẫu</span><strong>Không gian mẫu, Quận 3</strong></div>
+      <div class="fact"><span class="fact-label">Phí tham gia</span><strong>Miễn phí ↗</strong></div>
+    </div>
+    <section id="cach-doi" class="section" aria-labelledby="how-title">
+      <div class="section-heading"><p class="eyebrow">01 / Cách đổi sách</p><h2 id="how-title">Sách đổi tay.<br>Câu chuyện đi xa.</h2></div>
+      <div class="steps">
+        <article class="step"><div class="step-top"><span class="step-number">01</span><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="m12 14 25-5 8 30-25 5-8-30Z" stroke="currentColor" stroke-width="1.6"/><path d="m12 14-5 4 8 30 25-5 5-4M15 18l6 23m-3-18 14-3m-12 9 13-3" stroke="currentColor" stroke-width="1.6"/></svg></div><h3>Chọn sách để mang theo</h3><p>Chuẩn bị 1–3 cuốn sách còn đọc được. Chọn những cuốn bạn sẵn sàng trao cho một người đọc khác.</p></article>
+        <article class="step"><div class="step-top"><span class="step-number">02</span><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="7" y="15" width="17" height="29" rx="1" stroke="currentColor" stroke-width="1.6"/><rect x="32" y="12" width="17" height="29" rx="1" stroke="currentColor" stroke-width="1.6"/><path d="M17 7h23l-4-4m4 4-4 4M39 49H16l4-4m-4 4 4 4" stroke="currentColor" stroke-width="1.6"/></svg></div><h3>Gặp nhau & đổi sách</h3><p>Check-in lúc 09:00, bắt đầu đổi sách lúc 09:30. Xem sách, trò chuyện và cùng chọn cuốn muốn đọc tiếp.</p></article>
+        <article class="step"><div class="step-top"><span class="step-number">03</span><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="M8 13c8-2 14 0 20 5 6-5 12-7 20-5v29c-8-2-14 0-20 5-6-5-12-7-20-5V13Zm20 5v29m-15-25 9 3m-9 4 9 3m12-7 9-3m-9 10 9-3" stroke="currentColor" stroke-width="1.6"/></svg></div><h3>Mang câu chuyện về nhà</h3><p>Khép lại bằng phần chia sẻ lúc 11:30. Một cuốn sách mới để mở, một câu chuyện mới để bắt đầu.</p></article>
+      </div>
+      <div class="bring"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 11v6m0-10v1" stroke="currentColor" stroke-width="1.8"/></svg><span><strong>Trước khi đến:</strong> kiểm tra sách còn đọc được và mang theo 1–3 cuốn. Thông tin này thuộc kịch bản sự kiện mẫu.</span></div>
+    </section>
+    <section id="lich-trinh" class="program" aria-labelledby="program-title">
+      <div><p class="eyebrow">02 / Lịch trình mẫu</p><h2 id="program-title">Một buổi sáng<br>dành cho sách.</h2><p class="program-intro">18/10/2026 · 09:00–12:00<br>Không gian mẫu, Quận 3</p></div>
+      <ol class="timeline"><li><time datetime="2026-10-18T09:00">09:00</time><span>Check-in</span></li><li><time datetime="2026-10-18T09:30">09:30</time><span>Đổi sách</span></li><li><time datetime="2026-10-18T11:30">11:30</time><span>Chia sẻ cuối buổi</span></li></ol>
+    </section>
+    <section id="dang-ky" class="register" aria-labelledby="register-title">
+      <div class="register-story"><p class="eyebrow">03 / Đăng ký mô phỏng</p><h2 id="register-title">Bạn mang sách.<br>Chúng ta tiếp nối<br>câu chuyện.</h2><p>Thử đăng ký cho buổi đổi sách mẫu. Chỉ cần thông tin của bạn và số sách dự định mang theo.</p><div class="ticket"><div class="ticket-top"><svg viewBox="0 0 60 60" fill="none" aria-hidden="true"><path d="M10 17h40v35H10V17Zm0 11h40M20 10v14m20-14v14M19 36h6m10 0h6m-22 8h6m10 0h6" stroke="currentColor" stroke-width="2"/></svg><div><div class="ticket-date">18/10/2026</div><span>09:00–12:00 · MIỄN PHÍ</span></div></div><div class="ticket-meta">Không gian mẫu, Quận 3<br>Sự kiện hư cấu dành cho prototype.</div></div></div>
+      <form class="work-form" data-testid="work-form">
+        <p class="form-title">Hẹn bạn ở trang sách tiếp theo.</p><p class="form-note">Biểu mẫu thử nghiệm · Các trường có * là bắt buộc.</p>
+        <div class="field"><label for="reader-name">Họ và tên *</label><input id="reader-name" name="name" type="text" autocomplete="name" required maxlength="120" placeholder="Tên của bạn"></div>
+        <div class="field"><label for="reader-email">Email *</label><input id="reader-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="ban@example.com"><span class="hint">Không có email nào được gửi từ prototype này.</span></div>
+        <fieldset><legend>Số sách bạn dự định mang theo *</legend><div class="count-options"><label class="count-label"><input type="radio" name="books" value="1" required checked> 1 cuốn</label><label class="count-label"><input type="radio" name="books" value="2" required> 2 cuốn</label><label class="count-label"><input type="radio" name="books" value="3" required> 3 cuốn</label></div></fieldset>
+        <div class="field"><label for="access-note">Nhu cầu hỗ trợ tiếp cận <span class="optional">(không bắt buộc)</span></label><textarea id="access-note" name="accessibility" rows="4" aria-describedby="access-hint" placeholder="Bạn có thể chia sẻ nhu cầu hỗ trợ hoặc lưu ý để tham gia thuận tiện hơn…"></textarea><span id="access-hint" class="hint">Có thể viết ghi chú dài. Đây là dữ liệu thử nghiệm, chưa có hỗ trợ thực tế được xác nhận.</span></div>
+        <button class="button submit" data-testid="primary" type="submit"><span id="submit-label">Đăng ký mẫu</span><span aria-hidden="true">↗</span></button>
+        <div class="feedback" data-testid="feedback" id="feedback" role="status" aria-live="polite" aria-atomic="true" tabindex="-1" data-state="idle">Thao tác mô phỏng. Thông tin chỉ được xử lý trên trang này và không được gửi ra ngoài.</div>
+      </form>
+    </section>
+    <section class="faq" aria-labelledby="faq-title"><div><p class="eyebrow">04 / Trước khi tham gia</p><h2 id="faq-title">Bạn có thể<br>đang thắc mắc.</h2></div><div class="faq-list">
+      <details><summary>Tôi cần mang theo bao nhiêu sách?</summary><p>Theo thông tin mẫu, bạn mang 1–3 cuốn sách còn đọc được. Chọn số lượng dự định mang trong biểu mẫu đăng ký.</p></details>
+      <details><summary>Tham gia có mất phí không?</summary><p>Tham gia miễn phí theo kịch bản sự kiện mẫu. Biểu mẫu này không yêu cầu thanh toán.</p></details>
+      <details><summary>Tôi có thể ghi nhu cầu hỗ trợ tiếp cận ở đâu?</summary><p>Bạn có thể viết vào ô “Nhu cầu hỗ trợ tiếp cận” khi đăng ký. Ô này không bắt buộc và cho phép ghi chú dài. Trong prototype, ghi chú chỉ được giữ trên trang và chưa được gửi cho ai.</p></details>
+      <details><summary>Đăng ký này có hiệu lực ngoài trang mẫu không?</summary><p>Không. “Đổi sách cuối tuần” trên trang này là một sự kiện hư cấu. Đăng ký và thông báo xác nhận đều là mô phỏng, không tạo đăng ký tham gia thực tế.</p></details>
+    </div></section>
+  </main>
+  <footer class="footer wrap"><a class="brand" href="#main">Đổi sách cuối tuần <span aria-hidden="true">↗</span></a><p>Prototype frontend · Sự kiện hư cấu · Mọi thao tác đều là mô phỏng.<br>Dữ liệu chỉ tồn tại trên trang, được xóa khi tải lại.</p></footer>
+  <script>
+    (() => {
+      const form = document.querySelector('[data-testid="work-form"]');
+      const button = form.querySelector('[data-testid="primary"]');
+      const label = document.getElementById('submit-label');
+      const feedback = document.getElementById('feedback');
+      let failureShown = false;
+      let registered = false;
+      function fail() {
+        failureShown = true;
+        feedback.dataset.state = 'error';
+        feedback.replaceChildren();
+        const heading = document.createElement('strong');
+        heading.textContent = 'Chưa ghi nhận đăng ký mẫu.';
+        feedback.append(heading, 'Đây là lỗi mô phỏng. Thông tin bạn đã nhập vẫn được giữ nguyên. Vui lòng thử lại.');
+        label.textContent = 'Thử lại đăng ký mẫu';
+      }
+      form.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!form.reportValidity()) return;
+        const name = form.elements.name.value.trim();
+        if (!name) {
+          form.elements.name.setCustomValidity('Vui lòng nhập họ và tên.');
+          form.elements.name.reportValidity();
+          return;
+        }
+        if (!failureShown) {
+          fail();
+        } else {
+          registered = true;
+          feedback.dataset.state = 'success';
+          feedback.replaceChildren();
+          const heading = document.createElement('strong');
+          heading.textContent = 'Đã ghi nhận đăng ký mẫu.';
+          feedback.append(heading, `${name}, bạn đã đăng ký thử với ${form.elements.books.value} cuốn sách. Đây là xác nhận mô phỏng; không có dữ liệu hay email nào được gửi ra ngoài.`);
+          label.textContent = 'Đã đăng ký mẫu';
+          button.disabled = true;
+        }
+        feedback.focus({preventScroll:true});
+      });
+      form.addEventListener('input', () => {
+        form.elements.name.setCustomValidity('');
+        if (registered) {
+          registered = false;
+          button.disabled = false;
+          label.textContent = 'Cập nhật đăng ký mẫu';
+          feedback.dataset.state = 'idle';
+          feedback.textContent = 'Thông tin đã thay đổi. Bạn có thể lưu lại đăng ký mẫu; thao tác chỉ thực hiện trên trang này.';
+        }
+      });
+      if (new URLSearchParams(window.location.search).get('state') === 'error') {
+        form.elements.name.value = 'Người đọc mẫu';
+        form.elements.email.value = 'nguoidoc@example.com';
+        form.elements.books.value = '2';
+        fail();
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "superiorityClaim": false,
+  "claim": "No universal or statistical superiority established.",
+  "progression": "incomplete",
+  "coverage": {
+    "scheduled": 18,
+    "complete": 2,
+    "eligible": 0,
+    "ownerRated": 0,
+    "exploratoryRated": 0
+  },
+  "ownerVisual": {
+    "skill": 0,
+    "control": 0,
+    "tie": 0,
+    "neither": 0
+  },
+  "clarity": {
+    "skill": 0,
+    "control": 0,
+    "tie": 0,
+    "unknown": 0
+  },
+  "brand": {
+    "skill": 0,
+    "control": 0,
+    "tie": 0,
+    "na": 0
+  },
+  "perBrief": {},
+  "exploratory": [],
+  "decisiveWinRate": null,
+  "inferentialInterval": null,
+  "studyId": "ui-paired-v1-2026-10-08",
+  "generationAvailable": null,
+  "scope": "Descriptive evidence only. No automatic statistical superiority claim."
+}

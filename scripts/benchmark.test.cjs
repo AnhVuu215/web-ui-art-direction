@@ -1,0 +1,13 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const api = require('./benchmark.cjs');
+const eligible = id => ({id,briefId:'B',eligible:true,status:'complete',conditions:{A:'skill',B:'control'}});
+const vote = (pairId, visual='A') => ({pairId,reviewerId:'owner',reviewerRole:'owner',visual,clarity:'tie',brand:'na',reason:'Title and controls are easier to scan.'});
+test('a zero-vote study cannot claim superiority',()=>{assert.equal(typeof api.analyze,'function');const report=api.analyze([eligible('p1')],[]);assert.equal(report.superiorityClaim,false);assert.equal(report.progression,'incomplete');assert.equal(report.coverage.ownerRated,0);});
+test('ties and neither remain in the denominator',()=>{const report=api.analyze([eligible('p1'),eligible('p2'),eligible('p3')],[vote('p1'),vote('p2','tie'),vote('p3','neither')]);assert.deepEqual(report.ownerVisual,{skill:1,control:0,tie:1,neither:1});assert.equal(report.decisiveWinRate,1);assert.equal(report.coverage.ownerRated,3);assert.equal(report.superiorityClaim,false);});
+test('a duplicate owner vote cannot inflate the sample',()=>{assert.throws(()=>api.analyze([eligible('p1')],[vote('p1'),vote('p1','B')]),/Duplicate/);});
+test('invalid sides and unknown pairs are rejected',()=>{assert.throws(()=>api.analyze([eligible('p1')],[vote('p1','C')]),/Invalid visual/);assert.throws(()=>api.analyze([eligible('p1')],[vote('missing')]),/Unknown pair/);});
+test('ineligible exploratory pairs stay out of eligible counts',()=>{const pair=eligible('p1');pair.eligible=false;const report=api.analyze([pair],[vote('p1')]);assert.equal(report.coverage.eligible,0);assert.equal(report.coverage.exploratoryRated,1);assert.equal(report.ownerVisual.skill,0);assert.equal(report.progression,'incomplete');});
+test('AI reviewers never substitute for owner ratings',()=>{const ai=vote('p1');ai.reviewerRole='ai';const report=api.analyze([eligible('p1')],[ai]);assert.equal(report.coverage.ownerRated,0);assert.equal(report.progression,'incomplete');});
+test('text hashes survive BOM and Windows newlines',()=>{assert.equal(api.textHash('one\r\ntwo\r\n'),api.textHash('\ufeffone\ntwo\n'));assert.notEqual(api.textHash('one\ntwo\n'),api.textHash('changed\ntwo\n'));});
+test('a vote for changed renders is not silently reused',()=>{const pair=eligible('p1');pair.renderFingerprint='new-render';const old=vote('p1');old.renderFingerprint='old-render';assert.throws(()=>api.analyze([pair],[old]),/Render fingerprint/);});
