@@ -1,5 +1,8 @@
-The seven reference images in assets/owner-references/ are excluded from the
-following MIT license. See assets/owner-references/README.md for their terms.
+The seven reference images in assets/owner-references/ and their pixels in
+assets/reference-maps/ renders are excluded from the following MIT license.
+See assets/owner-references/README.md for their terms.
+Be Vietnam Pro fonts in assets/fonts/ are under the SIL Open Font License 1.1;
+see assets/fonts/OFL.txt. Original source code and text are under MIT.
 
 MIT License
 

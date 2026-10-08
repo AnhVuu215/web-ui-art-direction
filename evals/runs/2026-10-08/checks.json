@@ -1,0 +1,159 @@
+{
+  "generatedAt": "2026-10-08T15:18:42.264Z",
+  "browser": "154.0.8037.98",
+  "results": [
+    {
+      "variant": "control-public",
+      "views": {
+        "default-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Chữ Việt — Chữ rõ. Ý có dấu."
+        },
+        "default-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Chữ Việt — Chữ rõ. Ý có dấu."
+        }
+      },
+      "checks": [
+        {
+          "name": "mobile menu keyboard and Escape",
+          "passed": true
+        },
+        {
+          "name": "request feedback preserves fields",
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "skill-public",
+      "views": {
+        "default-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Chữ Việt — mẫu thử typography"
+        },
+        "default-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Chữ Việt — mẫu thử typography"
+        }
+      },
+      "checks": [
+        {
+          "name": "mobile menu keyboard and Escape",
+          "passed": true
+        },
+        {
+          "name": "request feedback preserves fields",
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "control-app",
+      "views": {
+        "default-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Hàng chờ bài viết · Bản thảo"
+        },
+        "default-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Hàng chờ bài viết · Bản thảo"
+        },
+        "error-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Chi tiết bài viết · Bản thảo"
+        },
+        "error-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Chi tiết bài viết · Bản thảo"
+        }
+      },
+      "checks": [
+        {
+          "name": "filter detail failure retry return",
+          "passed": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "variant": "skill-app",
+      "views": {
+        "default-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Bản thảo — Hàng đợi biên tập"
+        },
+        "default-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "Bản thảo — Hàng đợi biên tập"
+        },
+        "error-1440": {
+          "width": 1440,
+          "scrollWidth": 1440,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "BT-042 — Bản thảo"
+        },
+        "error-390": {
+          "width": 390,
+          "scrollWidth": 390,
+          "overflow": false,
+          "fontsLoaded": 3,
+          "vietnamese": true,
+          "title": "BT-042 — Bản thảo"
+        }
+      },
+      "checks": [
+        {
+          "name": "filter detail failure retry return",
+          "passed": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "limits": "Pilot only. Explicit invocation; no implicit activation or owner taste approval tested. Control artifacts kept without edits."
+}

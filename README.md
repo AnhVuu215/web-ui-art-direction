@@ -58,14 +58,21 @@ web-ui-art-direction/
 ├── README.md                    # Hướng dẫn và phạm vi
 ├── LICENSE                      # MIT cho nội dung gốc của repo
 ├── assets/owner-references/     # 7 ảnh gốc, manifest và điều kiện sử dụng riêng
+├── assets/reference-maps/       # 3 ảnh có ghim chú thích; source HTML không sửa ảnh gốc
+├── assets/specimen/             # Mẫu component tương tác, ảnh sáng/tối và kết quả check
+├── assets/fonts/                # Be Vietnam Pro tự host, giấy phép OFL riêng
 ├── evals/
-│   └── prompts.csv              # 10 tình huống kích hoạt/không kích hoạt
+│   ├── prompts.csv              # 10 tình huống kích hoạt/không kích hoạt
+│   └── runs/                    # Pilot có/không dùng skill; chưa được chủ skill duyệt
 ├── scripts/
-│   └── check-package.ps1        # Kiểm tra cấu trúc, link và prompt bằng PowerShell
+│   ├── check-package.ps1        # Kiểm tra cấu trúc, link và prompt bằng PowerShell
+│   └── render-review.cjs        # Render và kiểm tra hành vi bằng Playwright + Chrome
 └── references/
     ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
     ├── owner-style.md           # Gu mặc định rút từ 7 ảnh chủ skill chọn
     ├── owner-image-study.md     # Đọc từng ảnh và chuyển cơ chế sang web/app
+    ├── reference-details.md     # 3 sơ đồ phân tích khoảng cách, lớp và micro-detail
+    ├── component-specimen.md    # Anatomy, token đề xuất, trạng thái, sáng/tối và giới hạn
     ├── owner-components.md      # Áp gu đó vào header, nav, button, card, form, table, state
     ├── owner-product-ui.md      # Áp gu đó xuyên suốt hệ thống sau đăng nhập
     ├── evaluation.md            # Bộ thử kích hoạt, đầu ra thị giác và UX
@@ -201,9 +208,15 @@ references/evaluation.md, sửa những chỗ giống template hoặc làm khó 
 
 Khi chỉ cần hình ảnh thiết kế, hãy nói rõ đó là **mockup**; các nút và luồng chỉ được coi là hoạt động sau khi triển khai và kiểm thử. Nếu đã có code, cần kiểm tra trong giao diện chạy thật thay vì kết luận từ ảnh render.
 
+### Mẫu component và phân tích có hình
+
+[Mẫu Nét](references/component-specimen.md) cho xem header/menu, button, input, tabs, bảng chọn dòng và dialog phục hồi sau lỗi trên **cả nền sáng lẫn tối**. Có source chạy cục bộ và ảnh desktop/mobile. Các thông số là đề xuất để so sánh quan hệ; không bắt mọi dự án dùng cùng font, palette, radius hay layout. Nút minh họa trạng thái được ghi rõ; phần lọc, chọn dòng, tab và dialog có tương tác thử thật.
+
+[Ba sơ đồ đọc ảnh](references/reference-details.md) đánh dấu vùng để chỉ ra cách chữ, khoảng trống, header, lớp ảnh và panel phối hợp. Đây là phân tích quan hệ từ ảnh tĩnh, không đoán thông số CSS chính xác hoặc khẳng định tương tác của website gốc.
+
 ### Kiểm nghiệm thay vì tin rằng tài liệu dài sẽ tự tạo UI đẹp
 
-[Evaluation](references/evaluation.md) và [10 prompt thử](evals/prompts.csv) bao gồm brief mở, brand có sẵn, app nhiều màn hình, component nhỏ và yêu cầu không nên kích hoạt skill. So sánh đầu ra có/không có skill trên cùng dữ kiện; ghi lại ảnh render, màn hình rộng/hẹp, trạng thái và những hành vi đã kiểm tra. Một mẫu thiết kế chỉ trở thành **chuẩn thị giác của chủ skill** sau khi chủ skill xem và chấp nhận nó. Hiện repository chứa quy tắc và ví dụ suy luận, **chưa tuyên bố có một bộ ảnh đầu ra đã được duyệt làm chuẩn**.
+[Evaluation](references/evaluation.md) và [10 prompt thử](evals/prompts.csv) bao gồm brief mở, brand có sẵn, app nhiều màn hình, component nhỏ và yêu cầu không nên kích hoạt skill. [Pilot ngày 08/10/2026](evals/runs/2026-10-08/README.md) lưu hai brief có/không dùng skill, source, render và kiểm tra tương tác chung. Pilot nhỏ chỉ giúp tìm lỗi và so sánh một lần; chưa chứng minh mức cải thiện ổn định hoặc activation tự động. Một mẫu thiết kế chỉ trở thành **chuẩn thị giác của chủ skill** sau khi chủ skill xem và chấp nhận nó. Các ảnh mới **chưa được duyệt làm chuẩn**.
 
 Để kiểm tra nhanh gói skill sau khi sửa file, chạy trong thư mục repo bằng PowerShell:
 
@@ -211,7 +224,17 @@ Khi chỉ cần hình ảnh thiết kế, hãy nói rõ đó là **mockup**; cá
 .\scripts\check-package.ps1
 ```
 
-Script kiểm tra frontmatter, tên skill, liên kết nội bộ, placeholder và bảng prompt; nó **không chấm chất lượng giao diện**. Muốn biết skill thực sự giúp ích, phải chạy các prompt và xem đầu ra theo rubric trong `evaluation.md`.
+Script kiểm tra frontmatter, tên skill, liên kết nội bộ, placeholder và bảng prompt. Khi có pilot, nó đối chiếu hash source và các kết quả browser đã lưu; **không tự chạy browser hoặc chấm chất lượng giao diện**. Muốn biết skill thực sự giúp ích, phải chạy các prompt và xem đầu ra theo rubric trong `evaluation.md`.
+
+Để tái tạo ảnh và kiểm tra browser, cần Node.js, Playwright và Chrome đã cài. Trong một thư mục tooling riêng, cài `npm install playwright`; đặt `PLAYWRIGHT_MODULE` trỏ tới thư mục module đó nếu repo không có module local. Không cần tải browser nếu Chrome đã có:
+
+```powershell
+$env:PLAYWRIGHT_MODULE = 'D:\tooling\node_modules\playwright'
+$env:CHROME_PATH = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+node .\scripts\render-review.cjs all
+```
+
+Thay đường dẫn theo máy của bạn. Có thể chạy `specimen`, `maps` hoặc `pilots` riêng thay cho `all`. Script phục vụ file trên localhost trong lúc chạy, đóng browser/server sau khi xong, và ghi đè các ảnh/kết quả render tương ứng. Kết quả hành vi không thay thế đánh giá gu thẩm mỹ của bạn.
 
 ## Những gì rút ra từ 33 ảnh
 
@@ -234,4 +257,4 @@ Khi bổ sung quy tắc, hãy đưa ra **bối cảnh áp dụng**, **tác dụn
 
 ## Giấy phép
 
-Nội dung chữ và script gốc trong repo phát hành theo [MIT License](LICENSE). Giấy phép này không bao gồm 7 ảnh tham khảo trong `assets/owner-references/` và cũng không áp dụng cho 26 ảnh không được đưa vào repo.
+Nội dung chữ, source HTML/CSS/JS và script gốc trong repo phát hành theo [MIT License](LICENSE). Giấy phép này không bao gồm 7 ảnh tham khảo, pixel của chúng trong sơ đồ chú thích, hoặc 26 ảnh không được đưa vào repo. [Be Vietnam Pro](assets/fonts/README.md) dùng giấy phép OFL riêng.

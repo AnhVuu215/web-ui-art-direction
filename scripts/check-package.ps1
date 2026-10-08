@@ -7,6 +7,14 @@ $root = (Resolve-Path -LiteralPath $SkillRoot).Path
 $skillFile = Join-Path $root 'SKILL.md'
 $errors = [System.Collections.Generic.List[string]]::new()
 
+function Get-TextSha256([string]$Path) {
+    # Git may use CRLF on Windows. Hash logical UTF-8 text with LF and no BOM.
+    $content = [IO.File]::ReadAllText($Path).Replace("`r`n", "`n").Replace("`r", "`n")
+    $hasher = [Security.Cryptography.SHA256]::Create()
+    try { return [BitConverter]::ToString($hasher.ComputeHash([Text.Encoding]::UTF8.GetBytes($content))).Replace('-', '').ToLowerInvariant() }
+    finally { $hasher.Dispose() }
+}
+
 if (-not (Test-Path -LiteralPath $skillFile -PathType Leaf)) {
     throw "Missing SKILL.md in $root"
 }
@@ -90,9 +98,41 @@ if (-not (Test-Path -LiteralPath $promptFile -PathType Leaf)) {
     }
 }
 
+$runRoot = Join-Path $root 'evals\runs\2026-10-08'
+if (Test-Path -LiteralPath $runRoot) {
+    $runManifestFile = Join-Path $runRoot 'manifest.json'
+    $runChecksFile = Join-Path $runRoot 'checks.json'
+    if (-not (Test-Path -LiteralPath $runManifestFile) -or -not (Test-Path -LiteralPath $runChecksFile)) {
+        $errors.Add('Recorded pilot is missing its manifest or browser results.')
+    } else {
+        $runManifest = Get-Content -LiteralPath $runManifestFile -Raw -Encoding UTF8 | ConvertFrom-Json
+        if ($runManifest.skillSha256 -ine (Get-TextSha256 $skillFile)) {
+            $errors.Add('Skill changed after recorded pilot: rerun or explicitly archive this pilot before release.')
+        }
+        foreach ($entry in $runManifest.files) {
+            $artifact = [IO.Path]::GetFullPath((Join-Path $runRoot $entry.path))
+            if (-not $artifact.StartsWith($runRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+                $errors.Add("Pilot artifact outside run directory: $($entry.path)")
+                continue
+            }
+            if (-not (Test-Path -LiteralPath $artifact) -or (Get-TextSha256 $artifact) -ine $entry.sha256) {
+                $errors.Add("Pilot source missing or changed: $($entry.path)")
+            }
+        }
+        $runChecks = Get-Content -LiteralPath $runChecksFile -Raw -Encoding UTF8 | ConvertFrom-Json
+        if (@($runManifest.files).Count -ne 4 -or @($runChecks.results).Count -ne 4) { $errors.Add('Expected four pilot source artifacts and result entries.') }
+        foreach ($result in $runChecks.results) {
+            if (@($result.errors).Count -gt 0 -or @($result.checks | Where-Object { -not $_.passed }).Count -gt 0) { $errors.Add("Pilot browser failure: $($result.variant)") }
+            foreach ($view in $result.views.PSObject.Properties.Value) {
+                if ($view.overflow -or $view.fontsLoaded -lt 2) { $errors.Add("Pilot overflow or unloaded fonts: $($result.variant), width $($view.width)") }
+            }
+        }
+    }
+}
+
 if ($errors.Count -gt 0) {
     $errors | ForEach-Object { Write-Output "ERROR: $_" }
     exit 1
 }
 
-Write-Output "Package check passed: $($markdownFiles.Count) Markdown files, $($prompts.Count) evaluation prompts, seven verified reference images, no broken local links or placeholders."
+Write-Output "Package check passed: $($markdownFiles.Count) Markdown files, $($prompts.Count) evaluation prompts, seven verified reference images, no broken local links or placeholders; recorded pilot sources/results consistent when present."

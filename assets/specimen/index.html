@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nét — Mẫu component</title><link rel="stylesheet" href="specimen.css">
+</head>
+<body>
+  <header class="site-header"><a class="wordmark" href="#top">Nét</a><span class="purpose">Thư viện thử nghiệm</span><button id="menu-toggle" class="quiet mobile-menu" aria-expanded="false" aria-controls="site-nav">Menu</button><nav id="site-nav" aria-label="Các phần trong mẫu"><a href="#actions">Hành động</a><a href="#fields">Nhập liệu</a><a href="#work">Bề mặt làm việc</a></nav><button id="theme-toggle" class="quiet" aria-pressed="false">Xem nền tối</button></header>
+  <main id="top">
+    <section class="opening"><h1>Chi tiết nhỏ.<br><span>Một ngôn ngữ.</span></h1><div class="opening-note"><p>Chữ có lực. Điều khiển có nhịp.<br>Bề mặt đủ yên để làm việc.</p><p class="muted">Mẫu đề xuất cho gu của chủ skill — chưa được duyệt làm chuẩn. Nội dung và thao tác đều là dữ liệu thử.</p></div></section>
+    <section id="actions" class="chapter"><div class="section-heading"><h2>Hành động có thứ tự.</h2><p>Một màu nóng cho bước chính. Cùng chiều cao, khác mức nhấn.</p></div><div class="button-sheet">
+      <div><span class="sample-label">Mặc định</span><button class="primary">Tạo dự án <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+      <div><span class="sample-label">Hover mô phỏng</span><button class="primary hover-sample">Tạo dự án <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+      <div><span class="sample-label">Focus mô phỏng</span><button class="primary focus-sample">Tạo dự án <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+      <div><span class="sample-label">Đang xử lý</span><button class="primary busy" disabled aria-busy="true"><svg class="spinner" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-8-8"/></svg>Đang tạo…</button></div>
+      <div><span class="sample-label">Chưa khả dụng</span><button class="primary" disabled>Tạo dự án</button></div>
+      <div><span class="sample-label">Phụ / ít nhấn / xóa</span><div class="button-group"><button class="secondary">Xem mẫu</button><button class="quiet">Hủy</button><button class="danger">Xóa bản nháp</button></div></div>
+    </div><p class="small muted">Các nút trên minh họa hình thái. Dùng menu, chuyển nền, bộ lọc và “Chỉnh tên dự án” bên dưới để thử tương tác thật trong mẫu.</p></section>
+    <section id="fields" class="chapter"><div class="section-heading"><h2>Khoảng trống để viết.</h2><p>Nhãn, giá trị, lời trợ giúp và lỗi cùng một trục.</p></div><div class="field-sheet">
+      <div class="field"><label for="empty-name">Tên dự án</label><input id="empty-name" placeholder="Ví dụ: Bộ chữ cho tiệm sách"><p class="hint">Tên giúp nhóm tìm lại dự án.</p></div>
+      <div class="field"><label for="filled-name">Đã nhập</label><input id="filled-name" value="Những khoảng thở trong thành phố"><p class="hint">Giá trị vẫn đọc được khi chuỗi dài.</p></div>
+      <div class="field"><label for="focus-name">Focus mô phỏng</label><input id="focus-name" class="focus-sample" value="Bộ chữ tiếng Việt"><p class="hint">Viền focus tách khỏi viền trường.</p></div>
+      <div class="field"><label for="invalid-name">Tên bắt buộc</label><input id="invalid-name" aria-invalid="true" aria-describedby="name-error"><p id="name-error" class="error">Nhập tên dự án để tiếp tục.</p></div>
+    </div></section>
+    <section id="work" class="chapter work-chapter"><div class="section-heading"><h2>Nhận diện trong công việc.</h2><p>Đọc, tìm và sửa trên một bề mặt trung tính.</p></div><div class="work-surface">
+      <div class="work-header"><div><p class="context">Không gian Nét / Dự án</p><h3 id="project-title">Bộ chữ tiếng Việt</h3><p class="muted small">Dữ liệu minh họa · Cập nhật 08/10/2026</p></div><button class="primary" id="open-editor">Chỉnh tên dự án</button></div>
+      <div role="tablist" aria-label="Nội dung dự án" class="tabs"><button id="tab-items" role="tab" aria-selected="true" aria-controls="panel-items">Tài liệu</button><button id="tab-history" role="tab" aria-selected="false" aria-controls="panel-history" tabindex="-1">Lịch sử</button></div>
+      <div id="panel-items" role="tabpanel" aria-labelledby="tab-items"><div class="toolbar"><div class="field search"><label for="filter">Tìm tài liệu</label><input type="search" id="filter" placeholder="Tìm theo tên"></div><p id="selection-status" class="small" role="status">Chưa chọn tài liệu</p><button class="secondary" id="clear-selection" hidden>Bỏ chọn</button></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Bảng tài liệu, có thể cuộn ngang"><table><caption class="sr-only">Tài liệu của dự án Bộ chữ tiếng Việt</caption><thead><tr><th scope="col"><span class="sr-only">Chọn</span></th><th scope="col">Tài liệu</th><th scope="col">Trạng thái</th><th scope="col">Người phụ trách</th></tr></thead><tbody>
+          <tr data-name="bản mô tả chữ"><td><label class="check-hit"><input type="checkbox" aria-label="Chọn Bản mô tả chữ"></label></td><th scope="row">Bản mô tả chữ<span class="row-note">Mục đích, đối tượng và phạm vi</span></th><td><span class="status review">Chờ duyệt</span></td><td>Mai Anh</td></tr>
+          <tr data-name="mẫu dấu tiếng việt"><td><label class="check-hit"><input type="checkbox" aria-label="Chọn Mẫu dấu tiếng Việt"></label></td><th scope="row">Mẫu dấu tiếng Việt<span class="row-note">Ắ · Ề · Ỡ · Ự</span></th><td><span class="status progress">Đang sửa</span></td><td>Minh Khang</td></tr>
+          <tr data-name="quy tắc khoảng cách"><td><label class="check-hit"><input type="checkbox" aria-label="Chọn Quy tắc khoảng cách"></label></td><th scope="row">Quy tắc khoảng cách<span class="row-note">Chữ, dòng và khối nội dung</span></th><td><span class="status complete">Đã duyệt</span></td><td>Thu Hà</td></tr>
+        </tbody></table></div><div id="no-results" class="empty" hidden><h4>Không có tài liệu phù hợp</h4><p>Thử tên ngắn hơn hoặc bỏ từ khóa đang tìm.</p><button class="secondary" id="reset-filter">Xóa tìm kiếm</button></div>
+      </div><div id="panel-history" role="tabpanel" tabindex="0" aria-labelledby="tab-history" hidden><p class="history">08/10/2026 — Mai Anh tạo dự án mẫu. Lịch sử này là dữ liệu minh họa.</p></div>
+    </div><p class="small muted">Trạng thái dùng chữ và hình dạng; accent thương hiệu không thay cho mọi màu trạng thái.</p></section>
+  </main><footer>Đề xuất thị giác, không phải sản phẩm thương mại. <a href="../../references/component-specimen.md">Đọc quyết định và giới hạn của mẫu</a></footer>
+  <dialog id="editor" aria-labelledby="editor-title"><form id="edit-form"><div class="dialog-header"><h2 id="editor-title">Chỉnh tên dự án</h2><button type="button" id="close-editor" class="icon-button" aria-label="Đóng hộp chỉnh sửa"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p class="muted">Tên mới sẽ hiển thị trong không gian dự án mẫu.</p><div class="field"><label for="edit-name">Tên dự án</label><input id="edit-name" required value="Bộ chữ tiếng Việt"></div><p id="save-status" class="error feedback" role="status" hidden></p><div class="dialog-actions"><button type="button" class="secondary" id="cancel-editor">Hủy</button><button type="submit" class="primary" id="save-name">Lưu tên</button></div><p class="small muted">Lần lưu đầu mô phỏng lỗi mạng; thử lại để xem phục hồi. Không có dữ liệu gửi ra ngoài.</p></form></dialog>
+  <script src="specimen.js"></script>
+</body></html>

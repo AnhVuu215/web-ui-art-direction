@@ -4,6 +4,8 @@ These are the owner's actual selected reference files, shown below without alter
 
 The aim is to extract **mechanisms**: where the eye goes, how a section changes pace, how a small control belongs to the visual language, and what should happen when a user starts working. Do not copy a person, mark, composition, product UI, headline, metric, or exact decorative shape.
 
+For visible numbered regions and small relationships, use the [three annotated detail maps](reference-details.md). For original proposed controls with live states, use the [component specimen](component-specimen.md). Neither is an owner-approved output standard.
+
 ## How to read this set
 
 1. Pick the reference whose *mechanism* fits the product object and task; do not average all seven into an orange template.

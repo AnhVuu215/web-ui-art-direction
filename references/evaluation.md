@@ -74,3 +74,7 @@ Treat a revision as an improvement only when it has no new hard failures, does n
 ## 5. What an accepted example means
 
 An example becomes a **visual baseline** only after the owner has reviewed the renders and approved the direction. Record what was approved: subject, typography, composition, materials, component treatment, and limits. Do not generalize a chosen layout or palette into a mandatory template. An unapproved prototype can be used as a test artifact, not as proof that the skill matches the owner's taste.
+
+## 6. Recorded pilot
+
+The [2026-10-08 pilot](../evals/runs/2026-10-08/README.md) contains a typography studio brief and an editorial workspace brief. Each has a separate control and explicit-skill artifact, matching facts/assets, wide/narrow renders and a consequential state. The shared browser script produces machine-readable checks. Root-agent visual ratings are identified as non-blind judgments; owner acceptance remains pending. These two runs do not validate implicit activation, other brands, long-term reliability or general superiority.

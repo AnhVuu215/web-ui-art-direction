@@ -1,0 +1,25 @@
+{
+  "baseCommit": "2364c9097497b252e75e076217b0d3f7b7ca72a5",
+  "skillSha256": "1678920194cb5b93047da40ed121f56fe5efd49f9405e0b08a7b53663b9a4638",
+  "ownerDecision": "not-yet-reviewed",
+  "publicForward": "root-authored after independent subagent quota failure; control report already read",
+  "files": [
+    {
+      "sha256": "82d13eae0fe838cbfcadab8f8bcb0861afc5ed5636788bff34ac1b80e98dca90",
+      "path": "control-public/index.html"
+    },
+    {
+      "sha256": "a0a22f7e9248d5655e9edb375ec7607d93ecae3c3e0758fd5c75d89a9402249e",
+      "path": "skill-public/index.html"
+    },
+    {
+      "sha256": "1995425eb2b06967165683a611940a3396e8eb19bbf124e4514b18a166a34364",
+      "path": "control-app/index.html"
+    },
+    {
+      "sha256": "fcc1b27ca36de6c667968274d2e88702ee9dd1e5759ea8e82bc30a85b75ca462",
+      "path": "skill-app/index.html"
+    }
+  ],
+  "textHashConvention": "SHA-256 of UTF-8 text without BOM and with LF newlines"
+}

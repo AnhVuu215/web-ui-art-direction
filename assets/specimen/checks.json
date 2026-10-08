@@ -1,0 +1,182 @@
+{
+  "generatedAt": "2026-10-08T15:14:32.225Z",
+  "browser": "154.0.8037.98",
+  "views": {
+    "light-desktop": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    },
+    "dark-desktop": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    },
+    "light-mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    },
+    "dark-error": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    },
+    "width-320": {
+      "width": 320,
+      "scrollWidth": 320,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    },
+    "width-390": {
+      "width": 390,
+      "scrollWidth": 390,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    },
+    "width-1440": {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "overflow": false,
+      "fontsLoaded": 3,
+      "vietnamese": true,
+      "title": "Nét — Mẫu component"
+    }
+  },
+  "checks": [
+    {
+      "name": "mobile disclosure and Escape return",
+      "passed": true
+    },
+    {
+      "name": "keyboard focus visible",
+      "passed": true
+    },
+    {
+      "name": "theme switch",
+      "passed": true
+    },
+    {
+      "name": "tab ArrowRight and Home",
+      "passed": true
+    },
+    {
+      "name": "filter empty and recovery",
+      "passed": true
+    },
+    {
+      "name": "selection announces and clears",
+      "passed": true
+    },
+    {
+      "name": "dialog failure preserves input and retry succeeds",
+      "passed": true
+    },
+    {
+      "name": "dialog traps Tab",
+      "passed": true
+    },
+    {
+      "name": "reduced motion disables spinner",
+      "passed": true
+    }
+  ],
+  "contrast": [
+    {
+      "theme": "light",
+      "selector": "body",
+      "foreground": "rgb(33, 30, 27)",
+      "background": "rgb(244, 240, 233)",
+      "ratio": 14.6
+    },
+    {
+      "theme": "light",
+      "selector": ".opening-note .muted",
+      "foreground": "rgb(105, 97, 88)",
+      "background": "rgb(244, 240, 233)",
+      "ratio": 5.36
+    },
+    {
+      "theme": "light",
+      "selector": ".primary",
+      "foreground": "rgb(33, 30, 27)",
+      "background": "rgb(243, 105, 60)",
+      "ratio": 5.45
+    },
+    {
+      "theme": "light",
+      "selector": ".error",
+      "foreground": "rgb(161, 46, 50)",
+      "background": "rgb(244, 240, 233)",
+      "ratio": 6.26
+    },
+    {
+      "theme": "light",
+      "selector": ".complete",
+      "foreground": "rgb(34, 100, 67)",
+      "background": "rgb(255, 253, 248)",
+      "ratio": 6.95
+    },
+    {
+      "theme": "dark",
+      "selector": "body",
+      "foreground": "rgb(246, 240, 231)",
+      "background": "rgb(23, 20, 17)",
+      "ratio": 16.19
+    },
+    {
+      "theme": "dark",
+      "selector": ".opening-note .muted",
+      "foreground": "rgb(184, 172, 160)",
+      "background": "rgb(23, 20, 17)",
+      "ratio": 8.25
+    },
+    {
+      "theme": "dark",
+      "selector": ".primary",
+      "foreground": "rgb(33, 30, 27)",
+      "background": "rgb(243, 105, 60)",
+      "ratio": 5.45
+    },
+    {
+      "theme": "dark",
+      "selector": ".error",
+      "foreground": "rgb(255, 182, 185)",
+      "background": "rgb(23, 20, 17)",
+      "ratio": 11.05
+    },
+    {
+      "theme": "dark",
+      "selector": ".complete",
+      "foreground": "rgb(160, 220, 189)",
+      "background": "rgb(33, 29, 25)",
+      "ratio": 10.74
+    }
+  ],
+  "textEnlargement200Percent": {
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "fontsLoaded": 3,
+    "vietnamese": true,
+    "title": "Nét — Mẫu component"
+  },
+  "errors": [],
+  "limits": "Targeted checks. Enlarged computed text is not a browser zoom or screen reader audit. Static previews do not implement their example actions."
+}

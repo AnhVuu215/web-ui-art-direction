@@ -69,7 +69,7 @@ A result can become a designed moment. Use a strong title and a carefully lit or
 
 ### Create and edit
 
-Prioritize field grouping, defaults, validation, save state, and exit. Use stable light surfaces where long reading or typing occurs. Distinguish draft, saved, and unsaved changes. Provide a review step only when it prevents mistakes. An editing screen can retain identity in typography and borders without a large hero.
+Prioritize field grouping, defaults, validation, save state, and exit. Use stable neutral surfaces where long reading or typing occurs; light and dark are both valid when the brand, use environment, contrast pairs, and information density support them. Distinguish draft, saved, and unsaved changes. Provide a review step only when it prevents mistakes. An editing screen can retain identity in typography and borders without a large hero. The [component specimen](component-specimen.md) shows the same controls in both modes; neither mode is mandatory.
 
 ### Processing and async work
 

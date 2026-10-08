@@ -117,15 +117,7 @@ For an **authenticated product**, carry the identity through type, one accent, s
 
 For more detailed implementation, read [owner-components.md](owner-components.md) when choosing controls and [owner-product-ui.md](owner-product-ui.md) when designing an authenticated flow. Those references translate the same taste into buttons, headers, forms, tables, states, and multiple screens without sacrificing task clarity.
 
-For **components**, consider:
-
-| Part | Preferred character | Guardrail |
-| --- | --- | --- |
-| Header and navigation | Restrained chrome around a strong scene; clear active state | Keep links, labels, and mobile paths obvious |
-| Buttons | Compact, high-contrast primary action; icon can reinforce direction | Label the actual outcome; provide focus, disabled, loading, and error states |
-| Cards and panels | Vary span and intensity by importance; use image or content only when it helps a decision | Avoid rows of equal generic cards and nested decoration |
-| Typography | Bold display voice with quiet, readable supporting text | Protect Vietnamese diacritics, wrapping, contrast, and 200% zoom |
-| Imagery and motion | Subject-led photography or product view, directional light, one purposeful transition | Confirm rights and performance; support reduced motion |
+For **components**, the [specimen](component-specimen.md) shows how a compact header, ember action, quiet field and status-bearing table share a language on light and dark surfaces. Treat it as a candidate to inspect, not a prescribed token set. Keep behavior requirements in [component craft](component-craft.md) and identity choices in [owner components](owner-components.md), so a single rule has one clear source.
 
 ## Review the result, not just the intention
 

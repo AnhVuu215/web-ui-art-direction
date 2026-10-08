@@ -24,7 +24,7 @@ Do not give every button a glow, every card an orange gradient, or every icon a 
 | Icons | Choose one stroke/filled logic and optical size. Use icons to reinforce a labeled action or familiar control. | Icon-only actions have accessible names and comprehensible touch affordances. |
 | Focus and selection | Focus is a clear outline/halo independent of hover; selected state uses shape, indicator, or text as well as color. | Keyboard path remains visible on photo, orange, black, and warm-white surfaces. |
 
-Illustrative values can help a first pass, but should never override the existing product system. Try a 4/8px spacing rhythm, 1px structural borders, approximately 14–16px operational text, and a focus outline thick enough to remain visible. Set final values with the actual font, density, device, and accessibility checks. Component polish comes from consistent relationships more than from exact token numbers.
+See the [component specimen](component-specimen.md) for one inspectable token set, rendered anatomy, light/dark counterparts, and important states. Its values are illustrative candidates; use actual font, density, device, and accessibility checks to choose the product's system.
 
 ## 1. Public header and navigation
 
@@ -37,9 +37,9 @@ The marketing header frames the scene; it should not become a second hero. A com
 
 ## 2. App shell, sidebar, and page header
 
-Carry identity through a restrained wordmark, selected nav marker, type, and small accent. The shell should stay stable as the user switches tasks. If a dark shell surrounds a warm-white work canvas, let the canvas hold tables, forms, and long reading; avoid making every work panel black simply to match the landing page.
+Carry identity through a restrained wordmark, selected nav marker, type, and small accent. The shell should stay stable as the user switches tasks. Use a neutral light or dark work canvas according to the product brand and use scene; check contrast, adjacent surface distinction, and long reading in that mode. A workspace can retain darkness and material character while reducing decorative intensity.
 
-- Separate **global destinations** (workspace, practice, history, settings), **workspace context** (team/project), and **page actions** (create, retry, save). Do not put all three in one pill-shaped row.
+- Separate **global destinations** (workspace, projects, history, settings), **workspace context** (team/project), and **page actions** (create, retry, save). Do not put all three in one pill-shaped row.
 - The current destination must remain visible after hover ends. In a collapsed sidebar, preserve meaning through tooltips or an expansion path; on touch, use a labeled mobile navigation mode rather than a row of mysterious icons.
 - A page header should name the object or task, show any consequential status, and give one leading action for that context. Keep a return path where users move between list and detail. Do not duplicate the leading action in shell, header, empty state, and floating button unless each position solves a real access problem.
 - Use large editorial type sparingly inside the app: welcome or first-use can be expressive; a table page title should leave room for the table and toolbar.
@@ -58,7 +58,7 @@ Build a small action hierarchy. A **primary button** can use a saturated ember f
 | Disabled | Explain why where useful; retain readable label. Do not use disabled styling to hide a permission problem. |
 | Error/success | Show result close to the affected task; a color flash on the button alone is insufficient. |
 
-Use a link when the destination is a page, even if it is visually styled as a button. “Bắt đầu luyện tập” and “Xem lịch sử” communicate different outcomes. Avoid a generic arrow as the only cue. If the action is icon-only (playback, close, menu), verify its accessible name and visible affordance at touch size. The exact minimum target requirement depends on the adopted standard; check the implemented control against [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and the product's accessibility target.
+Use the button/link semantics and target requirements in [component craft](component-craft.md). A small arrow can reinforce the result but should not carry an unfamiliar action by itself. The specimen demonstrates a 44px candidate control height, stable loading width, and a focus outline separate from hover.
 
 ## 4. Cards, panels, and content hierarchy
 
@@ -75,14 +75,7 @@ Use image crop, typographic size, span, and surface tone to control priority. A 
 
 Forms are the quietest part of this style. Use a stable surface, strong label/value contrast, and restrained accent for focus or selection. A cinematic background may frame a sign-in page, but the field area itself should be calm.
 
-- Keep labels visible after typing. Place help and errors near the field; an example placeholder is supplementary.
-- Use appropriate input types and sensible width. A password or email field should not inherit an extreme ultra-wide editorial proportion just because the hero is wide.
-- Group fields by the user's mental model. A two-column layout is useful only when it preserves reading order; collapse it logically on narrow screens.
-- An invalid field needs text that says what to fix, not just an orange border. Reserve orange for brand/focus and a distinct semantic treatment for errors.
-- Preserve entered values after errors. For long forms, provide a summary and move focus to a useful repair point.
-- Distinguish optional, required, read-only, disabled, saving, and saved. A user should not need to infer these from opacity alone.
-
-**Example:** A creation form should ask only for fields the product actually uses. It should not show a decorative “98% phù hợp” metric without a real calculation. The leading action should name the object being created; an error should identify the field or service that prevented creation and preserve the choices.
+For labels, validation, grouping, preserved input, and disabled/read-only behavior, use [component craft](component-craft.md). The owner's treatment adds neutral wells, precise label/value alignment, and enough space for Vietnamese helper and error text. Reserve the brand accent for focus or a leading action; use a distinct error role. A field should not inherit an ultra-wide hero proportion. Compare the specimen's filled, focused, and invalid fields at actual size before choosing the final geometry.
 
 ## 6. Tabs, filters, and segmented choices
 

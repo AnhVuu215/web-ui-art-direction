@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Bản thảo — Hàng đợi biên tập</title>
+<style>
+@font-face{font-family:Be;src:url('../../../../assets/fonts/BeVietnamPro-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:Be;src:url('../../../../assets/fonts/BeVietnamPro-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:Be;src:url('../../../../assets/fonts/BeVietnamPro-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+:root{--paper:#f4f1e9;--surface:#fffdf8;--ink:#25251f;--muted:#65665b;--line:#c8c9bb;--rust:#ac3b22;--rust-hover:#8d2e19;--focus:#255aa2;--green:#285743;--error:#902e2b;--space:24px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Be,Arial,sans-serif;font-size:15px;line-height:1.6}button,select{font:inherit}a{color:inherit}button,a,select{-webkit-tap-highlight-color:transparent}button,select{min-height:46px}button{cursor:pointer}button:disabled{cursor:default}:focus-visible{outline:3px solid var(--focus);outline-offset:4px}h1,h2,p{margin:0}h1,h2{line-height:1.22}button{transition:background-color .12s,color .12s}a{transition:color .12s}.skip{position:absolute;left:20px;top:-100px;z-index:10;padding:12px;background:white;color:#25251f}.skip:focus{top:12px}.masthead{background:#25251f;color:#f9f6ed;padding:0 5%;min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:20px}.wordmark{font-weight:700;font-size:27px;letter-spacing:-1px;line-height:1;display:flex;gap:13px;align-items:center}.mark{width:23px;height:29px;display:inline-block;border-top:3px solid #ed7953;border-bottom:3px solid #ed7953;position:relative}.mark:after{content:'';position:absolute;left:0;right:5px;top:10px;border-top:3px solid #ed7953}.workspace-label{font-size:13px;color:#d0d0c5;border-left:1px solid #616157;padding-left:22px}.nav-wrap{display:flex;align-items:center;gap:28px}.active-nav{font-size:14px;border-bottom:2px solid #ed7953;min-height:88px;display:flex;align-items:center;font-weight:500}.prototype{font-size:12px;color:#dadbd1;white-space:nowrap}.content{max-width:1296px;margin:0 auto;padding:48px 48px 56px}.eyebrow{font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.page-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:38px}.page-head h1{font-size:46px;letter-spacing:-1.6px;font-weight:700;max-width:700px}.intro{margin-top:15px;color:var(--muted);max-width:630px}.head-note{font-size:13px;color:var(--muted);max-width:180px;text-align:right}.rule{height:1px;background:var(--ink);margin-bottom:26px}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-bottom:22px}.field-label{font-size:13px;font-weight:500;display:block;margin-bottom:7px}.filter-group{display:flex;gap:14px;align-items:center}.filter-group .field-label{margin:0}select{padding:10px 38px 10px 14px;border:1px solid #838579;background:var(--surface);color:var(--ink);border-radius:4px;max-width:100%}.filter{min-width:190px}.scope{font-size:13px;color:var(--muted)}.queue{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.queue-header,.article-row{display:grid;grid-template-columns:minmax(300px,1fr) 155px 140px 125px;gap:24px;align-items:center}.queue-header{padding:16px 22px;color:var(--muted);font-size:12px;letter-spacing:.4px;font-weight:500}.article-row{padding:26px 22px;background:var(--surface);border-top:1px solid var(--line);min-height:134px}.article-row:first-of-type{border-left:3px solid var(--rust);padding-left:19px}.article-id{font-size:12px;letter-spacing:.8px;color:var(--muted);margin-bottom:7px}.article-link{font-size:21px;font-weight:500;line-height:1.45;letter-spacing:-.4px;text-decoration:none;display:inline-flex;align-items:center;gap:16px}.article-link:hover{color:var(--rust);text-decoration:underline;text-underline-offset:5px}.arrow{font-size:23px;font-weight:400;color:var(--rust);flex:none}.row-title{max-width:490px}.badge{display:inline-flex;align-items:center;gap:7px;font-size:12px;line-height:1.4;font-weight:500;padding:7px 10px;border-radius:4px;width:fit-content}.badge:before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}.pending{background:#eee8d4;color:#685315}.editing{background:#e8edf0;color:#355469}.approved{background:#e5eee6;color:var(--green)}.cell-label{display:none}.assignee-value,.date-value{font-size:13px}.queue-foot{display:flex;justify-content:space-between;gap:24px;margin-top:20px;color:var(--muted);font-size:12px}.demo-note{max-width:590px}.back-link{display:inline-flex;gap:10px;align-items:center;text-decoration:none;font-size:14px;min-height:44px;margin-bottom:30px;color:var(--muted)}.back-link:hover{color:var(--rust)}.detail-layout{display:grid;grid-template-columns:minmax(0,1fr) 365px;gap:56px;align-items:start}.object-heading{padding-bottom:32px;border-bottom:1px solid var(--ink)}.object-heading .eyebrow{margin-bottom:20px}.object-heading h1{font-size:48px;letter-spacing:-1.65px;max-width:650px;line-height:1.25;margin:16px 0 28px}.object-meta{display:flex;gap:40px;flex-wrap:wrap}.meta-label{display:block;color:var(--muted);font-size:12px;margin-bottom:4px}.meta-value{font-size:14px;font-weight:500}.object-context{margin-top:30px;max-width:570px}.object-context h2{font-size:19px;font-weight:500;letter-spacing:-.3px;margin-bottom:11px}.object-context p{color:var(--muted);font-size:14px}.edit-panel{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--rust);padding:28px}.panel-kicker{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:9px}.edit-panel h2{font-size:24px;letter-spacing:-.6px;margin-bottom:12px}.panel-intro{font-size:13px;color:var(--muted);margin-bottom:28px}.assignee-select{width:100%}.help{font-size:12px;color:var(--muted);margin-top:9px}.status{font-size:13px;line-height:1.65;margin-top:22px;padding:13px 14px;background:#f0ede5;border-left:3px solid #a4a598;min-height:66px}.status strong{display:block;font-weight:500}.status.error{background:#f8e9e5;border-color:var(--error);color:var(--error)}.status.success{background:#e9f0e8;border-color:var(--green);color:var(--green)}.status.dirty{background:#f3eedc;border-color:#806727;color:#695620}.save{width:100%;padding:12px 20px;background:var(--rust);color:#fff;border:0;border-radius:4px;font-weight:500;min-height:49px;margin-top:18px}.save:hover{background:var(--rust-hover)}.save:disabled{background:#e5e2d8;color:#646559}.demo-caption{font-size:12px;color:var(--muted);margin-top:16px}.footer{max-width:1296px;margin:0 auto;padding:20px 48px 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;color:var(--muted);font-size:12px}[hidden]{display:none!important}
+@media(min-width:1500px){.content{padding-top:60px}.page-head{margin-bottom:44px}}
+@media(max-width:1050px){.content{padding:36px 28px 44px}.queue-header,.article-row{grid-template-columns:minmax(235px,1fr) 128px 108px 100px;gap:16px}.detail-layout{grid-template-columns:minmax(0,1fr) 325px;gap:32px}.object-heading h1{font-size:39px}.workspace-label{display:none}.footer{padding-left:28px;padding-right:28px}}
+@media(max-width:760px){.masthead{padding:20px 24px;min-height:0;flex-wrap:wrap;gap:18px}.wordmark{font-size:25px}.nav-wrap{width:100%;justify-content:space-between;gap:16px}.active-nav{min-height:35px;font-size:13px}.prototype{font-size:11px}.content{padding:32px 24px 40px}.page-head{display:block;margin-bottom:27px}.page-head h1{font-size:35px;letter-spacing:-1.1px}.intro{font-size:14px;margin-top:12px}.head-note{display:none}.rule{margin-bottom:20px}.toolbar{align-items:flex-start;gap:12px;flex-wrap:wrap}.filter-group{width:100%;justify-content:space-between;gap:10px}.filter{min-width:185px}.scope{font-size:12px}.queue-header{display:none}.article-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:23px 18px;min-height:0}.article-row:first-of-type{padding-left:15px}.row-title{grid-column:1/-1}.article-link{font-size:19px;gap:10px;align-items:flex-start;max-width:100%}.badge{margin:1px 0;font-size:11px}.cell-label{display:block;font-size:11px;color:var(--muted);margin-bottom:3px}.date-cell{grid-column:1/-1;display:flex;gap:10px;align-items:baseline}.date-cell .cell-label{margin:0}.queue-foot{display:block;margin-top:18px}.queue-foot>p+p{margin-top:10px}.back-link{margin-bottom:22px}.detail-layout{display:block}.object-heading h1{font-size:35px;letter-spacing:-1.2px;margin-top:16px}.object-heading{padding-bottom:25px}.object-meta{gap:20px 32px}.object-context{margin:24px 0 28px}.edit-panel{padding:24px 20px}.edit-panel h2{font-size:23px}.panel-intro{margin-bottom:23px}.footer{padding:18px 24px 24px;display:block}.footer span{display:block}.footer span+span{margin-top:5px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Đến nội dung chính</a>
+<header class="masthead">
+ <div class="wordmark"><span class="mark" aria-hidden="true"></span>Bản thảo <span class="workspace-label">Không gian biên tập</span></div>
+ <div class="nav-wrap"><span class="active-nav">Hàng đợi biên tập</span><span class="prototype">Nguyên mẫu · Dữ liệu mẫu</span></div>
+</header>
+<main id="main" class="content">
+ <section id="queue-view" aria-labelledby="queue-title">
+  <div class="page-head"><div><p class="eyebrow">Không gian biên tập</p><h1 id="queue-title" tabindex="-1">Hàng đợi biên tập</h1><p class="intro">Theo dõi bài viết và phân công người phụ trách.</p></div><p class="head-note">Bài viết là trung tâm.<br>Phân công là bước tiếp theo.</p></div>
+  <div class="rule"></div>
+  <div class="toolbar"><div class="filter-group"><label class="field-label" for="queue-filter">Trạng thái</label><select id="queue-filter" class="filter" data-testid="queue-filter"><option value="all">Tất cả trạng thái</option><option value="pending">Chờ duyệt</option><option value="editing">Đang biên tập</option><option value="approved">Đã duyệt</option></select></div><p class="scope" id="scope" aria-live="polite">Dữ liệu mẫu · 3 bài viết</p></div>
+  <div class="queue" role="table" aria-label="Hàng đợi bài viết mẫu">
+   <div class="queue-header" role="row"><span role="columnheader">BÀI VIẾT</span><span role="columnheader">TRẠNG THÁI</span><span role="columnheader">PHỤ TRÁCH</span><span role="columnheader">CẬP NHẬT</span></div>
+   <article class="article-row" role="row" data-status="pending"><div class="row-title" role="cell"><p class="article-id">BT-042</p><a class="article-link" href="?view=detail" data-testid="open-BT-042" data-open="BT-042"><span>Những khoảng thở trong thành phố</span><span class="arrow" aria-hidden="true">↗</span></a></div><div role="cell"><span class="badge pending">Chờ duyệt</span></div><div role="cell"><span class="cell-label">Phụ trách</span><span class="assignee-value" id="queue-assignee">Mai Anh</span></div><div role="cell" class="date-cell"><span class="cell-label">Cập nhật</span><span class="date-value">08/10/2026</span></div></article>
+   <article class="article-row" role="row" data-status="editing"><div class="row-title" role="cell"><p class="article-id">BT-043</p><span class="article-link"><span>Một khu vườn trên sân thượng</span></span></div><div role="cell"><span class="badge editing">Đang biên tập</span></div><div role="cell"><span class="cell-label">Phụ trách</span><span class="assignee-value">Minh Khang</span></div><div role="cell" class="date-cell"><span class="cell-label">Cập nhật</span><span class="date-value" aria-label="Chưa có dữ liệu cập nhật">—</span></div></article>
+   <article class="article-row" role="row" data-status="approved"><div class="row-title" role="cell"><p class="article-id">BT-044</p><span class="article-link"><span>Bữa cơm của những người về muộn</span></span></div><div role="cell"><span class="badge approved">Đã duyệt</span></div><div role="cell"><span class="cell-label">Phụ trách</span><span class="assignee-value">Thu Hà</span></div><div role="cell" class="date-cell"><span class="cell-label">Cập nhật</span><span class="date-value" aria-label="Chưa có dữ liệu cập nhật">—</span></div></article>
+  </div>
+  <div class="queue-foot"><p class="demo-note">Luồng mẫu: mở BT-042 để đổi người phụ trách, thử lưu và thử lại.</p><p>— Chưa có dữ liệu cập nhật</p></div>
+ </section>
+ <section id="detail-view" aria-labelledby="detail-title" hidden>
+  <a class="back-link" href="?" data-testid="return-queue" id="return-queue"><span aria-hidden="true">←</span>Trở về hàng đợi</a>
+  <div class="detail-layout">
+   <div><div class="object-heading"><p class="eyebrow">Chi tiết bài viết · BT-042</p><span class="badge pending">Chờ duyệt</span><h1 id="detail-title" tabindex="-1">Những khoảng thở trong thành phố</h1><div class="object-meta"><div><span class="meta-label">Người phụ trách hiện tại</span><span class="meta-value" id="current-assignee">Mai Anh</span></div><div><span class="meta-label">Cập nhật</span><span class="meta-value">08/10/2026</span></div></div></div><div class="object-context"><h2>Phân công biên tập</h2><p>Chọn người phụ trách ở bên cạnh và lưu phân công. Sau khi lưu thành công, tên mới sẽ xuất hiện trong hàng đợi.</p></div></div>
+   <form class="edit-panel" id="assignment-form"><p class="panel-kicker">BT-042 / Người phụ trách</p><h2>Đổi người phụ trách</h2><p class="panel-intro">Phân công cho một người trong danh sách mẫu.</p><label for="assignee" class="field-label">Người phụ trách</label><select id="assignee" class="assignee-select" data-testid="assignee" aria-describedby="assignee-help save-status"><option value="Mai Anh">Mai Anh</option><option value="Minh Khang">Minh Khang</option><option value="Thu Hà">Thu Hà</option></select><p class="help" id="assignee-help">Lựa chọn chỉ có hiệu lực sau khi lưu thành công.</p><div id="save-status" class="status" data-testid="save-status" role="status" aria-live="polite" aria-atomic="true"><strong>Chưa có thay đổi.</strong>Chọn người khác để lưu phân công.</div><button class="save" type="submit" id="save" data-testid="save" disabled>Lưu phân công</button><p class="demo-caption">Chế độ demo: lần lưu đầu tiên sẽ mô phỏng lỗi. Bạn có thể thử lại với lựa chọn được giữ nguyên.</p></form>
+  </div>
+ </section>
+</main>
+<footer class="footer"><span>Bản thảo / Không gian biên tập</span><span>Nguyên mẫu tương tác · Dữ liệu mẫu</span></footer>
+<script>
+(() => {
+ 'use strict';
+ const query = new URLSearchParams(location.search);
+ const queueView = document.getElementById('queue-view');
+ const detailView = document.getElementById('detail-view');
+ const filter = document.getElementById('queue-filter');
+ const assignee = document.getElementById('assignee');
+ const save = document.getElementById('save');
+ const status = document.getElementById('save-status');
+ let savedAssignee = 'Mai Anh';
+ let attempted = false;
+ let saving = false;
+ let returnFocus = null;
+ let savedScroll = 0;
+ const validFilters = ['all', 'pending', 'editing', 'approved'];
+ const requestedFilter = query.get('filter');
+ filter.value = validFilters.includes(requestedFilter) ? requestedFilter : 'all';
+ const updateFilter = () => {
+  let visible = 0;
+  document.querySelectorAll('.article-row').forEach(row => { row.hidden = filter.value !== 'all' && row.dataset.status !== filter.value; if (!row.hidden) visible++; });
+  document.getElementById('scope').textContent = `Dữ liệu mẫu · ${visible} bài viết`;
+  document.querySelector('[data-open]').href = `?view=detail&filter=${filter.value}`;
+ };
+ const feedback = (kind, heading, body) => {
+  status.className = `status ${kind}`;
+  status.replaceChildren();
+  const strong = document.createElement('strong'); strong.textContent = heading; status.append(strong, document.createTextNode(body));
+ };
+ const setView = (detail, focus = true) => {
+  queueView.hidden = detail; detailView.hidden = !detail;
+  document.title = detail ? 'BT-042 — Bản thảo' : 'Bản thảo — Hàng đợi biên tập';
+  if (focus) {
+   if (detail) { document.getElementById('detail-title').focus(); window.scrollTo(0,0); }
+   else { (returnFocus && !returnFocus.closest('[hidden]') ? returnFocus : document.getElementById('queue-title')).focus(); window.scrollTo(0,savedScroll); }
+  }
+ };
+ filter.addEventListener('change', () => { updateFilter(); const url = new URL(location.href); url.searchParams.set('filter',filter.value); history.replaceState({},'',url); });
+ document.querySelector('[data-open]').addEventListener('click', event => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault(); returnFocus = event.currentTarget; savedScroll = window.scrollY;
+  const url = new URL(location.href); url.searchParams.set('view','detail'); url.searchParams.set('filter',filter.value); url.searchParams.delete('state'); history.pushState({},'',url); setView(true);
+ });
+ assignee.addEventListener('change', () => {
+  const dirty = assignee.value !== savedAssignee;
+  save.disabled = !dirty; save.textContent = attempted && dirty ? 'Thử lại phân công' : 'Lưu phân công';
+  if (dirty) feedback('dirty','Lựa chọn chưa được lưu.',`Người được chọn: ${assignee.value}.`);
+  else feedback('','Chưa có thay đổi.','Người phụ trách hiện tại vẫn là '+savedAssignee+'.');
+ });
+ document.getElementById('assignment-form').addEventListener('submit', event => {
+  event.preventDefault(); if (saving || assignee.value === savedAssignee) return;
+  saving = true; save.disabled = true; assignee.disabled = true; save.textContent = 'Đang lưu…';
+  feedback('','Đang lưu phân công…','Vui lòng chờ kết quả mô phỏng.');
+  window.setTimeout(() => {
+   saving = false; assignee.disabled = false;
+   if (!attempted) {
+    attempted = true; feedback('error','Demo: chưa lưu được phân công.',`Lựa chọn ${assignee.value} được giữ nguyên. Nhấn “Thử lại phân công” để tiếp tục.`); save.disabled = false; save.textContent = 'Thử lại phân công';
+   } else {
+    savedAssignee = assignee.value; document.getElementById('current-assignee').textContent = savedAssignee; document.getElementById('queue-assignee').textContent = savedAssignee;
+    feedback('success','Đã lưu phân công trong bản demo.',`Người phụ trách: ${savedAssignee}. Bạn có thể trở về hàng đợi.`); save.disabled = true; save.textContent = 'Đã lưu phân công';
+   }
+  },450);
+ });
+ document.getElementById('return-queue').addEventListener('click', event => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault(); const url = new URL(location.href); url.searchParams.delete('view'); url.searchParams.delete('state'); url.searchParams.set('filter',filter.value); history.pushState({},'',url); setView(false);
+ });
+ window.addEventListener('popstate', () => { const params = new URLSearchParams(location.search); const nextFilter = params.get('filter'); if (validFilters.includes(nextFilter)) filter.value = nextFilter; updateFilter(); setView(params.get('view') === 'detail'); });
+ updateFilter();
+ if (query.get('state') === 'error' && query.get('view') === 'detail') {
+  assignee.value = 'Minh Khang'; attempted = true; save.disabled = false; save.textContent = 'Thử lại phân công'; feedback('error','Demo: chưa lưu được phân công.','Lựa chọn Minh Khang được giữ nguyên. Nhấn “Thử lại phân công” để tiếp tục.');
+ }
+ setView(query.get('view') === 'detail',false);
+})();
+</script>
+</body>
+</html>
