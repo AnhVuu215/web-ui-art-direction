@@ -18,6 +18,7 @@ When the brief leaves art direction open, read [owner-style.md](references/owner
 - Read [worked-example.md](references/worked-example.md) when an open-ended brief needs a concrete example of a design direction and its translation into page sections.
 - Read [product-ui.md](references/product-ui.md) for an authenticated app, dashboard, admin area, editor, settings, data-heavy screen, or multi-screen task. It covers information architecture, task continuity, tables, forms, permissions, and state behavior.
 - Read [component-craft.md](references/component-craft.md) when choosing, designing, implementing, or reviewing headers, navigation, buttons, inputs, tabs, overlays, feedback, and other reusable controls. Use it with [product-ui.md](references/product-ui.md) for app work.
+- When using the owner's preferred direction, read [owner-components.md](references/owner-components.md) for its specific component grammar. For a multi-screen app, also read [owner-product-ui.md](references/owner-product-ui.md) to distribute the style across landing, sign-in, work, and result screens.
 - Read [worked-app-example.md](references/worked-app-example.md) when a post-login brief needs a concrete example spanning several screens and states.
 - Read [source-notes.md](references/source-notes.md) to trace the public design-system guidance and product examples behind the post-login rules. Public galleries are examples to inspect, not proof that a pattern works for every user.
 

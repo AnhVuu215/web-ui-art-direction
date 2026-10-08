@@ -10,6 +10,20 @@ Từ 33 ảnh, chủ skill chọn 7 ảnh làm nhóm tham chiếu ưu tiên. [Ow
 
 Đây là **gu ưu tiên, không phải khuôn mẫu**. Brand và yêu cầu cụ thể của dự án được ưu tiên trước. Trang sau đăng nhập vẫn phải dễ đọc, dễ thao tác; không phủ gradient cam lên bảng, form và trạng thái chỉ để giống ảnh tham khảo. 7 ảnh gốc vẫn chỉ được phân tích bằng chữ, không được đưa vào repository.
 
+### 7 ảnh được ưu tiên cho điều gì?
+
+| Ảnh trong bộ sưu tập | Chi tiết đáng học | Cách chuyển thành quy tắc |
+| --- | --- | --- |
+| `5fbabad0` · ứng dụng nghe nhạc | Bàn tay cầm sản phẩm trên trường sáng đỏ cam; chuyển sang chương nền đen. | Cho thấy sản phẩm ở một khoảnh khắc sử dụng thật, rồi đổi nhịp để giải thích. |
+| `21ae9f90` · agency | Chữ cực lớn trên trắng, một vệt sáng cam, chương kể chuyện trên đen. | Để chữ dẫn, dùng một biến cố thị giác có chủ đích thay vì nhiều hiệu ứng nhỏ. |
+| `85b954e2` · media agency | Mở đầu nóng, các phần giải thích tối và chặt, module chứng cứ. | Giữ accent nhất quán, để thông tin thực tạo khác biệt giữa các phần. |
+| `16233b3d` · nội thất | Ghế điêu khắc đè lên chữ; bo góc lõm, đường mảnh, vật liệu ấm. | Lấy vật thể thật của sản phẩm làm nguồn cho hình, màu và chi tiết. |
+| `50223f7c` · motion studio | Dấu hiệu thị giác lớn trong ánh sáng cam đen; chương sau thở trên nền kem. | Một tâm điểm mạnh cần được tiếp nối bằng khoảng nghỉ. |
+| `be8fa1a3` · branding agency | Chân dung có ánh sáng ấm, panel bất đối xứng, bảng màu gọn. | Sự hiện diện của con người cần phù hợp ngữ cảnh, không dùng ảnh stock vô nghĩa. |
+| `ed8d239b` · bộ slide | Chữ lớn, nền cam, xen panel tối/sáng, dấu `+` lặp lại. | Một dấu hiệu nhỏ lặp lại có thể nối nhiều bố cục khác nhau. |
+
+Đây là **quan sát trên ảnh tĩnh**, không phải kết luận rằng các website mẫu hoạt động tốt. Các chữ siêu nhỏ, số liệu, chân dung, logo và bố cục nguyên mẫu không được bê sang sản phẩm mới. Tài liệu [owner-style.md](references/owner-style.md) phân tích từng ảnh sâu hơn và chỉ rõ phần nào không nên kế thừa.
+
 ## Skill giải quyết việc gì?
 
 Một lời nhắc kiểu “làm landing page hiện đại, đẹp, có hồn” thường chưa đủ để ra giao diện tốt. Skill buộc người thiết kế/AI kết nối:
@@ -32,6 +46,8 @@ web-ui-art-direction/
 └── references/
     ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
     ├── owner-style.md           # Gu mặc định rút từ 7 ảnh chủ skill chọn
+    ├── owner-components.md      # Áp gu đó vào header, nav, button, card, form, table, state
+    ├── owner-product-ui.md      # Áp gu đó xuyên suốt hệ thống sau đăng nhập
     ├── component-craft.md       # Header, nav, button, input, tab, overlay và micro-detail
     ├── product-ui.md            # Quy tắc cho hệ thống sau đăng nhập
     ├── source-notes.md          # Nguồn công khai, kết luận và giới hạn bằng chứng
@@ -107,6 +123,19 @@ Khi chỉ cần thiết kế, hãy nói rõ “chỉ phân tích/đề xuất, c
 
 Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references/worked-app-example.md), [quy tắc thị giác](references/design-rules.md), [quy tắc product UI](references/product-ui.md) và [quy tắc component](references/component-craft.md).
 
+## Cách đọc bộ tài liệu theo nhu cầu
+
+| Bạn đang làm gì? | Đọc tài liệu nào? | Kết quả cần chốt |
+| --- | --- | --- |
+| Muốn hiểu gu cá nhân | [Owner style](references/owner-style.md) + [atlas 33 ảnh](references/visual-atlas.md) | Chủ thể, chữ, màu, ánh sáng, nhịp trang và giới hạn của ảnh tham khảo. |
+| Thiết kế homepage/portfolio | [Owner style](references/owner-style.md) + [design rules](references/design-rules.md) | Một cảnh mở đầu gắn với sản phẩm, phần giải thích, chứng cứ, CTA, responsive. |
+| Thiết kế header, nút, card, form | [Owner components](references/owner-components.md) + [component craft](references/component-craft.md) | Phân cấp hành động, cấu tạo, trạng thái, bàn phím, mobile và độ nhất quán. |
+| Thiết kế sản phẩm sau đăng nhập | [Owner product UI](references/owner-product-ui.md) + [product UI](references/product-ui.md) | Một luồng từ mục tiêu đến kết quả, đủ màn hình và trạng thái quan trọng. |
+| Muốn xem ví dụ chuyển brief thành thiết kế | [Ví dụ homepage](references/worked-example.md) hoặc [ví dụ app](references/worked-app-example.md) | Phân biệt quyết định thiết kế với hình trang trí và dữ liệu chưa xác minh. |
+| Muốn kiểm tra cơ sở của quy tắc | [Source notes](references/source-notes.md) | Nguồn công khai nào hỗ trợ quy tắc, nguồn nào chỉ là ví dụ. |
+
+Các tài liệu `owner-*` nói về **gu của chủ skill**. `component-craft.md` và `product-ui.md` nói về hành vi, cấu trúc và khả năng sử dụng có thể áp dụng rộng hơn. Khi làm một sản phẩm thật, cần cả hai lớp: ý tưởng thị giác nhất quán và giao diện hoàn thành tác vụ.
+
 ## Bổ sung cho hệ thống sau đăng nhập
 
 - Bắt đầu từ **vai trò → mục tiêu → đối tượng dữ liệu → hành động → kết quả → cách phục hồi**, rồi mới chọn màn hình và component.
@@ -115,9 +144,33 @@ Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references
 - Cá tính của sản phẩm nằm ở ngôn ngữ, cấu trúc, nhịp chữ và những chi tiết phục vụ công việc; giao diện dùng hằng ngày cần ổn định để người dùng thao tác nhanh.
 - Đánh giá **một luồng hoàn chỉnh** với dữ liệu thực tế và quyền khác nhau. Screenshot chỉ cho thấy một thời điểm.
 
+### Cường độ thị giác thay đổi theo công việc
+
+Trang công khai có thể mở bằng một cảnh giàu ánh sáng và chữ lớn. Màn hình đăng nhập giữ chất liệu đó ở phần khung, để form rõ ràng. Workspace có thể dùng một panel chính có cá tính, còn danh sách và lịch sử nên ổn định để quét nhanh. Form, bảng và settings cần bề mặt đọc tốt, quy tắc trạng thái rõ. Màn hình kết quả hoặc cột mốc quan trọng có thể tăng cường độ thị giác trở lại **khi có nội dung thật để nhấn mạnh**.
+
+Đối với website phỏng vấn AI, một luồng mẫu là **chọn câu hỏi → thu âm câu trả lời → biết trạng thái xử lý → xem transcript và nhận xét có dẫn chứng → luyện lại hoặc xem lịch sử**. Mỗi bước có câu hỏi người dùng khác nhau, nên không nên vẽ thành chuỗi card giống hệt nhau. Hướng chi tiết theo màn hình, bao gồm lỗi quyền micro, chờ xử lý và dữ liệu mẫu, nằm trong [owner-product-ui.md](references/owner-product-ui.md). Đây là ví dụ thiết kế, không khẳng định một mô hình AI hay pipeline thu âm đã tồn tại.
+
 ## Từ hệ thống đến component nhỏ
 
 [Component craft](references/component-craft.md) bổ sung cách chọn và rà soát header, nav, button, link, input, tab, dialog, drawer, tooltip, thông báo và điều khiển trong bảng. Nó tập trung vào **mục đích, cấu tạo, nhãn, trạng thái, bàn phím, mobile và chi tiết thị giác**, không áp một kích thước hoặc bộ màu cố định cho mọi sản phẩm. Ví dụ: header toàn ứng dụng khác header của một trang; button kích hoạt hành động còn link dẫn tới địa chỉ; tooltip chỉ giải thích thêm, không giấu thông tin bắt buộc.
+
+[Owner components](references/owner-components.md) thêm một tầng cụ thể cho gu đã chọn: header gọn để nhường tâm điểm, CTA màu nóng đúng chỗ, card có kích thước theo mức độ quan trọng, form yên tĩnh, table chính xác, trạng thái thu âm rõ nghĩa. Mỗi component đều cần trạng thái hover/focus/selected/loading/error nếu luồng sử dụng có thể đi tới trạng thái đó. Sự tinh tế đến từ quan hệ giữa các thành phần, không phải việc đặt glow và gradient lên từng nút.
+
+### Prompt kiểm tra xem skill có tạo giao diện “có hồn” không
+
+```text
+$web-ui-art-direction Đọc references/owner-style.md,
+references/owner-components.md và references/owner-product-ui.md.
+Thiết kế luồng phỏng vấn AI từ dashboard đến kết quả. Trước khi vẽ,
+hãy xác định chủ thể thật của sản phẩm, câu hỏi người dùng ở từng màn hình,
+và một khoảnh khắc xứng đáng có treatment cinematic. Tránh hero chung chung,
+card lời khuyên không gắn tác vụ, thống kê bịa và chữ quá nhỏ.
+Render desktop/mobile của ít nhất dashboard, recording, result và một state lỗi.
+Sau đó tự phê bình: điểm nhìn, nhịp, chữ, component, độ rõ trạng thái và
+đường đi tới tác vụ tiếp theo. Sửa những chỗ trông như template.
+```
+
+Khi chỉ cần hình ảnh thiết kế, hãy nói rõ đó là **mockup**; các nút và luồng chỉ được coi là hoạt động sau khi triển khai và kiểm thử. Nếu đã có code, cần kiểm tra trong giao diện chạy thật thay vì kết luận từ ảnh render.
 
 ## Những gì rút ra từ 33 ảnh
 

@@ -2,6 +2,8 @@
 
 This is a static visual analysis of 33 files supplied by the user on 2026-10-04. File names are identifiers, not author/source attribution. Several images are presentation composites, concept work, or product mockups. They show visible design choices; they do not establish live behavior, legal rights, responsive quality, accessibility, or whether displayed claims are true. The original images are intentionally excluded from this public skill repository.
 
+The owner later selected seven images as their preferred visual direction. Their shared visual grammar, differences, and limits are analyzed in [owner-style.md](owner-style.md); the entries below preserve the observations across all 33 images.
+
 ## Families visible across the set
 
 | Family | Image IDs | Useful mechanism | Main risk when copied mechanically |
