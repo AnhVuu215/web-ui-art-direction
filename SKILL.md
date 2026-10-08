@@ -7,6 +7,10 @@ description: Design or review distinctive, usable website and web-app interfaces
 
 Create an interface that feels authored for its audience and purpose. A distinctive interface does not need maximal decoration: its structure, typography, content, interaction, and small details should express the same idea. Preserve the user's stated taste, real workflows, and existing product truth.
 
+## Owner's visual preference
+
+When the brief leaves art direction open, read [owner-style.md](references/owner-style.md) and use the owner's preferred cinematic editorial direction as the starting point: bold sans-serif type, a product-specific hero subject, purposeful orange/red light against dark and warm-white chapters, and varied section rhythm. This is a **preference**, not a mandatory palette or layout. A stated brand, supplied visual direction, task needs, and accessibility take precedence. Keep authenticated work surfaces readable and efficient even when the public page is expressive.
+
 ## When to read the references
 
 - Read [design-rules.md](references/design-rules.md) when deciding or reviewing layout, type, color, imagery, components, states, and motion.
@@ -22,10 +26,10 @@ Create an interface that feels authored for its audience and purpose. A distinct
 1. Establish the audience, primary task, content and data, brand constraints, target devices, and existing product/design system. For an app, identify user roles, the objects they work on, and what success looks like. Inspect the current product before changing an established design. If critical information is missing, make a small explicit assumption or ask one focused question.
 2. Identify the surface's job: persuade, help someone operate, support reading, or present work to experience. A marketing page and an authenticated workspace may need different density and pacing while sharing brand foundations. For an open brief, compare two meaningfully different directions and choose one with a reason; follow a constrained brief directly.
 3. Write a short **direction statement**: audience + intended feeling + visual metaphor or material + reason it serves the task. Specify one dominant visual move, two or three supporting moves, and deliberate things to omit. Make the direction testable against every section, not a pile of style adjectives.
-4. Build a compact system before polishing components: type roles and scale, content width/grid, spacing rhythm, color roles, image treatment, surfaces, corners, borders, icons, and motion behavior. Choose values from content and context; do not impose a signature palette or layout on every project.
+4. Build a compact system before polishing components: type roles and scale, content width/grid, spacing rhythm, color roles, image treatment, surfaces, corners, borders, icons, and motion behavior. Where the brief is open, use the owner preference as an art-direction bias, then adapt its devices to the product; do not impose one palette or layout on every project.
 5. Map the real journey. For a public page, cover first impression, explanation, evidence, action, and follow-through. For an app, map entry point, finding an object, acting on it, feedback, recovery, and return. Design the relevant normal, first-use, empty-result, loading, error, and permission states. See [product-ui.md](references/product-ui.md).
 6. Write specific copy and use believable imagery/data. Mark unknown facts as placeholders for user-supplied truth and track claims that affect trust or decisions. Implement with the existing stack and components when requested. Translate the direction into responsive layouts and actual behavior, not a screenshot clone. Keep semantic HTML, keyboard operation, performance, and product behavior intact.
-7. Review representative tasks at desktop and narrow widths, normal and zoomed text, keyboard focus, and reduced motion. Check long names, sparse and dense data, loading, empty, error, success, and role differences where applicable. Compare with [design-rules.md](references/design-rules.md) and [product-ui.md](references/product-ui.md); revise generic or contradictory details.
+7. Review representative tasks at desktop and narrow widths, normal and zoomed text, keyboard focus, and reduced motion. Check long names, sparse and dense data, loading, empty, error, success, and role differences where applicable. Compare with [design-rules.md](references/design-rules.md), [product-ui.md](references/product-ui.md), and the questions in [owner-style.md](references/owner-style.md) when this preference was used. Revise generic or contradictory details before presenting the work.
 
 ## Decision rules
 

@@ -4,6 +4,12 @@ Skill cho Codex giúp biến ý tưởng hoặc bộ ảnh tham khảo thành gi
 
 Bộ skill khởi đầu từ 33 ảnh giao diện, mockup và slide do người dùng cung cấp. [Atlas phân tích từng ảnh](references/visual-atlas.md) ghi rõ điểm quan sát được, nguyên tắc có thể chuyển dụng và điều cần kiểm tra. Phiên bản hiện tại bổ sung [quy tắc cho product UI](references/product-ui.md), dựa trên việc đọc chọn lọc các trang công khai của nhiều design system, nghiên cứu UX, thư viện flow và tài liệu sản phẩm. [Ghi chú nguồn](references/source-notes.md) nói rõ đã đọc gì và giới hạn của từng loại bằng chứng. Ảnh gốc không được đưa lên GitHub vì quyền sử dụng ảnh chưa được xác minh.
 
+## Gu thẩm mỹ mặc định của chủ skill
+
+Từ 33 ảnh, chủ skill chọn 7 ảnh làm nhóm tham chiếu ưu tiên. [Owner style](references/owner-style.md) phân tích mẫu số chung: **chữ sans lớn và tự tin; bố cục editorial; một người, vật thể hoặc giao diện sản phẩm làm tâm điểm; ánh sáng cam/đỏ giàu chiều sâu trên nền tối; khoảng trắng để đổi nhịp; chi tiết điều khiển gọn và chính xác**. Khi brief chưa chốt phong cách, Codex nên bắt đầu từ hướng này thay vì tự chọn một giao diện SaaS xanh pastel chung chung.
+
+Đây là **gu ưu tiên, không phải khuôn mẫu**. Brand và yêu cầu cụ thể của dự án được ưu tiên trước. Trang sau đăng nhập vẫn phải dễ đọc, dễ thao tác; không phủ gradient cam lên bảng, form và trạng thái chỉ để giống ảnh tham khảo. 7 ảnh gốc vẫn chỉ được phân tích bằng chữ, không được đưa vào repository.
+
 ## Skill giải quyết việc gì?
 
 Một lời nhắc kiểu “làm landing page hiện đại, đẹp, có hồn” thường chưa đủ để ra giao diện tốt. Skill buộc người thiết kế/AI kết nối:
@@ -25,6 +31,7 @@ web-ui-art-direction/
 ├── LICENSE                      # MIT cho nội dung gốc của repo
 └── references/
     ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
+    ├── owner-style.md           # Gu mặc định rút từ 7 ảnh chủ skill chọn
     ├── component-craft.md       # Header, nav, button, input, tab, overlay và micro-detail
     ├── product-ui.md            # Quy tắc cho hệ thống sau đăng nhập
     ├── source-notes.md          # Nguồn công khai, kết luận và giới hạn bằng chứng
@@ -58,6 +65,15 @@ $web-ui-art-direction Hãy thiết kế lại trang chủ dịch vụ du lịch 
 Đối tượng là người đi theo nhóm nhỏ, ưu tiên trải nghiệm địa phương.
 Đọc frontend hiện tại, giữ chức năng và nội dung thật, đề xuất art direction
 rồi triển khai responsive. Kiểm tra trạng thái loading, empty, error và keyboard.
+```
+
+Nếu muốn Codex bám rõ gu cá nhân đã chọn, có thể dùng:
+
+```text
+$web-ui-art-direction Thiết kế website này theo gu mặc định trong
+references/owner-style.md. Chọn một hình ảnh hoặc cảnh gắn thật với sản phẩm,
+dùng chữ lớn và tương phản có chủ ý; giữ màn hình thao tác dễ đọc. Đừng sao chép
+bố cục hay tài sản từ 7 ảnh tham khảo. Render desktop và mobile để tự đánh giá.
 ```
 
 Khi có ảnh tham khảo:
