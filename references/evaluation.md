@@ -39,7 +39,7 @@ Judge the work with the actual brief beside it. Score each dimension **0 = absen
 | Product specificity | The subject, copy, data, and imagery could not be swapped into an unrelated product without revision. |
 | Visual authorship | One discernible idea governs type, material, crop, shape, and accent; it is not a stack of unrelated trends. |
 | Hierarchy and rhythm | The first focal point and next action are unmistakable; subsequent sections or screens change pace according to their job. |
-| Taste fit | When the brief is open, the result interprets the owner's preference through subject, editorial type, warm contrast, and restraint. When brand is fixed, it honors the brand. |
+| Taste fit | When the brief is open, at least two mechanisms from the owner's selected references are visible in specific places, such as subject-led staging, editorial type, purposeful light, or chapter contrast. A palette name alone is insufficient. When brand is fixed, it honors the brand. |
 | Component continuity | Header, navigation, buttons, inputs, tables, states, and icon treatment feel related while serving different priorities. |
 | Task clarity | The user can find the current object, status, action, result, and recovery route without relying on decoration. |
 | Responsive and readable | Text, crop, navigation, controls, and state messages work at desktop, narrow width, and zoom; Vietnamese accents render correctly. |
