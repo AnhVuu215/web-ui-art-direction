@@ -43,11 +43,16 @@ web-ui-art-direction/
 ├── SKILL.md                     # Khi nào dùng và quy trình chính
 ├── README.md                    # Hướng dẫn và phạm vi
 ├── LICENSE                      # MIT cho nội dung gốc của repo
+├── evals/
+│   └── prompts.csv              # 10 tình huống kích hoạt/không kích hoạt
+├── scripts/
+│   └── check-package.ps1        # Kiểm tra cấu trúc, link và prompt bằng PowerShell
 └── references/
     ├── design-rules.md          # Quy tắc thị giác và checklist chống giao diện rập khuôn
     ├── owner-style.md           # Gu mặc định rút từ 7 ảnh chủ skill chọn
     ├── owner-components.md      # Áp gu đó vào header, nav, button, card, form, table, state
     ├── owner-product-ui.md      # Áp gu đó xuyên suốt hệ thống sau đăng nhập
+    ├── evaluation.md            # Bộ thử kích hoạt, đầu ra thị giác và UX
     ├── component-craft.md       # Header, nav, button, input, tab, overlay và micro-detail
     ├── product-ui.md            # Quy tắc cho hệ thống sau đăng nhập
     ├── source-notes.md          # Nguồn công khai, kết luận và giới hạn bằng chứng
@@ -65,6 +70,14 @@ git clone https://github.com/AnhVuu215/web-ui-art-direction.git "$env:USERPROFIL
 ```
 
 Nếu đã có thư mục cùng tên, hãy kiểm tra và cập nhật repo cũ thay vì clone đè. Khởi động lại Codex hoặc mở chat mới để skill được nhận diện. Cũng có thể đặt thư mục skill trong `.agents/skills/` của riêng một dự án nếu bạn chỉ muốn dùng tại dự án đó.
+
+Kiểm tra bản cài cá nhân có `SKILL.md`:
+
+```powershell
+Test-Path "$env:USERPROFILE\.codex\skills\web-ui-art-direction\SKILL.md"
+```
+
+Kết quả `True` chỉ xác nhận file tồn tại; để biết skill được chọn đúng lúc, thử các prompt kích hoạt và không kích hoạt trong [bộ đánh giá](references/evaluation.md).
 
 Nếu đã clone bản cũ và không có chỉnh sửa cục bộ trong thư mục skill, cập nhật bằng:
 
@@ -133,8 +146,9 @@ Xem [ví dụ homepage](references/worked-example.md), [ví dụ app](references
 | Thiết kế sản phẩm sau đăng nhập | [Owner product UI](references/owner-product-ui.md) + [product UI](references/product-ui.md) | Một luồng từ mục tiêu đến kết quả, đủ màn hình và trạng thái quan trọng. |
 | Muốn xem ví dụ chuyển brief thành thiết kế | [Ví dụ homepage](references/worked-example.md) hoặc [ví dụ app](references/worked-app-example.md) | Phân biệt quyết định thiết kế với hình trang trí và dữ liệu chưa xác minh. |
 | Muốn kiểm tra cơ sở của quy tắc | [Source notes](references/source-notes.md) | Nguồn công khai nào hỗ trợ quy tắc, nguồn nào chỉ là ví dụ. |
+| Muốn biết skill có thực sự cải thiện đầu ra | [Evaluation](references/evaluation.md) | Chạy cùng brief có/không có skill, xem render, hành vi và lỗi bắt buộc phải sửa. |
 
-Các tài liệu `owner-*` nói về **gu của chủ skill**. `component-craft.md` và `product-ui.md` nói về hành vi, cấu trúc và khả năng sử dụng có thể áp dụng rộng hơn. Khi làm một sản phẩm thật, cần cả hai lớp: ý tưởng thị giác nhất quán và giao diện hoàn thành tác vụ.
+Các tài liệu `owner-*` nói về **gu của chủ skill**. `component-craft.md` và `product-ui.md` nói về hành vi, cấu trúc và khả năng sử dụng có thể áp dụng rộng hơn. Khi làm một sản phẩm thật, cần cả hai lớp: ý tưởng thị giác nhất quán và giao diện hoàn thành tác vụ. Codex chỉ nên đọc các tài liệu liên quan đến nhiệm vụ hiện tại, không cần nạp toàn bộ `references/` cho một nút hoặc một màn hình.
 
 ## Bổ sung cho hệ thống sau đăng nhập
 
@@ -148,29 +162,40 @@ Các tài liệu `owner-*` nói về **gu của chủ skill**. `component-craft.
 
 Trang công khai có thể mở bằng một cảnh giàu ánh sáng và chữ lớn. Màn hình đăng nhập giữ chất liệu đó ở phần khung, để form rõ ràng. Workspace có thể dùng một panel chính có cá tính, còn danh sách và lịch sử nên ổn định để quét nhanh. Form, bảng và settings cần bề mặt đọc tốt, quy tắc trạng thái rõ. Màn hình kết quả hoặc cột mốc quan trọng có thể tăng cường độ thị giác trở lại **khi có nội dung thật để nhấn mạnh**.
 
-Đối với website phỏng vấn AI, một luồng mẫu là **chọn câu hỏi → thu âm câu trả lời → biết trạng thái xử lý → xem transcript và nhận xét có dẫn chứng → luyện lại hoặc xem lịch sử**. Mỗi bước có câu hỏi người dùng khác nhau, nên không nên vẽ thành chuỗi card giống hệt nhau. Hướng chi tiết theo màn hình, bao gồm lỗi quyền micro, chờ xử lý và dữ liệu mẫu, nằm trong [owner-product-ui.md](references/owner-product-ui.md). Đây là ví dụ thiết kế, không khẳng định một mô hình AI hay pipeline thu âm đã tồn tại.
+Với bất kỳ sản phẩm nào, hãy theo dõi **cùng một đối tượng** qua lúc người dùng tìm thấy nó, mở chi tiết, thay đổi, chờ kết quả và quay lại. Tên, trạng thái, quyền và hành động của đối tượng phải nhất quán; không vẽ thêm màn hình chỉ để phô diễn phong cách. [Owner product UI](references/owner-product-ui.md) có bảng kiểm tra sự liên tục này theo từng thời điểm.
 
 ## Từ hệ thống đến component nhỏ
 
 [Component craft](references/component-craft.md) bổ sung cách chọn và rà soát header, nav, button, link, input, tab, dialog, drawer, tooltip, thông báo và điều khiển trong bảng. Nó tập trung vào **mục đích, cấu tạo, nhãn, trạng thái, bàn phím, mobile và chi tiết thị giác**, không áp một kích thước hoặc bộ màu cố định cho mọi sản phẩm. Ví dụ: header toàn ứng dụng khác header của một trang; button kích hoạt hành động còn link dẫn tới địa chỉ; tooltip chỉ giải thích thêm, không giấu thông tin bắt buộc.
 
-[Owner components](references/owner-components.md) thêm một tầng cụ thể cho gu đã chọn: header gọn để nhường tâm điểm, CTA màu nóng đúng chỗ, card có kích thước theo mức độ quan trọng, form yên tĩnh, table chính xác, trạng thái thu âm rõ nghĩa. Mỗi component đều cần trạng thái hover/focus/selected/loading/error nếu luồng sử dụng có thể đi tới trạng thái đó. Sự tinh tế đến từ quan hệ giữa các thành phần, không phải việc đặt glow và gradient lên từng nút.
+[Owner components](references/owner-components.md) thêm một tầng cụ thể cho gu đã chọn: header gọn để nhường tâm điểm, CTA màu nóng đúng chỗ, card có kích thước theo mức độ quan trọng, form yên tĩnh, table chính xác, trạng thái quan trọng rõ nghĩa. Mỗi component đều cần trạng thái hover/focus/selected/loading/error nếu luồng sử dụng có thể đi tới trạng thái đó. Sự tinh tế đến từ quan hệ giữa các thành phần, không phải việc đặt glow và gradient lên từng nút.
 
-### Prompt kiểm tra xem skill có tạo giao diện “có hồn” không
+### Prompt kiểm tra trên sản phẩm bất kỳ
 
 ```text
-$web-ui-art-direction Đọc references/owner-style.md,
-references/owner-components.md và references/owner-product-ui.md.
-Thiết kế luồng phỏng vấn AI từ dashboard đến kết quả. Trước khi vẽ,
-hãy xác định chủ thể thật của sản phẩm, câu hỏi người dùng ở từng màn hình,
-và một khoảnh khắc xứng đáng có treatment cinematic. Tránh hero chung chung,
-card lời khuyên không gắn tác vụ, thống kê bịa và chữ quá nhỏ.
-Render desktop/mobile của ít nhất dashboard, recording, result và một state lỗi.
-Sau đó tự phê bình: điểm nhìn, nhịp, chữ, component, độ rõ trạng thái và
-đường đi tới tác vụ tiếp theo. Sửa những chỗ trông như template.
+$web-ui-art-direction Đọc frontend và nội dung thật của dự án này.
+Thiết kế lại trang công khai và một luồng quan trọng sau đăng nhập.
+Trước khi vẽ, hãy xác định chủ thể thật của sản phẩm, đối tượng dữ liệu,
+việc người dùng cần làm ở từng màn hình và lúc nào nên tăng/giảm cường độ
+thị giác. Giữ brand hiện có nếu đã rõ. Không bịa số liệu hay dùng ảnh
+minh họa như bằng chứng sản phẩm. Render desktop/mobile của các màn hình
+liên quan và một trạng thái lỗi hoặc trống. Tự đánh giá theo
+references/evaluation.md, sửa những chỗ giống template hoặc làm khó thao tác.
 ```
 
 Khi chỉ cần hình ảnh thiết kế, hãy nói rõ đó là **mockup**; các nút và luồng chỉ được coi là hoạt động sau khi triển khai và kiểm thử. Nếu đã có code, cần kiểm tra trong giao diện chạy thật thay vì kết luận từ ảnh render.
+
+### Kiểm nghiệm thay vì tin rằng tài liệu dài sẽ tự tạo UI đẹp
+
+[Evaluation](references/evaluation.md) và [10 prompt thử](evals/prompts.csv) bao gồm brief mở, brand có sẵn, app nhiều màn hình, component nhỏ và yêu cầu không nên kích hoạt skill. So sánh đầu ra có/không có skill trên cùng dữ kiện; ghi lại ảnh render, màn hình rộng/hẹp, trạng thái và những hành vi đã kiểm tra. Một mẫu thiết kế chỉ trở thành **chuẩn thị giác của chủ skill** sau khi chủ skill xem và chấp nhận nó. Hiện repository chứa quy tắc và ví dụ suy luận, **chưa tuyên bố có một bộ ảnh đầu ra đã được duyệt làm chuẩn**.
+
+Để kiểm tra nhanh gói skill sau khi sửa file, chạy trong thư mục repo bằng PowerShell:
+
+```powershell
+.\scripts\check-package.ps1
+```
+
+Script kiểm tra frontmatter, tên skill, liên kết nội bộ, placeholder và bảng prompt; nó **không chấm chất lượng giao diện**. Muốn biết skill thực sự giúp ích, phải chạy các prompt và xem đầu ra theo rubric trong `evaluation.md`.
 
 ## Những gì rút ra từ 33 ảnh
 

@@ -33,9 +33,9 @@ The shared preference is **high contrast with a reason**. The owner did not sele
 
 ### 1. Begin with the subject, not the palette
 
-Name the product's **hero object** before drawing a hero: the thing people use, make, buy, inspect, or change. For a music product it might be a listening session; for an interview tool, a spoken answer and its review; for a furniture studio, the furniture itself. Ask what moment a person would recognize as real. If no meaningful photo or object is available, a typographic composition with an honest product view is better than unrelated stock imagery or a glowing abstract shape.
+Name the product's **hero object** before drawing a hero: the thing people use, make, buy, inspect, or change. For a music product it might be a listening session; for a made-to-order studio, the object and its material; for a work platform, the record or decision people return to. Ask what moment a person would recognize as real. If no meaningful photo or object is available, a typographic composition with an honest product view is better than unrelated stock imagery or a glowing abstract shape.
 
-The subject should determine the visual material. Recording may justify a signal line and close microphone controls. A physical product may justify shadows, crop, and material texture. A data workspace may justify a precise grid. An orange glow is useful only when it supports that chosen subject.
+The subject should determine the visual material. A physical product may justify shadows, crop, and material texture. A data workspace may justify a precise grid. A service may justify a photograph of the actual work and a visible sequence. An orange glow is useful only when it supports that chosen subject.
 
 ### 2. Compose the first viewport as one sentence
 
@@ -53,9 +53,9 @@ Choose a relationship deliberately: type beside a real scene, type crossing a su
 
 ### 4. Color and light as roles
 
-The references favor near-black or dark brown, warm white, and a hot orange/red family. Define **canvas, work surface, text, accent, focus, success, warning, and error** separately. A sample exploratory direction might start with warm white `#F7F3EE`, near-black `#11100F`, ember `#E64B25`, and a deeper rust `#8B2C1A`; these are *illustrative candidates*, not prescribed brand tokens. Check contrast with the actual font, weight, and background image before adopting any value.
+The references favor near-black or dark brown, warm white, and a hot orange/red family. Define **canvas, work surface, text, accent, focus, success, warning, and error** separately. A sample exploratory direction might start with warm white `#F7F3EE`, near-black `#11100F`, ember `#E64B25`, and a deeper rust `#8B2C1A`; these are *illustrative candidates*, not prescribed brand tokens. Define foreground/background **pairs**, not isolated swatches. For example, `#11100F` on `#E64B25` is about 4.89:1, while white on that ember is about 3.89:1 and ember text on `#F7F3EE` is about 3.52:1; the latter two miss WCAG AA's 4.5:1 threshold for ordinary text. Recheck every pair against its actual font, weight, state, and background image before use.
 
-Place the hot color where attention or state warrants it: a hero light source, one chapter transition, a primary action, an active recording control, or a meaningful highlight. Use gradients to describe illumination or motion, with a plausible direction and falloff. An identical radial gradient on every card makes the system look assembled. Preserve calm neutral surfaces for reading, comparing, and editing.
+Place the hot color where attention or state warrants it: a hero light source, one chapter transition, a primary action, an active task, or a meaningful highlight. Use gradients to describe illumination or motion, with a plausible direction and falloff. An identical radial gradient on every card makes the system look assembled. Preserve calm neutral surfaces for reading, comparing, and editing.
 
 On dark scenes, use tinted light text rather than faint gray. On bright orange scenes, verify whether dark ink or white type is more legible at each point in the image. A static screenshot's legibility cannot be assumed to survive responsive crop or dynamic content.
 
@@ -79,23 +79,20 @@ Use overlays, cutouts, unusual corners, or staggered cards only when they reveal
 
 The references suggest energy through motion blur and light, but a still image does not prescribe animation. If motion helps, give it one role: introduce a focal subject, show a transition between chapters, or explain a product state. Motion should not delay the main action. Provide a reduced-motion version and verify that meaning survives with animation off.
 
-Reserve expressive motion for marketing and special transitions. In a daily workspace, use restrained state transitions that preserve location and cause-and-effect. A loading state should say what is happening; a recording state should clearly show whether audio is being captured; a save should confirm success or explain failure.
+Reserve expressive motion for marketing and special transitions. In a daily workspace, use restrained state transitions that preserve location and cause-and-effect. A loading state should say what is happening; an active task should remain unmistakable without animation; a save should confirm success or explain failure.
 
 ## Translate a brief into two different compositions
 
 The owner's preference should guide decisions without producing the same website each time. For an open brief, sketch two **different composition logics** using the same product facts, then choose the one that makes the offer clearest.
 
-**Example brief: AI interview practice.** The known subject is a person answering a question and reviewing the answer. Do not invent performance statistics, real customer portraits, or an AI score model.
-
-| Decision | Direction A: the speaking moment | Direction B: the review moment |
+| Decision | Subject-first composition | Type-first composition |
 | --- | --- | --- |
-| First view | A close, human-scale recording scene with the actual question and a clearly labeled record control. | A typographic statement beside a readable annotated answer excerpt. |
-| Visual material | Warm directional light and a restrained signal line that belongs to voice capture. | Near-black ink, warm-white reading surface, one ember annotation or correction. |
-| Hierarchy | Question → person/recording object → benefit → action. | Claim → concrete before/after answer evidence → action. |
-| Next chapter | Slow into a quiet explanation of what happens after recording. | Show the short practice sequence and a realistic sample result. |
-| Risk | The scene may hide the product if it becomes generic portrait photography. | The answer excerpt may imply real AI feedback when it is only illustrative. |
+| First view | The actual product, work, or use moment occupies a clear stage; copy explains its value. | A product-specific statement carries the opening; one precise image or interface detail interrupts it. |
+| Visual material | Light, crop, depth, and texture come from the subject's real material or setting. | Scale, line break, spacing, and one accent carry most of the identity. |
+| Next chapter | Move from atmosphere to a quiet explanation and concrete choices. | Move from claim to evidence: process, real object detail, or a meaningful comparison. |
+| Risk | A dramatic image with no useful product context becomes stock-like. | Type becomes a poster when the product, action, or proof stays abstract. |
 
-The choice depends on the real product and audience. If the strongest differentiator is the recording experience, A may fit. If the value is actionable review, B may explain the product faster. In both cases, the first screen needs legible copy, an honest CTA destination, and a responsive composition; neither direction is a template to apply to unrelated products.
+For a physical product, subject-first may reveal the material faster. For a complex service, type-first may clarify the offer before imagery. This is a decision based on the actual brief, not a rule by industry. Both need legible copy, an honest action, and responsive composition; neither is a reusable page template.
 
 ### A small direction sheet before implementation
 
@@ -116,7 +113,7 @@ If a later section cannot be connected to that sheet or to a user task, revise i
 
 For a **public landing page or portfolio** with an open visual brief, propose this cinematic editorial direction first. Write a direction statement naming the product-specific subject, the scene, the type voice, where the heat appears, and where the page becomes quiet. A useful starting palette is warm white, near-black, and one ember accent; select actual color values by content and contrast. Give the hero one dominant subject and one primary action. Use high-energy treatment once, then vary the next sections instead of repeating it.
 
-For an **authenticated product**, carry the identity through type, one accent, selected imagery, and component details while keeping daily tasks calm and fast. A marketing-scale title can appear on first use or an important transition; tables, forms, recording controls, and settings need stable alignment and readable information density. Orange can mark an active recording or primary moment, but status colors must still mean what they say. Do not place a dramatic gradient behind routine data or turn every dashboard card into a campaign panel.
+For an **authenticated product**, carry the identity through type, one accent, selected imagery, and component details while keeping daily tasks calm and fast. A marketing-scale title can appear on first use or an important transition; tables, forms, repeated controls, and settings need stable alignment and readable information density. Orange can mark a primary moment, but status colors must still mean what they say. Do not place a dramatic gradient behind routine data or turn every dashboard card into a campaign panel.
 
 For more detailed implementation, read [owner-components.md](owner-components.md) when choosing controls and [owner-product-ui.md](owner-product-ui.md) when designing an authenticated flow. Those references translate the same taste into buttons, headers, forms, tables, states, and multiple screens without sacrificing task clarity.
 
@@ -142,8 +139,8 @@ After the first render, inspect desktop and mobile images and answer:
 
 If the visual answers fail, revise the composition or content before delivery. Passing a color or typography checklist alone does not mean the interface matches this preference.
 
-## Failure signals from the first HiReady trial
+## Failure signals to catch in a first render
 
-The first interview-practice mockup followed the broad flow but still felt generic. Its sage-and-rust palette, serif headlines, circles, and quote card could have belonged to many unrelated coaching sites. The dashboard gave decorative advice almost as much space as the next practice task. Repeated two-card compositions flattened the difference between choosing, recording, waiting, and reviewing. Small labels looked polished in a screenshot but were weak at use size. The result showed abstract STAR bars without anchoring feedback to the candidate's actual answer.
+A palette, serif headline, circles, and quote card can look designed yet belong to almost any product. Decorative advice must not outrank the next task. Repeating the same two-card arrangement across choosing, acting, waiting, and reviewing flattens different user moments. Tiny labels may look polished in a full-page image but fail at actual size. An abstract chart without a definition or a link to underlying evidence cannot carry the product's value.
 
-These are **execution failures**, not reasons to force a specific replacement style onto every product. A stronger version would show a question, voice recording, transcript or answer excerpt, and a specific annotated improvement; the visual motif would come from speaking and review. Before handing off any design, identify the product-specific evidence visible on the screen and remove cards or effects that do not help it.
+These are execution failures, not reasons to force more orange onto every screen. Before hand-off, identify the product-specific object and evidence visible on each screen; remove cards or effects that do not help someone understand or act. If the first render fails this check, revise the composition or content rather than only changing the palette.

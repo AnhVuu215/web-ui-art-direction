@@ -1,50 +1,41 @@
 ---
 name: web-ui-art-direction
-description: Design or review distinctive, usable website and web-app interfaces, including authenticated dashboards, workflows, forms, tables, settings, and marketing pages. Use when visual or UX decisions are needed; skip backend-only tasks and narrow functional fixes with no interface decision.
+description: Use when designing, implementing, or reviewing a website or web app whose visual direction, UX flow, or component hierarchy needs deliberate decisions, especially from image references or the owner's preferred style. Covers public pages and authenticated workspaces; skip backend-only work and fixes with no interface decision.
 ---
 
 # Web UI art direction
 
-Create an interface that feels authored for its audience and purpose. A distinctive interface does not need maximal decoration: its structure, typography, content, interaction, and small details should express the same idea. Preserve the user's stated taste, real workflows, and existing product truth.
+Create an interface that feels authored for its product and remains usable across real tasks. The visual subject, typography, content, interaction, and small controls should support one coherent idea.
 
-## Owner's visual preference
+## Decide which direction governs
 
-When the brief leaves art direction open, read [owner-style.md](references/owner-style.md) and use the owner's preferred cinematic editorial direction as the starting point: bold sans-serif type, a product-specific hero subject, purposeful orange/red light against dark and warm-white chapters, and varied section rhythm. This is a **preference**, not a mandatory palette or layout. A stated brand, supplied visual direction, task needs, and accessibility take precedence. Keep authenticated work surfaces readable and efficient even when the public page is expressive.
+Follow the user's brief and an established product brand first. Respect task, audience, domain, accessibility, and existing component constraints. When visual direction is open, use the owner's preference in [owner-style.md](references/owner-style.md) as a **starting hypothesis**: product-specific subject, confident sans-serif type, editorial scale, purposeful warm light, and changing page rhythm. It is not a required orange palette or a layout to copy. If that preference conflicts with the product's evidence, adapt it and say why.
 
-## When to read the references
+## Read only what the task needs
 
-- Read [design-rules.md](references/design-rules.md) when deciding or reviewing layout, type, color, imagery, components, states, and motion.
-- Read [visual-atlas.md](references/visual-atlas.md) when the brief includes visual references or needs alternative directions. It records observations from 33 static images and the limits of those observations. Use the images as evidence of techniques, never as templates to copy.
-- Read [worked-example.md](references/worked-example.md) when an open-ended brief needs a concrete example of a design direction and its translation into page sections.
-- Read [product-ui.md](references/product-ui.md) for an authenticated app, dashboard, admin area, editor, settings, data-heavy screen, or multi-screen task. It covers information architecture, task continuity, tables, forms, permissions, and state behavior.
-- Read [component-craft.md](references/component-craft.md) when choosing, designing, implementing, or reviewing headers, navigation, buttons, inputs, tabs, overlays, feedback, and other reusable controls. Use it with [product-ui.md](references/product-ui.md) for app work.
-- When using the owner's preferred direction, read [owner-components.md](references/owner-components.md) for its specific component grammar. For a multi-screen app, also read [owner-product-ui.md](references/owner-product-ui.md) to distribute the style across landing, sign-in, work, and result screens.
-- Read [worked-app-example.md](references/worked-app-example.md) when a post-login brief needs a concrete example spanning several screens and states.
-- Read [source-notes.md](references/source-notes.md) to trace the public design-system guidance and product examples behind the post-login rules. Public galleries are examples to inspect, not proof that a pattern works for every user.
+| Task | Read |
+| --- | --- |
+| Open visual brief, marketing page, or reference-led redesign | [Owner style](references/owner-style.md) when the preference fits; [design rules](references/design-rules.md) for general visual decisions; [visual atlas](references/visual-atlas.md) only when comparing supplied images or alternative directions. |
+| Authenticated, multi-screen product | [Product UI](references/product-ui.md) for work and state models; add [owner product UI](references/owner-product-ui.md) only when using the owner's direction. |
+| Header, navigation, buttons, fields, tables, overlays, or controls | [Component craft](references/component-craft.md) for behavior; add [owner components](references/owner-components.md) only when using the owner's direction. |
+| Research provenance, worked reasoning, or evaluation | [Source notes](references/source-notes.md), [public-page example](references/worked-example.md), [app example](references/worked-app-example.md), or [evaluation guide](references/evaluation.md) as needed. The examples are alternate contexts, not templates or the owner's approved visual baseline. |
 
-## Work from the brief to the interface
+## Work from brief to result
 
-1. Establish the audience, primary task, content and data, brand constraints, target devices, and existing product/design system. For an app, identify user roles, the objects they work on, and what success looks like. Inspect the current product before changing an established design. If critical information is missing, make a small explicit assumption or ask one focused question.
-2. Identify the surface's job: persuade, help someone operate, support reading, or present work to experience. A marketing page and an authenticated workspace may need different density and pacing while sharing brand foundations. For an open brief, compare two meaningfully different directions and choose one with a reason; follow a constrained brief directly.
-3. Write a short **direction statement**: audience + intended feeling + visual metaphor or material + reason it serves the task. Specify one dominant visual move, two or three supporting moves, and deliberate things to omit. Make the direction testable against every section, not a pile of style adjectives.
-4. Build a compact system before polishing components: type roles and scale, content width/grid, spacing rhythm, color roles, image treatment, surfaces, corners, borders, icons, and motion behavior. Where the brief is open, use the owner preference as an art-direction bias, then adapt its devices to the product; do not impose one palette or layout on every project.
-5. Map the real journey. For a public page, cover first impression, explanation, evidence, action, and follow-through. For an app, map entry point, finding an object, acting on it, feedback, recovery, and return. Design the relevant normal, first-use, empty-result, loading, error, and permission states. See [product-ui.md](references/product-ui.md).
-6. Write specific copy and use believable imagery/data. Mark unknown facts as placeholders for user-supplied truth and track claims that affect trust or decisions. Implement with the existing stack and components when requested. Translate the direction into responsive layouts and actual behavior, not a screenshot clone. Keep semantic HTML, keyboard operation, performance, and product behavior intact.
-7. Review representative tasks at desktop and narrow widths, normal and zoomed text, keyboard focus, and reduced motion. Check long names, sparse and dense data, loading, empty, error, success, and role differences where applicable. Compare with [design-rules.md](references/design-rules.md), [product-ui.md](references/product-ui.md), and the questions in [owner-style.md](references/owner-style.md) when this preference was used. Revise generic or contradictory details before presenting the work.
+1. Identify audience, primary task, product objects, actual content/data, brand constraints, devices, and existing implementation. For an app, map **role → goal → object → action → result → recovery**. Ask only about missing information that materially changes the direction; state small assumptions.
+2. Choose a product-specific subject and write a short direction statement: who it serves, what feeling and material fit, why they help the task, one dominant visual move, and what to omit. For an open brief, compare two materially different compositions. For an established brand, preserve its system unless change is requested.
+3. Set a compact design grammar: type roles, grid, spacing, surface and semantic color roles, image/crop rule, component geometry, and motion purpose. Carry identity into working screens at lower intensity; let each screen's task determine emphasis.
+4. Build the real journey and only its relevant states. Public pages need an honest promise, explanation, evidence, action, and follow-through. Product screens need orientation, finding/creating an object, acting, feedback, recovery, and return. Use specific copy and believable content; label illustrative data.
+5. Render and inspect representative desktop and narrow screens. Check product specificity, hierarchy, component coherence, long Vietnamese text, keyboard focus, zoom/reflow, reduced motion, and meaningful loading/empty/error/success states. Revise after seeing the output, using the [evaluation guide](references/evaluation.md). A static render proves appearance only; test behavior in the running product when implementation is requested.
 
-## Decision rules
+## Non-negotiable boundaries
 
-- Favor specificity over generic “premium”, “modern”, or “AI” styling. Explain what a design choice communicates and how it helps the user.
-- Reuse a reference's underlying device (for example, an editorial scale jump or a repeated image crop) only when it fits the product. Do not reproduce another site's composition, copy, branding, or artwork.
-- Give important controls clear labels and visible feedback. Expressive design must not hide navigation, meaning, or the primary action.
-- Treat statistics, testimonials, partner logos, scarcity, and social proof as factual content that needs a source. Do not invent them to complete a visual.
-- In regulated or high-stakes domains, source and verify benefits, safety statements, qualifications, outcomes, and prices before publishing them. Make uncertainty explicit.
-- Do not ship a CTA or form that appears functional if its destination or submission path does not exist. Resolve the real contact/action route for a live page, or label the deliverable as a prototype.
-- Separate observed evidence from proposed behavior. A static reference cannot prove interactions, accessibility, responsiveness, or performance.
-- For operational UI, let task priority determine emphasis. Put product personality into language, hierarchy, materials, and precise details without making repeated work harder.
-- Treat a design-system example as contextual guidance, not a mandatory component choice or a license to copy another product's brand.
-- If the user asked only for a design analysis or direction, stop at that deliverable. Do not create code, assets, or external projects without task authorization.
+- Reuse a reference's **design mechanism**, not its composition, artwork, brand, people, copy, or statistics. Static references do not prove interaction, accessibility, performance, or responsiveness.
+- Never invent testimonials, outcomes, partner logos, product metrics, qualifications, or other trust claims to fill a layout. In high-stakes domains, verify substantive claims before publication.
+- A live CTA or form needs a real destination and result path. If the deliverable is a mockup, make that status clear.
+- The leading action, object, status, and recovery path must be easier to find than decoration. Preserve established behavior and use semantic, keyboard-accessible controls when implementing.
+- If asked for analysis or design only, deliver that scope. Do not create code or external artifacts without authorization.
 
 ## Hand-off
 
-For design-only work, give the chosen direction, why it fits, a section map, key design tokens, distinctive details, and unresolved factual inputs. For implementation work, report the same decisions briefly, plus what changed and the visual/functional validation actually performed. State what was not verified.
+For design work, give the chosen direction and reason, screen or section map, a compact visual grammar, distinctive details, and unresolved factual inputs. For implementation, report changes and the visual and functional checks actually performed; distinguish proposal, render, and verified behavior.

@@ -54,7 +54,7 @@ Build a small action hierarchy. A **primary button** can use a saturated ember f
 | Hover | Small change in fill, border, or elevation; avoid motion that moves the click target. |
 | Focus | Clearly visible outline with separation from the button edge; works over all backgrounds. |
 | Pressed/active | Distinct tactile change, without implying permanent selection for a momentary action. |
-| Loading | Keep width stable; say “Đang lưu…” or “Đang tạo buổi luyện…” where progress cannot be inferred. Prevent accidental duplicate submission. |
+| Loading | Keep width stable; say “Đang lưu…” or name the object being created where progress cannot be inferred. Prevent accidental duplicate submission. |
 | Disabled | Explain why where useful; retain readable label. Do not use disabled styling to hide a permission problem. |
 | Error/success | Show result close to the affected task; a color flash on the button alone is insufficient. |
 
@@ -82,11 +82,11 @@ Forms are the quietest part of this style. Use a stable surface, strong label/va
 - Preserve entered values after errors. For long forms, provide a summary and move focus to a useful repair point.
 - Distinguish optional, required, read-only, disabled, saving, and saved. A user should not need to infer these from opacity alone.
 
-**Example:** A practice setup form can ask for role, interview type, and answer language. It should not show a decorative “personalized 98%” metric without a real calculation. The leading action could be “Tạo buổi luyện”; an error should identify the field or service that prevented creation and preserve the choices.
+**Example:** A creation form should ask only for fields the product actually uses. It should not show a decorative “98% phù hợp” metric without a real calculation. The leading action should name the object being created; an error should identify the field or service that prevented creation and preserve the choices.
 
 ## 6. Tabs, filters, and segmented choices
 
-Tabs can carry an editorial feel through confident labels and a thin selected rule. The rule must remain visible over dark and light backgrounds. Use tabs for peer content inside one object, such as “Câu trả lời / Nhận xét / Lịch sử”. Use a filter or segmented control to change which items appear, and a stepper only for a real sequence.
+Tabs can carry an editorial feel through confident labels and a thin selected rule. The rule must remain visible over dark and light backgrounds. Use tabs for peer content inside one object, such as “Tổng quan / Chi tiết / Lịch sử”. Use a filter or segmented control to change which items appear, and a stepper only for a real sequence.
 
 Keep the number of visible choices manageable. If labels wrap, do not shrink them into microscopic pills; use a scrollable tab list with clear affordance or a different navigation structure. A selected filter should show its value, count when meaningful, and a way to clear it. Keyboard behavior should follow the component pattern in use.
 
@@ -104,7 +104,7 @@ Treat data as content, not as a graphic texture. A table can still feel part of 
 
 A dialog or drawer may borrow the system's corner and type language, but its purpose controls its intensity. A short confirmation can use a strong title and neutral surface; a long editing task deserves a full page or structured drawer. Do not place an irreversible decision on a hot orange background that makes the consequence hard to read.
 
-For a dialog, identify the affected object, result, leading action, cancellation route, and focus behavior. For a drawer, preserve enough context from the underlying object and make its close/save behavior predictable. A toast can confirm a low-risk success; a failed upload, lost recording, or unsaved form needs persistent, actionable feedback. Tone should become direct when the user is blocked, regardless of how playful the brand is elsewhere.
+For a dialog, identify the affected object, result, leading action, cancellation route, and focus behavior. For a drawer, preserve enough context from the underlying object and make its close/save behavior predictable. A toast can confirm a low-risk success; a failed upload, lost input, or unsaved form needs persistent, actionable feedback. Tone should become direct when the user is blocked, regardless of how playful the brand is elsewhere.
 
 ## 9. Media, recording, and review controls
 

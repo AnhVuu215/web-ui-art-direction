@@ -18,7 +18,7 @@ This is an intensity map, not a rule that work screens must be dull. Product per
 
 ## 1. Find the real object and journey
 
-Write **role → goal → object → action → visible result → recovery** before choosing screens. The object might be a practice session, candidate, recording, order, project, file, or report. Use the user's words, not generic `Overview / Activity / Insights` labels. Then choose the *one moment* from that journey that deserves the strongest visual treatment.
+Write **role → goal → object → action → visible result → recovery** before choosing screens. The object might be an order, project, file, reservation, item, or report. Use the user's words, not generic `Overview / Activity / Insights` labels. Then choose the *one moment* from that journey that deserves the strongest visual treatment.
 
 For each screen, write a short contract:
 
@@ -38,7 +38,7 @@ Build a small translation sheet before screens:
 | Landing-page device | Product translation | Guardrail |
 | --- | --- | --- |
 | Oversized display type | One strong first-use or milestone statement; restrained page-title scale elsewhere. | Do not consume the working viewport with a slogan on every visit. |
-| Ember light/gradient | Leading action, active recording, selected focal module, or transition illustration. | Do not color every status or data card orange. |
+| Ember light/gradient | Leading action, meaningful active moment, selected focal module, or transition illustration. | Do not color every status or data card orange. |
 | Near-black chapter | App shell, media-review surface, or focused activity when contrast is controlled. | Do not force a dark canvas behind long forms and tables. |
 | Warm-white pause | Main reading/editing surface with crisp ink and borders. | Preserve hierarchy; “quiet” must not become low contrast. |
 | One person/object/product scene | An honest product view, real session, or relevant content preview. | Avoid generic portraits and fake UI inside devices. |
@@ -79,22 +79,21 @@ Say what is processing and whether the user can leave. If progress is unknown, a
 
 Explain scope and consequences. Group settings by user goal, not backend entity names. Avoid marketing language on billing, deletion, access, or security screens. For role restrictions, show actions accurately; UI visibility is not authorization. A visually quiet settings area can still feel related through type, spacing, and one restrained accent.
 
-## 4. One illustrative AI interview-practice flow
+## 4. A reusable continuity contract across screens
 
-This is a **design exercise**, not a claim about an existing product, scoring model, recording pipeline, privacy policy, or AI capability. Replace copy and states with the actual product contract before implementation.
+Track **one real object** through the experience before polishing a dashboard. Use a sample record with long and missing values, an actual status vocabulary, and only actions the role may take. Replace every illustrative value before presenting the work as a live product.
 
-| Screen/state | User question | Evidence and controls | Where the owner's style appears |
-| --- | --- | --- | --- |
-| Home, returning user | “What should I practice now?” | One unfinished practice, next question, recent sessions, clear “Tiếp tục” or “Bắt đầu buổi mới”. | Confident sans title; one lead panel with purposeful warmth, quiet history beneath. |
-| Choose question | “Which scenario fits my goal?” | Role, difficulty or topic only if meaningful; question preview, estimated time if known, start action. | Editorial headline around the actual question; strong type and clean option hierarchy. |
-| Record answer | “Am I recording and what happens if I stop?” | Question stays visible; microphone permission, start/stop, elapsed time, status, discard/retry path. | A focused dark recording stage and ember live indicator; no decorative waveform as sole state cue. |
-| Processing | “Was my answer saved and can I leave?” | A named session and explicit processing status; safe return path; error/retry if processing fails. | One restrained signal/light motif; no made-up progress number. |
-| Review result | “What did I say well and what should I change?” | Transcript or answer excerpt, specific annotated feedback, confidence/limitations where relevant, one next practice step. | Strong result headline; contrast between focused evidence panel and calm explanatory surface. |
-| History/detail | “Can I compare and resume?” | Dated sessions, clear status, filters, stable detail path, relevant comparison if supported. | Precise rows and fine dividers; orange reserved for selection or next action. |
+| Moment | What must stay continuous | Where visual expression belongs |
+| --- | --- | --- |
+| Entry | The user's scope and the most relevant object or unfinished task. | One lead panel can carry the warm accent; surrounding work stays calm. |
+| Find | Object name, status, filters, sort, and return path. | Clear type and fine dividers; accent marks selection, not every row. |
+| Detail | The same object identity, current state, evidence, history, and allowed actions. | A stronger composition can frame the key evidence; keep supporting data readable. |
+| Act or edit | The exact change being made, validation, unsaved state, and exit. | Focus and primary action carry color; fields remain quiet. |
+| Wait | Whether the action was received, what is pending, and whether the user can leave. | Restrained motion may support status but cannot replace it. |
+| Result | What changed, what did not, source or reason when relevant, and next step. | A milestone may regain editorial emphasis if it contains substantive content. |
+| Return | Previous location, filters or context where feasible, and updated object state. | Stable navigation and familiar components matter more than a second spectacle. |
 
-Example microcopy should remain specific. “Bạn đã nêu kết quả nhưng chưa nói rõ vai trò của mình” is more useful than “Cải thiện kỹ năng giao tiếp”. A review annotation should point to a real excerpt or event. If the prototype lacks transcription or scoring, show representative sample content with an explicit prototype label rather than implying live evaluation.
-
-The first HiReady trial is a useful negative case: its sage/rust/serif/circle combination and quote-like coaching panels did not connect to the chosen reference family or to the actual speaking/review task. Replacing that with more orange alone would repeat the problem. The product needs a credible recording moment, an answer object, and evidence-based feedback across screens.
+This matrix is a worksheet, not a required seven-screen product. A short task may fit in one page and a dialog; a consequential task may need several pages. The design should not invent intermediate screens merely to showcase style. If the object's state or ownership changes, make that change traceable across the surfaces that mention it.
 
 ## 5. Information density and responsive behavior
 
@@ -103,7 +102,7 @@ Use density according to the work:
 - A first-use explanation may have generous spacing and display type.
 - A repeat-use queue should fit enough items to scan without hiding status or actions.
 - A transcript/review may need long-form reading, line references, and contextual annotations.
-- A recording screen needs few controls, clear state, and strong focus.
+- A focused action screen needs few controls, clear state, and strong focus.
 
 On narrow screens, preserve the **sequence of thought**: identity → current status → key evidence → action. Reflow multi-column desktop compositions rather than shrinking them. If a side panel becomes a drawer or a table becomes stacked rows, verify that context, filters, and actions remain findable. Test long Vietnamese text, large user-generated content, mixed languages, and 200% zoom. A dramatic desktop overlap is optional; the task path is not.
 
@@ -117,13 +116,13 @@ The same visual system must explain at least:
 | No records | How to create one, if allowed. |
 | No filtered results | Which filter/query caused the result and how to clear it. |
 | Loading | What is being loaded; preserve layout where possible. |
-| Recording permission denied | What permission is needed and how to retry or choose an alternative. |
+| Required device or account permission denied | What permission is needed and how to retry or choose an alternative, where applicable. |
 | Processing delay/failure | Whether the answer was preserved, what is delayed/failed, and retry/support path. |
 | Save failure | Which changes remain unsaved; preserve user input. |
 | Restricted role | Why an action is unavailable at the level the product can safely disclose. |
 | Success | What changed and where to continue. |
 
-Do not decorate an uncertain state into apparent certainty. Scores, feedback, testimonials, and outcome metrics need actual product evidence. A screenshot cannot prove a recording works, that an AI conclusion is valid, or that a state survives refresh. Verify those claims in the implemented system before reporting them.
+Do not decorate an uncertain state into apparent certainty. Scores, feedback, testimonials, and outcome metrics need actual product evidence. A screenshot cannot prove an input was saved, an automated conclusion is valid, or a state survives refresh. Verify those claims in the implemented system before reporting them.
 
 ## 7. Visual review across a flow
 

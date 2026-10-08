@@ -61,7 +61,7 @@ These are decision checks, not a mandatory aesthetic. The 33-image atlas shows s
 ## 7. Keep the design robust
 
 - Test narrow screens with actual content: long titles, translated labels, real data, empty values, validation messages, and on-screen keyboard space.
-- At 200% text zoom, content and controls must remain usable without horizontal scrolling for ordinary page content.
+- Check 200% text resize and WCAG 1.4.10 reflow at a viewport equivalent to 320 CSS px (for example, 400% browser zoom from 1280 CSS px). Preserve information and functionality without two-dimensional scrolling, except for content whose meaning requires a two-dimensional layout, such as some tables.
 - Aim for WCAG 2.2 AA. Normal text needs at least 4.5:1 contrast and large text at least 3:1; pointer targets are at least 24×24 CSS px or meet the stated exceptions. A 44×44 px target is a useful comfort goal for prominent touch controls, not the WCAG 2.2 AA minimum.
 - Keep focus visible and unobscured by sticky headers or overlays. Use semantic elements and sensible heading order.
 - Reserve space for images and dynamic sections to prevent layout jumps. Prioritize the hero image; lazy-load lower-page media when it helps. Compress and size media for the displayed use.

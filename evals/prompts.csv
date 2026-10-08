@@ -1,0 +1,11 @@
+id,should_trigger,prompt
+A1,true,"Dùng $web-ui-art-direction đề xuất art direction cho website xưởng đèn gốm đặt làm và khu vực khách theo dõi đơn. Chưa có ảnh hay số liệu thật; chỉ thiết kế, chưa viết code."
+A2,true,"Trang giới thiệu dịch vụ sửa xe đạp hiện rất rập khuôn. Hãy phân tích nội dung hiện có, đề xuất hai bố cục khác nhau và chọn một hướng có hình ảnh gắn với công việc thật."
+A3,true,"Thiết kế UX/UI cho workspace quản lý hồ sơ: trang tổng quan, danh sách, chi tiết, chỉnh sửa và một trạng thái lưu lỗi. Giữ cùng một hồ sơ xuyên suốt luồng."
+A4,true,"Review header, điều hướng, nút chính, form và bảng trong frontend hiện tại; chỉ sửa phân cấp thị giác và trạng thái component khi cần, không đổi hành vi nghiệp vụ."
+B1,true,"Ứng dụng hiện có brand xanh lạnh và tiêu đề serif được duyệt. Hãy cải thiện màn hình lịch sử giao dịch nhưng giữ nhận diện này, ưu tiên khả năng so sánh và đọc."
+B2,true,"Thiết kế homepage cho xưởng may nhỏ chưa có ảnh được phép dùng. Hãy đề xuất cách thể hiện quy trình và sản phẩm mà không tạo bằng chứng giả."
+B3,true,"Thiết kế màn hình kiểm kê với hàng trăm mặt hàng, trạng thái và bộ lọc. Ưu tiên thao tác nhanh; không cần trang giới thiệu hoặc hiệu ứng hero."
+N1,false,"Tối ưu chỉ mục PostgreSQL cho bảng orders theo truy vấn lọc ngày và trạng thái; không thay đổi giao diện."
+N2,false,"Sửa lỗi API trả 502 khi worker timeout. Giữ nguyên frontend và mọi quyết định UI hiện tại."
+N3,true,"Chỉ phân tích ba ảnh tham khảo và đề xuất hướng thiết kế cho trang khóa học; chưa tạo code, ảnh hay dự án ngoài."
